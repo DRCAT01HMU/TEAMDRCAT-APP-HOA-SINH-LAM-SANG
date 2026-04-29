@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRẮC NGHIỆM HÓA SINH LÂM SÀNG - P1 Hóa sinh lâm sàng tim mạch</title>
+    
+    
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#0284c7'
+                    }
+                }
+            }
+        }
+    </script>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script defer src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        * { -webkit-tap-highlight-color: transparent; outline: none; }
+        .fast-render { }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #475569; }
+        .option-transition { transition: background-color 0.15s ease-out, border-color 0.15s ease-out, transform 0.1s; }
+        html { scroll-behavior: smooth; }
+    </style>
+<style>
+        * { -webkit-tap-highlight-color: transparent; outline: none; }
+        .fast-render { }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; overflow-x: hidden; }
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #8b5cf6; border-radius: 10px; } 
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #7c3aed; } 
+.option-transition { transition: transform 0.1s ease-out, background-color 0.1s ease-out; }
+html { scroll-behavior: smooth; }
+
+.bg-animated { background: linear-gradient(270deg, #ffe4e6, #fee2e2, #fecdd3, #fff1f2); background-size: 200% 200%; } /* Disabled animation for speed */
+.dark .bg-animated { background: linear-gradient(270deg, #2e0915, #4c0519, #4a044e, #2a0412); background-size: 200% 200%; } /* Disabled animation */
+@keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.glass-panel { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); }
+@media (min-width: 768px) {
+  .glass-panel { background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+}
+.dark .glass-panel { background: rgba(11, 15, 25, 0.95); border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); }
+@media (min-width: 768px) {
+  .dark .glass-panel { background: rgba(11, 15, 25, 0.95); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.25); }
+}
+.fast-render-box { content-visibility: auto; contain-intrinsic-size: 0 400px; }
+.dark .glass-panel { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); }
+@media (min-width: 768px) {
+  .glass-panel { background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+}
+.dark .glass-panel { background: rgba(11, 15, 25, 0.95); border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); }
+@media (min-width: 768px) {
+  .dark .glass-panel { background: rgba(11, 15, 25, 0.95); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.25); }
+}
+.fast-render-box { content-visibility: auto; contain-intrinsic-size: 0 400px; }
+.dark .glass-panel { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); }
+@media (min-width: 768px) {
+  .glass-panel { background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05); }
+}
+.dark .glass-panel { background: rgba(11, 15, 25, 0.95); border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); }
+@media (min-width: 768px) {
+  .dark .glass-panel { background: rgba(11, 15, 25, 0.95); box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.25); }
+}
+.fast-render-box { content-visibility: auto; contain-intrinsic-size: 0 400px; }
+
+
+.medical-record-box { background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%); border-left: 5px solid #dc2626; border-top: 15px solid #b91c1c; box-shadow: 0 4px 20px -2px rgba(220, 38, 38, 0.1); position: relative; border-radius: 0.5rem; }
+.medical-record-box::before { content: ''; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 60px; height: 15px; background: #94a3b8; border-radius: 5px 5px 0 0; }
+.dark .medical-record-box { background: linear-gradient(135deg, #0f172a 0%, #020617 100%); border-left: 5px solid #f87171; border-top: 15px solid #ef4444; box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4); }
+.dark .medical-record-box::before { background: #475569; }
+.btn-gradient { background: linear-gradient(135deg, #dc2626, #0284c7); background-size: 200% auto; transition: 0.5s; }
+.btn-gradient:hover { background-position: right center; }
+
+::selection { background-color: #fef08a; color: #000; text-shadow: none; }
+.dark ::selection { background-color: #facc15; color: #000; }
+
+@keyframes heartbeat { 0% { transform: scale(1); } 14% { transform: scale(1.3); } 28% { transform: scale(1); } 42% { transform: scale(1.3); } 70% { transform: scale(1); } 100% { transform: scale(1); } }
+.animate-heartbeat { animation: heartbeat 1.2s infinite; }
+.animate-heartbeat-fast { animation: heartbeat 0.6s infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 50% { transform: translateX(10px); } 75% { transform: translateX(-10px); } }
+.animate-shake { animation: shake 0.4s ease-in-out; }
+</style>
+
+    <style id="performance-optimizations">
+        /* Optimize glass-panel class */
+        .glass-panel { 
+            backdrop-filter: none !important; 
+            -webkit-backdrop-filter: none !important; 
+            background: rgba(255, 255, 255, 0.98) !important; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; 
+            border: 1px solid rgba(226, 232, 240, 1) !important; 
+        }
+        .dark .glass-panel { 
+            background: rgba(15, 23, 42, 0.98) !important; 
+            border-color: rgba(51, 65, 85, 1) !important; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* Optimize list rendering */
+        div[class*="border-slate-100"] {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 200px;
+        }
+
+        /* Disable heavy hover shadows and scaling */
+        .hover\:shadow-2xl:hover, .shadow-2xl, .shadow-xl {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* Disable heavy blur backdrops */
+           .backdrop-blur {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
+        /* Removed explicit GPU blanket to save RAM on iPad */
+    </style>
+
+
+    <!-- SECURITY SCRIPT -->
+    <script>
+        // Disable Right Click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        
+        // Disable Text Selection and Copy
+        document.addEventListener('selectstart', event => event.preventDefault());
+        document.addEventListener('copy', event => {
+            event.preventDefault();
+            alert("Tài liệu nội bộ: Không được phép sao chép!");
+            if (event.clipboardData) {
+                event.clipboardData.setData('text/plain', 'Tài liệu bản quyền TEAMDRCAT');
+            }
+        });
+        
+        // Disable DevTools shortcuts & Print
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if(e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I / J / C
+            if(e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (View Source)
+            if(e.ctrlKey && e.key.toUpperCase() === 'U') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+P (Print)
+            if(e.ctrlKey && e.key.toUpperCase() === 'P') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+S (Save)
+            if(e.ctrlKey && e.key.toUpperCase() === 'S') {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Anti-Debugging
+        setInterval(function() {
+            var before = new Date().getTime();
+            debugger;
+            var after = new Date().getTime();
+            if (after - before > 100) {
+                // User has DevTools open
+                document.body.innerHTML = "<div style='text-align:center; padding: 50px; font-family: sans-serif; font-weight: bold;'>Please close Developer Tools to continue using this application.</div>";
+            }
+        }, 1000);
+    </script>
+    <!-- END SECURITY SCRIPT -->
+
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1030830160852697"
+     crossorigin="anonymous"></script>
+
+<script>
+window.customConfirmDialog = function(msg, onConfirm) {
+    const overlay = document.createElement('div');
+    overlay.className = 'fixed inset-0 bg-slate-900/80 z-[99999] flex items-center justify-center backdrop-blur-sm transition-opacity duration-300';
+    overlay.style.opacity = '0';
+    
+    const dialog = document.createElement('div');
+    dialog.className = 'bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-[2rem] shadow-2xl max-w-sm w-[90%] mx-auto transform transition-all duration-300 border border-slate-200 dark:border-slate-700 scale-95 opacity-0';
+    
+    const iconContainer = document.createElement('div');
+    iconContainer.className = 'w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 dark:text-blue-400 shadow-inner';
+    iconContainer.innerHTML = '<i class="fa-solid fa-circle-question text-3xl"></i>';
+    
+    const title = document.createElement('h3');
+    title.className = 'text-xl font-black text-slate-800 dark:text-white mb-2 text-center uppercase tracking-wider';
+    title.innerText = 'Xác nhận';
+    
+    const message = document.createElement('p');
+    message.className = 'text-slate-500 dark:text-slate-400 text-center mb-8 font-medium text-sm sm:text-base';
+    message.innerText = msg;
+    
+    const btnContainer = document.createElement('div');
+    btnContainer.className = 'flex gap-3 justify-center';
+    
+    const btnCancel = document.createElement('button');
+    btnCancel.className = 'flex-1 px-5 py-3 rounded-xl font-bold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all active:scale-95';
+    btnCancel.innerText = 'Hủy';
+    btnCancel.onclick = () => {
+        overlay.style.opacity = '0';
+        dialog.classList.remove('scale-100', 'opacity-100');
+        dialog.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => { if(document.body.contains(overlay)) document.body.removeChild(overlay); }, 300);
+    };
+    
+    const btnConfirm = document.createElement('button');
+    btnConfirm.className = 'flex-1 px-5 py-3 rounded-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 shadow-md transition-all active:scale-95 shadow-blue-500/30';
+    btnConfirm.innerText = 'Đồng ý';
+    btnConfirm.onclick = () => {
+        overlay.style.opacity = '0';
+        dialog.classList.remove('scale-100', 'opacity-100');
+        dialog.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => { if(document.body.contains(overlay)) document.body.removeChild(overlay); }, 300);
+        if(onConfirm) onConfirm();
+    };
+    
+    btnContainer.appendChild(btnCancel);
+    btnContainer.appendChild(btnConfirm);
+    
+    dialog.appendChild(iconContainer);
+    dialog.appendChild(title);
+    dialog.appendChild(message);
+    dialog.appendChild(btnContainer);
+    overlay.appendChild(dialog);
+    
+    document.body.appendChild(overlay);
+    
+    // Trigger animations
+    requestAnimationFrame(() => {
+        overlay.style.opacity = '1';
+        dialog.classList.remove('scale-95', 'opacity-0');
+        dialog.classList.add('scale-100', 'opacity-100');
+    });
+};
+</script>
+
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 bg-animated transition-colors duration-300">
+    <div id="root"></div>
+    <script type="application/json" id="quizData">UEjhuqZOIDEgVFLhuq5DIE5HSEnhu4ZNIEjDk0EgU0lOSCBMw4JNIFPDgE5HCkLhu4ZOSCBUSU0gTeG6oENIIFkgSMOAIE7hu5hJClNP4bqgTiBCWSBEUkNBVAooIFTDoGkgbGnhu4d1IMSRxrDhu6NjIGJpw6puIHNv4bqhbiBk4buxYSB0csOqbiBraeG6v24gdGjhu6ljIGNodeG6qW4gWSBIw6AgTuG7mWkgKQoKUGjhuqduIEk6IFjGoSBW4buvYSDEkOG7mW5nIE3huqFjaCB2w6AgUuG7kWkgTG/huqFuIExpcGlkIE3DoXUKTeG7pWMgMS4xOiBDxqEgQ2jhur8gQuG7h25oIFNpbmggdsOgIEPDoWMgWeG6v3UgVOG7kSBOZ3V5IEPGoQpDw6J1IDEuIELhu4duaCBsw70gbuG7gW4gdOG6o25nIGNow61uaCBj4bunYSBo4bqndSBo4bq/dCBjw6FjIGLhu4duaCB0aW0gbeG6oWNoLCBk4bqrbiDEkeG6v24gY8OhYyBiaeG6v24gY2jhu6luZyBuZ2hpw6ptIHRy4buNbmcgbmjGsCBuaOG7k2kgbcOhdSBjxqEgdGltIHbDoCB04buVbiB0aMawxqFuZyDEkeG7mW5nIG3huqFjaCBuw6NvIGzDoCBnw6w/CkEuIFTEg25nIGh1eeG6v3Qgw6FwCkIuIMSQw6FpIHRow6FvIMSRxrDhu51uZwpDLiBYxqEgduG7r2EgxJHhu5luZyBt4bqhY2gKRC4gU3V5IHRpbSBzdW5nIGh1eeG6v3QKxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFRoZW8gdMOgaSBsaeG7h3UsIGLhu4duaCBsw70gY2jDrW5oIGPhu6dhIHRpbSBt4bqhY2ggbMOgIGLhu4duaCB4xqEgduG7r2EgxJHhu5luZyBt4bqhY2ggKFhWxJBNKSwgbeG7mXQgYuG7h25oIGPhu6dhIHRow6BuaCDEkeG7mW5nIG3huqFjaCBsw6BtIGjhurlwIGzDsm5nIG3huqFjaCB2w6AgZ8OieSByYSB0aGnhur91IG94eSBtw7QuIMSQw6J5IGzDoCBuZ3V5w6puIG5ow6JuIHRy4buxYyB0aeG6v3AgZOG6q24gxJHhur9uIG5o4buTaSBtw6F1IGPGoSB0aW0gKE5NQ1QpIHbDoCB04buVbiB0aMawxqFuZyDEkeG7mW5nIG3huqFjaCBuw6NvLgoKQ8OidSAyLiBUcm9uZyBjxqEgY2jhur8gYuG7h25oIHNpbmggY+G7p2EgeMahIHbhu69hIMSR4buZbmcgbeG6oWNoLCBsb+G6oWkgbGlwb3Byb3RlaW4gbsOgbyBraGkgYuG7iyBiaeG6v24gxJHhu5VpIChveHkgaMOzYSwgYWNldHlsIGjDs2EpIHPhur0gxJHGsOG7o2MgxJHhuqFpIHRo4buxYyBiw6BvIHRodSBuaOG6rW4ga2jDtG5nIGtp4buDbSBzb8OhdCwgdOG6oW8gdGjDoG5oIGPDoWMgdOG6vyBiw6BvIGLhu410PwpBLiBDaHlsb21pY3JvbiAoQ00pCkIuIExpcG9wcm90ZWluIHThu7cgdHLhu41uZyBy4bqldCB0aOG6pXAgKFZMREwpCkMuIExpcG9wcm90ZWluIHThu7cgdHLhu41uZyB0aOG6pXAgKExETCkKRC4gTGlwb3Byb3RlaW4gdOG7tyB0cuG7jW5nIGNhbyAoSERMKQrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogTERMICJiaeG6v24gxJHhu5VpIiBraMO0bmcgxJHGsOG7o2MgY8OhYyB04bq/IGLDoG8gdGjDtG5nIHRoxrDhu51uZyB0aHUgbmjhuq1uIHF1YSByZWNlcHRvciBMREwgY2h14bqpbi4gVHV5IG5oacOqbiwgxJHhuqFpIHRo4buxYyBiw6BvIHbDoCB04bq/IGLDoG8gY8ahIHRyxqFuIHRow6BuaCBt4bqhY2ggY8OzIGPDoWMgcmVjZXB0b3IgxJHhurdjIGhp4buHdSAocmVjZXB0b3IgZOG7jW4gZOG6uXAgLSBzY2F2ZW5nZXIgcmVjZXB0b3IpIGNobyBMREwgImJp4bq/biDEkeG7lWkiIHbDoCB0aHUgbmjhuq1uIGNow7puZyBt4buZdCBjw6FjaCBraMO0bmcgY8OzIGPGoSBjaOG6vyB04buxIMSRaeG7gXUgaMOyYS4gxJBp4buBdSBuw6B5IGThuqtuIMSR4bq/biBz4buxIHTDrWNoIHThu6UgY2hvbGVzdGVyb2wga2jDtG5nIGdp4bubaSBo4bqhbiwgYmnhur9uIMSR4bqhaSB0aOG7sWMgYsOgbyB0aMOgbmggdOG6vyBiw6BvIGLhu410LCBsw6AgxJHhurdjIHRyxrBuZyBj4bunYSBt4bqjbmcgeMahIHbhu69hLgoKQ8OidSAzLiBZ4bq/dSB04buRIG7DoG8gc2F1IMSRw6J5IMSRxrDhu6NjIGNvaSBsw6AgeeG6v3UgdOG7kSBi4bqjbyB24buHLCBjaOG7kW5nIGzhuqFpIHF1w6EgdHLDrG5oIHjGoSB24buvYSDEkeG7mW5nIG3huqFjaD8KQS4gVMSDbmcgbuG7k25nIMSR4buZIExETC1jaG9sZXN0ZXJvbApCLiBUxINuZyBu4buTbmcgxJHhu5kgVHJpZ2x5Y2VyaWQKQy4gVMSDbmcgbuG7k25nIMSR4buZIEhETC1jaG9sZXN0ZXJvbApELiBUxINuZyBu4buTbmcgxJHhu5kgVkxETC1jaG9sZXN0ZXJvbArEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogSERMIGPDsyBjaOG7qWMgbsSDbmcgduG6rW4gY2h1eeG7g24gY2hvbGVzdGVyb2wgdOG7qyBjw6FjIG3DtCBuZ2/huqFpIHZpIChiYW8gZ+G7k20gY+G6oyB0aMOgbmggxJHhu5luZyBt4bqhY2gpIHRy4bufIHbhu4EgZ2FuIMSR4buDIHRob8OhaSBow7NhLiBEbyDEkcOzLCBIREwtY2hvbGVzdGVyb2wgKGNob2xlc3Rlcm9sICJ04buRdCIpIMSRxrDhu6NjIGNvaSBsw6AgeeG6v3UgdOG7kSBi4bqjbyB24buHIGNo4buRbmcgbOG6oWkgWFbEkE0uIE7hu5NuZyDEkeG7mSBIREwtY2hvbGVzdGVyb2wgY2FvIGPDsyB0xrDGoW5nIHF1YW4gbmdo4buLY2ggduG7m2kgbmd1eSBjxqEgbeG6r2MgYuG7h25oIHRpbSBt4bqhY2guCgpDw6J1IDQuIFRoZW8gc8ahIMSR4buTIGPDoWMgeeG6v3UgdOG7kSBuZ3V5IGPGoSBnw6J5IHjGoSB24buvYSDEkeG7mW5nIG3huqFjaCAoSMOsbmggOS4xKSwgxJHDoWkgdGjDoW8gxJHGsOG7nW5nIGfDs3AgcGjhuqduIHbDoG8gWFbEkE0gdGjDtG5nIHF1YSBuaOG7r25nIGPGoSBjaOG6vyBjaMOtbmggbsOgbz8KQS4gQ2jhu4kgZ8OieSB0xINuZyBsaXBpZCBtw6F1CkIuIENo4buJIGfDonkgcuG7kWkgbG/huqFuIHRow6BuaCBt4bqhY2gKQy4gR8OieSB0xINuZyBodXnhur90IMOhcCB2w6AgdMSDbmcgxJHDtG5nIG3DoXUKRC4gR8OieSBj4bqjIHTEg25nIGxpcGlkIG3DoXUgdsOgIHLhu5FpIGxv4bqhbiB0aMOgbmggbeG6oWNoCsSQw6FwIMOhbjogRApHaeG6o2kgdGjDrWNoOiBTxqEgxJHhu5MgKEjDrG5oIDkuMSkgY2hvIHRo4bqleSDEkcOhaSB0aMOhbyDEkcaw4budbmcgbMOgIG3hu5l0IHnhur91IHThu5Egbmd1eSBjxqEgdHJ1bmcgdMOibSwgY8OzIGPDoWMgbcWpaSB0w6puIGNo4buJIMSR4bq/biBj4bqjICJUxINuZyBsaXBpZCBtw6F1IiB2w6AgIlLhu5FpIGxv4bqhbiB0aMOgbmggbeG6oWNoIi4gxJBp4buBdSBuw6B5IHRo4buDIGhp4buHbiBy4bqxbmcgxJHDoWkgdGjDoW8gxJHGsOG7nW5nIHRow7pjIMSR4bqpeSBYVsSQTSBxdWEgbmhp4buBdSBjb24gxJHGsOG7nW5nLCBiYW8gZ+G7k20gdmnhu4djIGfDonkgcmEgcuG7kWkgbG/huqFuIGNodXnhu4NuIGjDs2EgbGlwaWQgdsOgIGzDoG0gdOG7lW4gdGjGsMahbmcgbOG7m3AgbuG7mWkgbeG6oWMgbeG6oWNoIG3DoXUuCgpDw6J1IDUuIFThuqFpIHNhbyBMREwgxJHGsOG7o2MgZ+G7jWkgbMOgIHnhur91IHThu5EgInLhuqV0IG3huqFuaCIgZ8OieSB4xqEgduG7r2EgxJHhu5luZyBt4bqhY2g/CkEuIFbDrCBuw7MgduG6rW4gY2h1eeG7g24gdHJpZ2x5Y2VyaWQgbuG7mWkgc2luaApCLiBWw6wgbsOzIGPDsyBrw61jaCB0aMaw4bubYyBs4bubbiBuaOG6pXQgdHJvbmcgY8OhYyBsaXBvcHJvdGVpbgpDLiBWw6wgY2jhu6ljIG7Eg25nIGNow61uaCBj4bunYSBuw7MgbMOgIHbhuq1uIGNodXnhu4NuIGNob2xlc3Rlcm9sIMSR4bq/biBjw6FjIHThur8gYsOgbyBuZ2/huqFpIHZpIHbDoCBk4buFIGLhu4sgYmnhur9uIMSR4buVaSwgbOG6r25nIMSR4buNbmcg4bufIHRow6BuaCBt4bqhY2gKRC4gVsOsIG7DsyDEkcaw4bujYyB04buVbmcgaOG7o3AgdHLhu7FjIHRp4bq/cCB04burIHJ14buZdCBzYXUgYuG7r2EgxINuCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBDaOG7qWMgbsSDbmcgY2jDrW5oIGPhu6dhIExETCBsw6AgduG6rW4gY2h1eeG7g24gY2hvbGVzdGVyb2wgxJHhur9uIGPDoWMgbcO0IG5nb+G6oWkgdmkuIEtoaSBu4buTbmcgxJHhu5kgTERMIGNhbyBob+G6t2MgdOG7k24gdOG6oWkgbMOidSB0cm9uZyB0deG6p24gaG/DoG4sIG7DsyBk4buFIGLhu4sgb3h5IGjDs2EgdGjDoG5oIExETCAiYmnhur9uIMSR4buVaSIuIEThuqFuZyBuw6B5IMSRxrDhu6NjIGPDoWMgxJHhuqFpIHRo4buxYyBiw6BvIOG7nyB0aMOgbmggbeG6oWNoIHRodSBuaOG6rW4sIGfDonkgdMOtY2ggdOG7pSBjaG9sZXN0ZXJvbCB2w6AgaMOsbmggdGjDoG5oIG3huqNuZyB4xqEgduG7r2EuIERvIMSRw7MsIG7DsyDEkcaw4bujYyB4ZW0gbMOgIHnhur91IHThu5EgZ8OieSBYVsSQTSBy4bqldCBt4bqhbmguCgpN4bulYyAxLjI6IFBow6JuIExv4bqhaSB2w6AgQ2jhu6ljIE7Eg25nIEPhu6dhIExpcG9wcm90ZWluCkPDonUgNi4gTGlwb3Byb3RlaW4gbsOgbyDEkcaw4bujYyB04bqhbyB0aMOgbmggZHV5IG5o4bqldCDhu58gdOG6vyBiw6BvIG5pw6ptIG3huqFjIHJ14buZdCB2w6AgY2jhu4kgeHXhuqV0IGhp4buHbiB0cm9uZyBodXnhur90IHTGsMahbmcgbeG7mXQgdGjhu51pIGdpYW4gbmfhuq9uIHNhdSBi4buvYSDEg24gZ2nDoHUgbGlwaWQ/CkEuIFZMREwKQi4gTERMCkMuIEhETApELiBDaHlsb21pY3JvbiAoQ00pCsSQw6FwIMOhbjogRApHaeG6o2kgdGjDrWNoOiBDaHlsb21pY3JvbiAoQ00pIMSRxrDhu6NjIHThuqFvIHRow6BuaCDEkeG7mWMgbmjhuqV0IGLhu59pIHThur8gYsOgbyBtw6BuZyBydeG7mXQgxJHhu4MgduG6rW4gY2h1eeG7g24gbGlwaWQgbmdv4bqhaSBzaW5oIChjaOG7pyB54bq/dSBsw6AgdHJpZ2x5Y2VyaWQpIHThu6sgdGjhu6ljIMSDbiB2w6BvIGjhu4cgdHXhuqduIGhvw6BuLiBDaMO6bmcgbMOgbSBodXnhur90IHTGsMahbmcgY8OzIG3DoHUgxJHhu6VjIG5oxrAgc+G7r2Egc2F1IGLhu69hIMSDbiB2w6Agc+G6vSBiaeG6v24gbeG6pXQgc2F1IHbDoGkgZ2nhu50ga2hpIMSRw7NpLgoKQ8OidSA3LiBUcsOqbiBr4bq/dCBxdeG6oyDEkWnhu4duIGRpIGxpcG9wcm90ZWluLCBt4buZdCDEkeG7iW5oIHTEg25nIGNhbyDhu58gdsO5bmcgdGnhu4FuLc6yIGxpcG9wcm90ZWluIChwcmUtzrIgTFApIHTGsMahbmcg4bupbmcgduG7m2kgc+G7sSBnaWEgdMSDbmcgY+G7p2EgbG/huqFpIGxpcG9wcm90ZWluIG7DoG8ga2hpIHBow6JuIGxv4bqhaSBi4bqxbmcgcGjGsMahbmcgcGjDoXAgc2nDqnUgbHkgdMOibT8KQS4gQ2h5bG9taWNyb24KQi4gVkxETApDLiBMREwKRC4gSERMCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBC4bqjbmcgOS4xIGNobyB0aOG6pXkgc+G7sSB0xrDGoW5nIOG7qW5nIGdp4buvYSBoYWkgcGjGsMahbmcgcGjDoXAgcGjDom4gbG/huqFpLiBWTERMIChwaMOibiBsb+G6oWkgdGhlbyB04bu3IHRy4buNbmcpIHTGsMahbmcg4bupbmcgduG7m2kgZOG6o2kgdGnhu4FuLc6yIGxpcG9wcm90ZWluIChwcmUtzrIgTFApIHRyw6puIGvhur90IHF14bqjIMSRaeG7h24gZGkuIERvIMSRw7MsIHTEg25nIHByZS3OsiBMUCBuZ2jEqWEgbMOgIHTEg25nIFZMREwuCgpDw6J1IDguIENo4bupYyBuxINuZyBjaMOtbmggY+G7p2EgbGlwb3Byb3RlaW4gdOG7tyB0cuG7jW5nIGNhbyAoSERMKSBsw6AgZ8OsPwpBLiBW4bqtbiBjaHV54buDbiB0cmlnbHljZXJpZCBuZ2/huqFpIHNpbmggxJHhur9uIGdhbgpCLiBW4bqtbiBjaHV54buDbiB0cmlnbHljZXJpZCBu4buZaSBzaW5oIHThu6sgZ2FuIHbDoG8gbcOhdQpDLiBW4bqtbiBjaHV54buDbiBjaG9sZXN0ZXJvbCB04burIGdhbiDEkeG6v24gdOG6vyBiw6BvIG5nb+G6oWkgdmkKRC4gVuG6rW4gY2h1eeG7g24gY2hvbGVzdGVyb2wgdOG7qyB04bq/IGLDoG8gbmdv4bqhaSB2aSB24buBIGdhbgrEkMOhcCDDoW46IEQKR2nhuqNpIHRow61jaDogSERMIHRo4buxYyBoaeG7h24gcXXDoSB0csOsbmggInbhuq1uIGNodXnhu4NuIGNob2xlc3Rlcm9sIG5nxrDhu6NjIiwgdOG7qWMgbMOgIHRodSB0aOG6rXAgY2hvbGVzdGVyb2wgZMawIHRo4burYSB04burIGPDoWMgbcO0IG5nb+G6oWkgdmkgKG5oxrAgdGjDoG5oIMSR4buZbmcgbeG6oWNoKSB2w6AgbWFuZyB24buBIGdhbi4gVOG6oWkgZ2FuLCBjaG9sZXN0ZXJvbCDEkcaw4bujYyBjaHV54buDbiBow7NhIHRow6BuaCBhY2lkIG3huq10IHbDoCDEkcOgbyB0aOG6o2kuIENo4bupYyBuxINuZyBuw6B5IGdpw7pwIGNo4buRbmcgbOG6oWkgc+G7sSBow6xuaCB0aMOgbmggbeG6o25nIHjGoSB24buvYS4KCkPDonUgOS4gTG/huqFpIEFwb2xpcG9wcm90ZWluIG7DoG8gZ+G6r24gY2jhu6cgeeG6v3UgduG7m2kgVkxETCB2w6AgTERMLCDEkcaw4bujYyB4ZW0gbMOgIHnhur91IHThu5EgZ8OieSB4xqEgduG7r2EgxJHhu5luZyBt4bqhY2g/CkEuIEFwb0EtSQpCLiBBcG9BLUlJCkMuIEFwb0IKRC4gQXBvRQrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbsOqdSByw7U6ICJBcG8gQiArIGNob2xlc3Rlcm9sIGfhuq9uIHbhu5tpIFZMREwgdsOgIExETCA9IHnhur91IHThu5EgZ8OieSBYVsSQTSIuIEFwb0IgKGPhu6UgdGjhu4MgbMOgIEFwb0ItMTAwKSBsw6AgcHJvdGVpbiBj4bqldSB0csO6YyBjaMOtbmggY+G7p2EgVkxETCB2w6AgTERMLCBj4bqnbiB0aGnhur90IGNobyB2aeG7h2MgZ+G6r24gY8OhYyBsaXBvcHJvdGVpbiBuw6B5IHbDoG8gcmVjZXB0b3IgY+G7p2EgdOG6vyBiw6BvLgoKQ8OidSAxMC4gVOG7tyBz4buRIEFwb0EvQXBvQiDEkcaw4bujYyBz4butIGThu6VuZyDEkeG7gyDEkcOhbmggZ2nDoSBuZ3V5IGPGoSB4xqEgduG7r2EgxJHhu5luZyBt4bqhY2guIE3hu5l0IHThu7cgc+G7kSB0aOG6pXAgKDwxLDUpIHBo4bqjbiDDoW5oIMSRaeG7gXUgZ8OsLCBuZ2F5IGPhuqMga2hpIG7hu5NuZyDEkeG7mSBjaG9sZXN0ZXJvbCB0b8OgbiBwaOG6p24gYsOsbmggdGjGsOG7nW5nPwpBLiBT4buxIGNodXnhu4NuIGjDs2EgdsOgIMSRw6BvIHRo4bqjaSBjaG9sZXN0ZXJvbCB04buRdApCLiBT4buxIGLDoGkgeHXhuqV0IGNob2xlc3Rlcm9sIGvDqW0gdsOgIG5ndXkgY8ahIOG7qSDEkeG7jW5nIGNob2xlc3Rlcm9sIOG7nyBtw7Qgbmdv4bqhaSB2aQpDLiBOZ3V5IGPGoSBt4bqvYyBi4buHbmggZ2FuIGPhuqVwIHTDrW5oCkQuIFTDrG5oIHRy4bqhbmcgc3V5IGRpbmggZMaw4buhbmcgbuG6t25nCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBBcG9BIGzDoCB0aMOgbmggcGjhuqduIGPhu6dhIEhETCAoYuG6o28gduG7hyksIHRyb25nIGtoaSBBcG9CIGzDoCB0aMOgbmggcGjhuqduIGPhu6dhIFZMREwvTERMIChnw6J5IGLhu4duaCkuIFThu7cgc+G7kSBBcG9BL0Fwb0IgdGjhuqVwIGNobyB0aOG6pXkgc+G7sSBt4bqldCBjw6JuIGLhurFuZyB0aGVvIGjGsOG7m25nIGPDsyBo4bqhaTogw610IEhETCBi4bqjbyB24buHIHbDoC9ob+G6t2Mgbmhp4buBdSBMREwgZ8OieSBi4buHbmguIMSQaeG7gXUgbsOgeSBwaOG6o24gw6FuaCBz4buxIGLDoGkgeHXhuqV0IGNob2xlc3Rlcm9sIGvDqW0gdsOgIHTEg25nIG5ndXkgY8ahIFhWxJBNLCB2w6AgbsOzIGPDsyB0aOG7gyBsw6AgbeG7mXQgY2jhu4kgc+G7kSBuaOG6oXkgaMahbiBzbyB24bubaSBjaOG7iSByacOqbmcgY2hvbGVzdGVyb2wgdG/DoG4gcGjhuqduLCDEkeG6t2MgYmnhu4d0IOG7nyBuaOG7r25nIG5nxrDhu51pIGPDsyBy4buRaSBsb+G6oW4gbGlwaWQgbcOhdSBt4bupYyDEkeG7mSBuaOG6uS4KCkPDonUgMTEuIExpcG9wcm90ZWluIG7DoG8gY8OzIHThu7cgbOG7hyBwaOG6p24gdHLEg20gcHJvdGVpbiBjYW8gbmjhuqV0IHRyb25nIHRow6BuaCBwaOG6p24gY+G6pXUgdOG6oW8/CkEuIENoeWxvbWljcm9uCkIuIFZMREwKQy4gTERMCkQuIEhETArEkMOhcCDDoW46IEQKR2nhuqNpIHRow61jaDogVGhlbyB0aMOgbmggcGjhuqduIGPhuqV1IHThuqFvIMSRxrDhu6NjIG3DtCB04bqjLCBIREwgY2jhu6lhIGtob+G6o25nIDQwJSBwcm90ZWluLCBjYW8gaMahbiBuaGnhu4F1IHNvIHbhu5tpIENoeWxvbWljcm9uICgyJSksIFZMREwgKDEzJSksIHbDoCBMREwgKDI1JSkuIFThu7cgbOG7hyBwcm90ZWluIGNhbyBnw7NwIHBo4bqnbiBsw6BtIGNobyBIREwgY8OzIHThu7cgdHLhu41uZyBjYW8gbmjhuqV0LgoKQ8OidSAxMi4gTeG7mXQgbeG6q3UgaHV54bq/dCB0xrDGoW5nIMSRxrDhu6NjIMSR4buDIOG7nyA04oiYQyB0cm9uZyAyNCBnaeG7nS4gUXVhbiBzw6F0IHRo4bqleSBjw7MgbeG7mXQgbOG7m3Aga2VtIHRy4bqvbmcgbuG7lWkgbMOqbiB0csOqbiBi4buBIG3hurd0LCBwaOG6p24gZOG7i2NoIGLDqm4gZMaw4bubaSB0cm9uZy4gVMOsbmggdHLhuqFuZyBuw6B5IGfhu6NpIMO9IHPhu7EgdMSDbmcgY2FvIGPhu6dhIGxv4bqhaSBsaXBvcHJvdGVpbiBuw6BvPwpBLiBDaOG7iSB0xINuZyBWTERMCkIuIENo4buJIHTEg25nIENoeWxvbWljcm9uCkMuIFTEg25nIGPhuqMgQ2h5bG9taWNyb24gdsOgIFZMREwKRC4gQ2jhu4kgdMSDbmcgTERMCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBDaHlsb21pY3JvbiBsw6AgY8OhYyBo4bqhdCBsaXBvcHJvdGVpbiBs4bubbiBuaOG6pXQgdsOgIGPDsyB04bu3IHRy4buNbmcgdGjhuqVwIG5o4bqldCwgY2jhu6lhIG5oaeG7gXUgdHJpZ2x5Y2VyaWQgbmdv4bqhaSBzaW5oLiBEbyB04bu3IHRy4buNbmcgcuG6pXQgdGjhuqVwLCBjaMO6bmcgc+G6vSBu4buVaSBsw6puIHRyw6puIGLhu4EgbeG6t3QgaHV54bq/dCB0xrDGoW5nIHThuqFvIHRow6BuaCBt4buZdCBs4bubcCBrZW0gdHLhuq9uZyBraGkgxJHhu4MgecOqbi4gTuG6v3UgcGjhuqduIGThu4tjaCBiw6puIGTGsOG7m2kgdHJvbmcsIMSRaeG7gXUgxJHDsyBjaG8gdGjhuqV5IG7hu5NuZyDEkeG7mSBWTERMIChnw6J5IMSR4bulYyDEkeG7gXUpIGtow7RuZyB0xINuZyDEkcOhbmcga+G7gy4KCkPDonUgMTMuIFZMREwgKFZlcnkgTG93IERlbnNpdHkgTGlwb3Byb3RlaW4pIGNo4bunIHnhur91IMSRxrDhu6NjIHThu5VuZyBo4bujcCDhu58gxJHDonUgdsOgIGPDsyBjaOG7qWMgbsSDbmcgY2jDrW5oIGzDoCBnw6w/CkEuIFJ14buZdCwgduG6rW4gY2h1eeG7g24gdHJpZ2x5Y2VyaWQgbmdv4bqhaSBzaW5oCkIuIEdhbiwgduG6rW4gY2h1eeG7g24gdHJpZ2x5Y2VyaWQgbuG7mWkgc2luaApDLiBNw6F1LCB24bqtbiBjaHV54buDbiBjaG9sZXN0ZXJvbCDEkeG6v24gbcO0CkQuIE3DtCBt4buhLCBk4buxIHRy4buvIGxpcGlkCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBWTERMIMSRxrDhu6NjIHThuqFvIHRow6BuaCBjaOG7pyB54bq/dSDhu58gdOG6vyBiw6BvIGdhbi4gQ2jhu6ljIG7Eg25nIGNow61uaCBj4bunYSBuw7MgbMOgIMSRw7NuZyBnw7NpIHbDoCB24bqtbiBjaHV54buDbiB0cmlnbHljZXJpZCDEkcaw4bujYyB04buVbmcgaOG7o3AgdOG6oWkgZ2FuICh0cmlnbHljZXJpZCBu4buZaSBzaW5oKSB2w6BvIG3DoXUgdHXhuqduIGhvw6BuIMSR4buDIGN1bmcgY+G6pXAgY2hvIGPDoWMgbcO0IGtow6FjLgoKQ8OidSAxNC4gTERMIChMb3cgRGVuc2l0eSBMaXBvcHJvdGVpbikgxJHGsOG7o2MgaMOsbmggdGjDoG5oIGNo4bunIHnhur91IHThu6sgcXXDoSB0csOsbmggbsOgbz8KQS4gVOG7lW5nIGjhu6NwIHRy4buxYyB0aeG6v3AgdOG6oWkgZ2FuCkIuIEjhuqVwIHRodSB04burIHJ14buZdCBzYXUgYuG7r2EgxINuCkMuIFRob8OhaSBow7NhIGPhu6dhIFZMREwgdHJvbmcgaOG7hyB0deG6p24gaG/DoG4KRC4gVGhvw6FpIGjDs2EgY+G7p2EgSERMIHRyb25nIGjhu4cgdHXhuqduIGhvw6BuCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBMREwgbMOgIHPhuqNuIHBo4bqpbSBjdeG7kWkgY8O5bmcgY+G7p2EgY2h14buXaSBjaHV54buDbiBow7NhIFZMREwuIFRyb25nIG3DoXUsIFZMREwgYuG7iyBlbnp5bWUgbGlwb3Byb3RlaW4gbGlwYXNlIChMUEwpIHRo4buneSBwaMOibiwgbeG6pXQgZOG6p24gdHJpZ2x5Y2VyaWQgdsOgIGNodXnhu4NuIHRow6BuaCBJREwgKGxpcG9wcm90ZWluIHThu7cgdHLhu41uZyB0cnVuZyBnaWFuKSwgc2F1IMSRw7MgdGnhur9wIHThu6VjIGNodXnhu4NuIGjDs2EgdGjDoG5oIExETC4KCkPDonUgMTUuIFPhu7Ega2jDoWMgYmnhu4d0IGPGoSBi4bqjbiB24buBIHRow6BuaCBwaOG6p24gbGlwaWQgZ2nhu69hIENoeWxvbWljcm9uIHbDoCBWTERMIHNvIHbhu5tpIExETCB2w6AgSERMIGzDoCBnw6w/CkEuIENNIHbDoCBWTERMIGdpw6B1IGNob2xlc3Rlcm9sLCB0cm9uZyBraGkgTERMIHbDoCBIREwgZ2nDoHUgdHJpZ2x5Y2VyaWQKQi4gQ00gdsOgIFZMREwgZ2nDoHUgdHJpZ2x5Y2VyaWQsIHRyb25nIGtoaSBMREwgdsOgIEhETCBnacOgdSBjaG9sZXN0ZXJvbCAodMawxqFuZyDEkeG7kWkpCkMuIFThuqV0IGPhuqMgxJHhu4F1IGPDsyB0aMOgbmggcGjhuqduIGxpcGlkIHTGsMahbmcgdOG7sSBuaGF1CkQuIENNIHbDoCBWTERMIGPDsyBuZ3Xhu5NuIGfhu5FjIG5nb+G6oWkgc2luaCwgTERMIHbDoCBIREwgY8OzIG5ndeG7k24gZ+G7kWMgbuG7mWkgc2luaArEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogQ2jhu6ljIG7Eg25nIGNow61uaCBj4bunYSBDTSB2w6AgVkxETCBsw6AgduG6rW4gY2h1eeG7g24gdHJpZ2x5Y2VyaWQsIGRvIMSRw7MgdGjDoG5oIHBo4bqnbiB0cmlnbHljZXJpZCBjaGnhur9tIHThu7cgbOG7hyBy4bqldCBjYW8gKENNOiA4NiUsIFZMREw6IDQ5JSkuIE5nxrDhu6NjIGzhuqFpLCBMREwgbMOgIHBoxrDGoW5nIHRp4buHbiB24bqtbiBjaHV54buDbiBjaG9sZXN0ZXJvbCBjaMOtbmggxJHhur9uIG3DtCAoY2hvbGVzdGVyb2wgY2hp4bq/bSA0NCUpLCB2w6AgSERMIGPFqW5nIGNo4bupYSBt4buZdCBsxrDhu6NuZyBjaG9sZXN0ZXJvbCDEkcOhbmcga+G7gyAoMjAlKSB0cm9uZyBxdcOhIHRyw6xuaCB24bqtbiBjaHV54buDbiBuZ8aw4bujYyB24buBIGdhbi4KCk3hu6VjIDEuMzogQmlsYW4gTGlwaWQgdsOgIFBow6JuIFThuqduZyBOZ3V5IEPGoQpDw6J1IDE2LiAoQ2EgbMOibSBzw6BuZykgTeG7mXQgYuG7h25oIG5ow6JuIG5hbSA1NSB0deG7lWksIGtow7RuZyBjw7MgdHJp4buHdSBjaOG7qW5nLCDEkWkga2jDoW0gc+G7qWMga2jhu49lIMSR4buLbmgga+G7syBjw7Mga+G6v3QgcXXhuqMgeMOpdCBuZ2hp4buHbSBsaXBpZCBtw6F1IG5oxrAgc2F1OiBDaG9sZXN0ZXJvbCB0b8OgbiBwaOG6p24gKFRDKTogMjUwIG1nL2RMICg2LDUgbW1vbC9MKSwgSERMLUM6IDM1IG1nL2RMICgwLDkgbW1vbC9MKSwgTERMLUM6IDE3MCBtZy9kTCAoNCw0IG1tb2wvTCksIFRyaWdseWNlcmlkIChURyk6IDIyNSBtZy9kTCAoMiw1IG1tb2wvTCkuIFRoZW8ga2h1eeG6v24gY8OhbyBj4bunYSBBVFAgSUlJIChC4bqjbmcgOS40KSwgY2jhu4kgc+G7kSBuw6BvIGPhu6dhIGLhu4duaCBuaMOibiBuw6B5IMSR4bq3dCDDtG5nIHbDoG8gbeG7qWMgIk5ndXkgY8ahIGNhbyIgaG/hurdjICJS4bqldCBjYW8iPwpBLiBDaOG7iSBjw7MgTERMLUMKQi4gQ2jhu4kgY8OzIFRyaWdseWNlcmlkCkMuIEPhuqMgTERMLUMgdsOgIEhETC1DCkQuIEPhuqMgTERMLUMsIEhETC1DIHbDoCBUcmlnbHljZXJpZArEkMOhcCDDoW46IEQKR2nhuqNpIHRow61jaDogROG7sWEgdsOgbyBC4bqjbmcgOS40IChBVFAgSUlJKToKTERMLUM6IDE3MCBtZy9kTCBsw6Ag4omlMTYwIG1nL2RMLCB0aHXhu5ljIG3hu6ljICJOZ3V5IGPGoSAoY2FvIHbDoCBy4bqldCBjYW8pIi4KSERMLUM6IDM1IG1nL2RMIGzDoCA8NDAgbWcvZEwsIHRodeG7mWMgbeG7qWMgIk5ndXkgY8ahIi4KVHJpZ2x5Y2VyaWQ6IDIyNSBtZy9kTCBsw6Ag4omlMjAwIG1nL2RMLCB0aHXhu5ljIG3hu6ljICJOZ3V5IGPGoSAoY2FvIHbDoCBy4bqldCBjYW8pIi4KRG8gxJHDsywgY+G6oyBiYSBjaOG7iSBz4buRIG7DoHkgxJHhu4F1IGNobyB0aOG6pXkgYuG7h25oIG5ow6JuIGPDsyBuZ3V5IGPGoSB0aW0gbeG6oWNoIGNhby4KQ8OidSAxNy4gVGhlbyBBVFAgSUlJLCBu4buTbmcgxJHhu5kgTERMLWNob2xlc3Rlcm9sIMSRxrDhu6NjIGNvaSBsw6AgIlThu5F0IiAodOG7kWkgxrB1IHbDoCBn4bqnbiB04buRaSDGsHUpIGtoaSDhu58gbeG7qWMgbsOgbz8KQS4gPDEwMCBtZy9kTCAoPDIsNiBtbW9sL0wpCkIuIDwxMzAgbWcvZEwgKDwzLDQgbW1vbC9MKQpDLiA8MTYwIG1nL2RMICg8NCwyIG1tb2wvTCkKRC4gPDIwMCBtZy9kTCAoPDUsMiBtbW9sL0wpCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBC4bqjbmcgOS40IHBow6JuIGxv4bqhaSBt4bupYyBMREwtQyA8MTMwIG1nL2RMICg8Myw0IG1tb2wvTCkgbMOgICJU4buRdCAodOG7kWkgxrB1IHbDoCBn4bqnbiB04buRaSDGsHUpIi4gTeG7qWMgbsOgeSBiYW8gZ+G7k20gY+G6oyBt4bupYyB04buRaSDGsHUgKDwxMDAgbWcvZEwpIHbDoCBn4bqnbiB04buRaSDGsHUgKDEwMC0xMjkgbWcvZEwpLgoKQ8OidSAxOC4gVOG7tyBz4buRIENob2xlc3Rlcm9sIHRvw6BuIHBo4bqnbiAoVEMpIC8gSERMLWNob2xlc3Rlcm9sIGPDsyDDvSBuZ2jEqWEgdHJvbmcgxJHDoW5oIGdpw6Egbmd1eSBjxqEgWFbEkE0uIFThu7cgc+G7kSBuw6B5IG7Dqm4g4bufIG3hu6ljIG7DoG8gxJHhu4MgxJHGsOG7o2MgY29pIGzDoCB04buRdCBuaOG6pXQ/CkEuID42CkIuIEtob+G6o25nIDUKQy4gPDQKRC4gS2jDtG5nIGPDsyBnacOhIHRy4buLIHRoYW0ga2jhuqNvCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBjw7MgxJHhu4EgY+G6rXA6ICJU4bu3IHPhu5EgY2hvbGVzdGVyb2wgdG/DoG4gcGjhuqduIChUQykvSERMLWNob2xlc3Rlcm9sIGPFqW5nIMSRxrDhu6NjIGzGsHUgw70sIHThu7cgc+G7kSBuw6B5IDwgNCBsw6AgdOG7kXQgbmjhuqV0LCB04bu3IHPhu5EgY8OgbmcgY2FvIHRow6wga2jhuqMgbsSDbmcgYuG7iyBYVsSQTSBjw6BuZyBs4bubbiIuCgpDw6J1IDE5LiAoQ2EgbMOibSBzw6BuZykgTeG7mXQgcGjhu6UgbuG7ryA0NSB0deG7lWksIG3Do24ga2luaCwgxJHGsOG7o2MgY2jhuqluIMSRb8OhbiB0xINuZyBjaG9sZXN0ZXJvbCBtw6F1IHbhu5tpIFRDIGzDoCAyODAgbWcvZEwuIE5nb8OgaSB2aeG7h2MgdMawIHbhuqVuIGNo4bq/IMSR4buZIMSDbiB2w6AgbOG7kWkgc+G7kW5nLCB4w6l0IG5naGnhu4dtIG7DoG8gc2F1IMSRw6J5IGzDoCBxdWFuIHRy4buNbmcgbmjhuqV0IGPhuqduIGzDoG0gxJHhu4MgxJHDoW5oIGdpw6EgY8OhYyBuZ3V5w6puIG5ow6JuIHRo4bupIHBow6F0IGfDonkgdMSDbmcgY2hvbGVzdGVyb2wgbcOhdT8KQS4gTWVuIGdhbiAoQVNULCBBTFQpCkIuIENo4bupYyBuxINuZyB0dXnhur9uIGdpw6FwIChUU0gpCkMuIEPDtG5nIHRo4bupYyBtw6F1CkQuIMSQaeG7h24gdMOibSDEkeG7kwrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbGnhu4d0IGvDqiBjw6FjIG5ndXnDqm4gbmjDom4gZ8OieSB0xINuZyBjaG9sZXN0ZXJvbCBtw6F1IHRo4bupIHBow6F0LCB0cm9uZyDEkcOzIGPDsyAidGhp4buDdSBuxINuZyB0dXnhur9uIGdpw6FwIi4gU3V5IGdpw6FwIGzDoCBt4buZdCBuZ3V5w6puIG5ow6JuIHBo4buVIGJp4bq/biBnw6J5IHTEg25nIExETC1jaG9sZXN0ZXJvbC4gRG8gxJHDsywgeMOpdCBuZ2hp4buHbSBUU0ggxJHhu4MgxJHDoW5oIGdpw6EgY2jhu6ljIG7Eg25nIHR1eeG6v24gZ2nDoXAgbMOgIG3hu5l0IGLGsOG7m2MgY+G7sWMga+G7syBxdWFuIHRy4buNbmcgdHJvbmcgcXXDoSB0csOsbmggY2jhuqluIMSRb8OhbiBt4buZdCBi4buHbmggbmjDom4gbeG7m2kgYuG7iyB0xINuZyBjaG9sZXN0ZXJvbCBtw6F1LgoKQ8OidSAyMC4gTuG7k25nIMSR4buZIFRyaWdseWNlcmlkIGh1eeG6v3QgdMawxqFuZyBy4bqldCBjYW8gKHbDrSBk4bulID4xMDAwIG1nL2RMIGhheSDiiYgxMSwzIG1tb2wvTCkgY8OzIHRo4buDIGThuqtuIMSR4bq/biBiaeG6v24gY2jhu6luZyBj4bqlcCB0w61uaCBuw6BvPwpBLiBOaOG7k2kgbcOhdSBjxqEgdGltCkIuIFRhaSBiaeG6v24gbeG6oWNoIG3DoXUgbsOjbwpDLiBWacOqbSB04buleSBj4bqlcApELiBTdXkgdGjhuq1uIGPhuqVwCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBuw6p1IHLDtTogIk7hu5NuZyDEkeG7mSBURyBodXnhur90IHTGsMahbmcgPjExLjMgbW1vbC9MICjiiYgxMDAwIG1nL2RMKSBjw7MgdGjhu4MgZOG6q24gdOG7m2kgdmnDqm0gdOG7pXkgY+G6pXAiLiDEkMOieSBsw6AgbeG7mXQgYmnhur9uIGNo4bupbmcgbmd1eSBoaeG7g20gY+G6p24gxJHGsOG7o2Mgbmjhuq1uIGJp4bq/dCB2w6AgeOG7rSB0csOtIGvhu4twIHRo4budaS4KCkPDonUgMjEuIFRoZW8gIkjhu5lpIHjGoSB24buvYSDEkeG7mW5nIG3huqFjaCBjaMOidSDDgnUiIChC4bqjbmcgOS4zKSwgbeG7mXQgbmfGsOG7nWkgY8OzIENob2xlc3Rlcm9sIHRvw6BuIHBo4bqnbiAoVEMpIHRyb25nIGtob+G6o25nIDUsMi03LDggbW1vbC9MICgyMDAtMzAwIG1nL2RMKSDEkcaw4bujYyBjb2kgbMOgIGPDsyBy4buRaSBsb+G6oW4gY2h1eeG7g24gaMOzYSBsaXBpZCBu4bq/dSBjw7MgdGjDqm0gxJFp4buBdSBraeG7h24gbsOgbyBzYXUgxJHDonk/CkEuIFRyaWdseWNlcmlkID4yLDMgbW1vbC9MCkIuIEhETC1jaG9sZXN0ZXJvbCA8MCw5IG1tb2wvTCAoMzUgbWcvZEwpCkMuIFR14buVaSB0csOqbiA1MApELiBDw7MgdGnhu4FuIHPhu60gZ2lhIMSRw6xuaCBi4buLIGLhu4duaCB0aW0gbeG6oWNoCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBC4bqjbmcgOS4zIGNo4buJIHLDtSwga2hpIFRDIOG7nyBt4bupYyBnaeG7m2kgaOG6oW4gY2FvICg1LDItNyw4IG1tb2wvTCksIHTDrG5oIHRy4bqhbmcgbsOgeSDEkcaw4bujYyB4w6FjIMSR4buLbmggbMOgICJDw7MiIHLhu5FpIGxv4bqhbiBjaHV54buDbiBow7NhIGxpcGlkIG7hur91IEhETC1jaG9sZXN0ZXJvbCB0aOG6pXAgKDwwLDkgbW1vbC9MKS4gxJBp4buBdSBuw6B5IG5o4bqlbiBt4bqhbmggdOG6p20gcXVhbiB0cuG7jW5nIGPhu6dhIEhETC1DIHRyb25nIHZp4buHYyBwaMOibiB04bqnbmcgbmd1eSBjxqEsIG5nYXkgY+G6oyBraGkgVEMga2jDtG5nIHTEg25nIHF1w6EgY2FvLgoKQ8OidSAyMi4gTuG7k25nIMSR4buZIEhETC1jaG9sZXN0ZXJvbCDEkcaw4bujYyDEkcOhbmggZ2nDoSBsw6AgIkNhbyIgKGPDsyB0w61uaCBi4bqjbyB24buHKSB0aGVvIEFUUCBJSUkga2hpIOG7nyBt4bupYyBuw6BvPwpBLiA+NDAgbWcvZEwgKD4xLDAgbW1vbC9MKQpCLiA+NTAgbWcvZEwgKD4xLDMgbW1vbC9MKQpDLiA+NjAgbWcvZEwgKD4xLDYgbW1vbC9MKQpELiA+ODAgbWcvZEwgKD4yLDEgbW1vbC9MKQrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogQuG6o25nIDkuNCBjaG8gdGjhuqV5IG3hu6ljIEhETC1DID42MCBtZy9kTCAoPjEsNiBtbW9sL0wpIMSRxrDhu6NjIMSRw6FuaCBnacOhIGzDoCAiQ2FvIiwgxJHDonkgbMOgIG3hu5l0IHnhur91IHThu5EgdGnDqm4gbMaw4bujbmcgdOG7kXQsIGdpw7pwIGdp4bqjbSBuZ3V5IGPGoSB0aW0gbeG6oWNoLgoKQ8OidSAyMy4gWeG6v3UgdOG7kSBuw6BvIHNhdSDEkcOieSBLSMOUTkcgcGjhuqNpIGzDoCBuZ3V5w6puIG5ow6JuIGfDonkgdMSDbmcgY2hvbGVzdGVyb2wgbcOhdSB0aOG7qSBwaMOhdCDEkcaw4bujYyBsaeG7h3Qga8OqIHRyb25nIHTDoGkgbGnhu4d1PwpBLiDEkMOhaSB0aMOhbyDEkcaw4budbmcKQi4gVGhp4buDdSBuxINuZyB0dXnhur9uIGdpw6FwCkMuIFRo4bqtbiBoxrAgbmhp4buFbSBt4buhCkQuIEPGsOG7nW5nIG7Eg25nIHR1eeG6v24gZ2nDoXAKxJDDoXAgw6FuOiBECkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IGxp4buHdCBrw6ogY8OhYyBuZ3V5w6puIG5ow6JuIHTEg25nIGNob2xlc3Rlcm9sIG3DoXUgdGjhu6kgcGjDoXQgYmFvIGfhu5NtIMSRw6FpIHRow6FvIMSRxrDhu51uZywgdGhp4buDdSBuxINuZyB0dXnhur9uIGdpw6FwLCBi4buHbmggdGjhu5FuZyBwaG9uZywgdmnDqm0gdOG7pXksIHbDoCB0aOG6rW4gaMawIG5oaeG7hW0gbeG7oS4gQ8aw4budbmcgbsSDbmcgdHV54bq/biBnacOhcCAoaHlwZXJ0aHlyb2lkaXNtKSB0aMaw4budbmcgZ8OieSBnaeG6o20gY2hvbGVzdGVyb2wgbcOhdSBkbyB0xINuZyBjaHV54buDbiBow7NhLCBjaOG7qSBraMO0bmcgcGjhuqNpIHTEg25nLgoKQ8OidSAyNC4gKENhIGzDom0gc8OgbmcpIE3hu5l0IGLhu4duaCBuaMOibiBuYW0gNjAgdHXhu5VpIGPDsyBr4bq/dCBxdeG6oyBiaWxhbiBsaXBpZDogVEMgMTkwIG1nL2RMLCBIREwtQyA1MCBtZy9kTCwgTERMLUMgMTIwIG1nL2RMLCBURyAxMDAgbWcvZEwuIFR1eSBuaGnDqm4sIHThu7cgc+G7kSBBcG9BL0Fwb0IgY+G7p2Egw7RuZyBsw6AgMSwxLiBOaOG6rW4gxJHhu4tuaCBuw6BvIHNhdSDEkcOieSBsw6AgcGjDuSBo4bujcCBuaOG6pXQ/CkEuIELhu4duaCBuaMOibiBob8OgbiB0b8OgbiBraMO0bmcgY8OzIG5ndXkgY8ahIFhWxJBNIHbDrCBjw6FjIGNo4buJIHPhu5EgbGlwaWQgxJHhu4F1IHThu5F0LgpCLiBC4buHbmggbmjDom4gY8OzIG5ndXkgY8ahIFhWxJBNIHRp4buBbSDhuqluIGRvIHThu7cgc+G7kSBBcG9BL0Fwb0IgdGjhuqVwLCBj4bqnbiB0xrAgduG6pW4gdGhheSDEkeG7lWkgbOG7kWkgc+G7kW5nLgpDLiBD4bqnbiBsw6BtIGzhuqFpIHjDqXQgbmdoaeG7h20gdsOsIGvhur90IHF14bqjIEFwb0EvQXBvQiBtw6J1IHRodeG6q24gduG7m2kgY8OhYyBjaOG7iSBz4buRIGtow6FjLgpELiBC4buHbmggbmjDom4gY+G6p24gZMO5bmcgdGh14buRYyBo4bqhIGxpcGlkIG3DoXUgbmdheSBs4bqtcCB04bupYy4KxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IE3hurdjIGTDuSBjw6FjIGNo4buJIHPhu5EgbGlwaWQgY+G7lSDEkWnhu4NuIChUQywgTERMLUMsIEhETC1DLCBURykgxJHhu4F1IG7hurFtIHRyb25nIGdp4bubaSBo4bqhbiAiVOG7kXQiIGhv4bq3YyAiQsOsbmggdGjGsOG7nW5nIiB0aGVvIEFUUCBJSUksIHThu7cgc+G7kSBBcG9BL0Fwb0IgY+G7p2EgYuG7h25oIG5ow6JuIGzDoCAxLDEsIHRo4bqlcCBoxqFuIG3hu6ljIGtodXnhur9uIGPDoW8gbMOgIOKJiDEsNS4gVMOgaSBsaeG7h3UgbmjhuqVuIG3huqFuaCBy4bqxbmcgc+G7sSB0aGF5IMSR4buVaSBj4bunYSBBcG9BIHbDoCBBcG9CIHbhuqtuIGPDsyDDvSBuZ2jEqWEgbmdheSBj4bqjIGtoaSBu4buTbmcgxJHhu5kgY2hvbGVzdGVyb2wgaHV54bq/dCB0xrDGoW5nIGLDrG5oIHRoxrDhu51uZy4gVOG7tyBz4buRIHRo4bqlcCBuw6B5IGNobyB0aOG6pXkgc+G7sSBt4bqldCBjw6JuIGLhurFuZyBnaeG7r2EgY8OhYyBsaXBvcHJvdGVpbiBi4bqjbyB24buHIHbDoCBnw6J5IGjhuqFpLCBwaOG6o24gw6FuaCBt4buZdCBuZ3V5IGPGoSB0aeG7gW0g4bqpbiB2w6AgY+G6p24gY8OzIHPhu7EgY2FuIHRoaeG7h3AsIMOtdCBuaOG6pXQgbMOgIHbhu4EgY2jhur8gxJHhu5kgxINuIHbDoCBs4buRaSBz4buRbmcuCgpDw6J1IDI1LiDhu54gbmfGsOG7nWkgdHLDqm4gMzAgdHXhu5VpIHbDoCBraMO0bmcgY8OzIHnhur91IHThu5Egbmd1eSBjxqEgcsO1IHLhu4d0LCB04bqnbiBzdeG6pXQga2nhu4NtIHRyYSBjw6FjIHRow7RuZyBz4buRIGxpcGlkIG3DoXUgKFRHLCBUQywgSERMLUMsIExETC1DLCBBcG9BLCBBcG9CKSDEkcaw4bujYyBraHV54bq/biBjw6FvIGzDoCBiYW8gbMOidSBt4buZdCBs4bqnbj8KQS4gTeG7l2kgNiB0aMOhbmcKQi4gTeG7l2kgbsSDbQpDLiBN4buXaSAyLTMgbsSDbQpELiBN4buXaSA1IG7Eg20KxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IGtodXnhur9uIGPDoW86ICLhu54gdHXhu5VpID4zMDogc2F1IG3hu5dpIDItMyBuxINtIGPhuqduIGtp4buDbSB0cmEgY8OhYyB0aMO0bmcgc+G7kSB0csOqbiAxIGzhuqduLiIuCgpDw6J1IDI2LiBO4buTbmcgxJHhu5kgY2hvbGVzdGVyb2wgaHV54bq/dCB0xrDGoW5nIHRo4bqlcCAoPDIgbW1vbC9MKSBjw7MgdGjhu4MgbMOgIGThuqV1IGhp4buHdSBj4bunYSBi4buHbmggbMO9IG7DoG8/CkEuIFN1eSBnaeG6o20gY2h1eeG7g24gaMOzYSBj4bunYSB04bq/IGLDoG8gZ2FuCkIuIFTEg25nIG7Eg25nIHR1eeG6v24gZ2nDoXAKQy4gxJDDoWkgdGjDoW8gxJHGsOG7nW5nIHR5cGUgMQpELiBI4buZaSBjaOG7qW5nIEN1c2hpbmcKxJDDoXAgw6FuOiBBCkdp4bqjaSB0aMOtY2g6IE3hurdjIGTDuSB0xINuZyBjaG9sZXN0ZXJvbCBsw6AgduG6pW4gxJHhu4EgcGjhu5UgYmnhur9uLCBjaG9sZXN0ZXJvbCBxdcOhIHRo4bqlcCBjxaluZyBjw7Mgw70gbmdoxKlhIGLhu4duaCBsw70uIFTDoGkgbGnhu4d1IGdoaSBuaOG6rW46ICJDaG9sZXN0ZXJvbCBodXnhur90IHTGsMahbmcgPDIgbW1vbC9MIGzDoCBk4bqldSBoaeG7h3UgY+G7p2Egc+G7sSBzdXkgZ2nhuqNtIGNodXnhu4NuIGjDs2EgY+G7p2EgdOG6vyBiw6BvIGdhbiIuCgpDw6J1IDI3LiBUaGVvIEFUUCBJSUksIG3hu6ljIFRyaWdseWNlcmlkIG7DoG8gxJHGsOG7o2MgY29pIGzDoCDhu58gIkdp4bubaSBo4bqhbiBjYW8iPwpBLiAxNTAtMTk5IG1nL2RMICgxLDctMiwzIG1tb2wvTCkKQi4gMjAwLTIzOSBtZy9kTCAoMiwzLTIsNyBtbW9sL0wpCkMuIDwgMTUwIG1nL2RMICg8IDEsNyBtbW9sL0wpCkQuID4gNTAwIG1nL2RMICg+IDUsNiBtbW9sL0wpCsSQw6FwIMOhbjogQQpHaeG6o2kgdGjDrWNoOiBC4bqjbmcgOS40IHBow6JuIGxv4bqhaSBt4bupYyBURyB04burIDE1MC0xOTkgbWcvZEwgKDEsNy0yLDMgbW1vbC9MKSBsw6AgIkdp4bubaSBo4bqhbiBjYW8iLiBN4bupYyBuw6B5IGNoxrBhIHBo4bqjaSBsw6Agbmd1eSBjxqEgY2FvIG5oxrBuZyDEkcOjIGPhuqduIGNow7ogw70gY2FuIHRoaeG7h3AgbOG7kWkgc+G7kW5nLgoKQ8OidSAyOC4gVmnhu4djIHPhu60gZOG7pW5nIHRodeG7kWMgdHLDoW5oIHRoYWkgxJHGsOG7nW5nIHXhu5FuZyBrw6lvIGTDoGkg4bufIHBo4bulIG7hu68gY8OzIHRo4buDIOG6o25oIGjGsOG7n25nIMSR4bq/biBjaOG7iSBz4buRIGxpcGlkIG3DoXUgbsOgbz8KQS4gR8OieSBnaeG6o20gVHJpZ2x5Y2VyaWQKQi4gR8OieSB0xINuZyBUcmlnbHljZXJpZApDLiBHw6J5IHTEg25nIEhETC1jaG9sZXN0ZXJvbApELiBLaMO0bmcg4bqjbmggaMaw4bufbmcgxJHhur9uIGxpcGlkIG3DoXUKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IMSR4buBIGPhuq1wIHLhurFuZyB0xINuZyBURyBodXnhur90IHTGsMahbmcgY8OzIHRo4buDIHh14bqldCBoaeG7h24gIuG7nyBwaOG7pSBu4buvIGTDuW5nIHRodeG7kWMgdHLDoW5oIHRoYWkiLsSQw6J5IGzDoCBt4buZdCB0cm9uZyBuaOG7r25nIG5ndXnDqm4gbmjDom4gdGjhu6kgcGjDoXQgZ8OieSB0xINuZyB0cmlnbHljZXJpZC4KQ8OidSAyOS4gKENhIGzDom0gc8OgbmcpIE3hu5l0IGLhu4duaCBuaMOibiBjw7MgaHV54bq/dCB0xrDGoW5nIMSR4bulYyDEkeG7gXUgbmjGsCBz4buvYSBzYXUga2hpIG5o4buLbiDEg24gMTIgZ2nhu50uIFTDrG5oIHRy4bqhbmcgbsOgeSBn4bujaSDDvSBz4buxIHTEg25nIGNhbyBjaOG7pyB54bq/dSBj4bunYSBsb+G6oWkgbGlwb3Byb3RlaW4gbsOgbz8KQS4gQ2h5bG9taWNyb24KQi4gVkxETApDLiBMREwKRC4gSERMCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBtw7QgdOG6ozogIk7hur91IGPDsyBuaGnhu4F1IFZMREwgKHRyaWdseWNlcmlkIG7hu5lpIHNpbmgpOiBodXnhur90IHTGsMahbmcgxJHhu6VjIMSR4buBdSIuIFZMREwgbMOgIGPDoWMgaOG6oXQgbmjhu48gaMahbiBDaHlsb21pY3JvbiB2w6Aga2jDtG5nIG7hu5VpIGzDqm4gdGjDoG5oIGzhu5twIGtlbSBtw6AgcGjDom4gdMOhbiDEkeG7gXUgdHJvbmcgaHV54bq/dCB0xrDGoW5nLCBnw6J5IHJhIMSR4buZIMSR4bulYyDEkeG7k25nIG5o4bqldC4KCkPDonUgMzAuIFnhur91IHThu5EgbsOgbyBzYXUgxJHDonkgY8OzIOG6o25oIGjGsOG7n25nIGzDoG0gdMSDbmcgbuG7k25nIMSR4buZIGNob2xlc3Rlcm9sIG3DoXUgdGhlbyB0deG7lWkgdsOgIGdp4bubaT8KQS4g4bueIG5hbSwgY2hvbGVzdGVyb2wgZ2nhuqNtIGThuqduIHNhdSA0MCB0deG7lWkuCkIuIOG7niBu4buvLCBjaG9sZXN0ZXJvbCBjw7Mga2h1eW5oIGjGsOG7m25nIGNhbyBoxqFuIG5hbSBzYXUgNTAgdHXhu5VpLgpDLiBDaG9sZXN0ZXJvbCBraMO0bmcgdGhheSDEkeG7lWkgdGhlbyB0deG7lWkuCkQuIENob2xlc3Rlcm9sIOG7nyBu4buvIGx1w7RuIHRo4bqlcCBoxqFuIOG7nyBuYW0g4bufIG3hu41pIGzhu6lhIHR14buVaS4KxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IG7DqnUgcsO1OiAic2F1IDQwIHR14buVaSwgY2hvbGVzdGVyb2wgdMSDbmcga2hv4bqjbmcgMCwwNCBtbW9sIGNobyBt4buXaSB0deG7lWkg4bufIG5hbSB2w6AgMCwyNSBtbW9sIGNobyBt4buXaSB0deG7lWkg4bufIG7hu68sIHRyw6puIDUwIHR14buVaSwgY2hvbGVzdGVyb2wg4bufIG7hu68gY8OzIGtodXluaCBoxrDhu5tuZyBjYW8gaMahbiDhu58gbmFtIi4KCkPDonUgMzEuIFZhaSB0csOyIGPhu6dhIGVuenltZSBMQ0FUIChsZWNpdGhpbiBjaG9sZXN0ZXJvbCBhY3lsIHRyYW5zZmVyYXNlKSB0cm9uZyBjaHV54buDbiBow7NhIGxpcG9wcm90ZWluIGzDoCBnw6w/CkEuIFRo4buneSBwaMOibiB0cmlnbHljZXJpZCB0cm9uZyBWTERMCkIuIFjDumMgdMOhYyBjaHV54buDbiBIREwgbeG7m2kgc2luaCB0aMOgbmggSERMIHRyxrDhu59uZyB0aMOgbmggKEhETDMsIEhETDIpCkMuIEdpw7pwIExETCBn4bqvbiB2w6BvIHJlY2VwdG9yIHThur8gYsOgbwpELiBU4buVbmcgaOG7o3AgY2hvbGVzdGVyb2wgdOG6oWkgZ2FuCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSDEkeG7gSBj4bqtcCBy4bqxbmcgSERMIMSRxrDhu6NjIGdp4bqjaSBwaMOzbmcgZMaw4bubaSBk4bqhbmcgSERMIG3hu5tpIHNpbmgsIHLhu5NpIGNodXnhu4NuIHRow6BuaCBIREwzIC0gSERMMiAibmjhu50geMO6YyB0w6FjIGPhu6dhIExDQVQgKGxlY2l0aGluIGNob2xlc3Rlcm9sIGFjeWwgdHJhbnNmZXJhc2UpIi4gRW56eW1lIG7DoHkgZXN0ZXIgaMOzYSBjaG9sZXN0ZXJvbCB04buxIGRvIHRyw6puIGLhu4EgbeG6t3QgSERMLCBnacO6cCBIREwgY8OzIGto4bqjIG7Eg25nIHRodSBuaOG6rW4gdGjDqm0gY2hvbGVzdGVyb2wgdOG7qyBtw7Qgbmdv4bqhaSB2aS4KCkPDonUgMzIuIFRyb25nIGPDoWMgdGjDtG5nIHPhu5EgbGlwaWQgbcOhdSwgdGjDtG5nIHPhu5EgbsOgbyDEkcaw4bujYyB4ZW0gbMOgIGPDsyBnacOhIHRy4buLIGjGoW4gY2hvbGVzdGVyb2wgdG/DoG4gcGjhuqduIHRyb25nIHZp4buHYyBjaOG6qW4gxJFvw6FuIHbDoCB0aMSDbSBkw7Iga2jhuqMgbsSDbmcgYuG7iyBi4buHbmggdGltIG3huqFjaD8KQS4gQ2jhu4kgY8OzIFRyaWdseWNlcmlkCkIuIENo4buJIGPDsyBBcG9saXBvcHJvdGVpbiBCCkMuIEhETC1jaG9sZXN0ZXJvbCB2w6AgTERMLWNob2xlc3Rlcm9sCkQuIFRy4bqhbmcgdGjDoWkgaHV54bq/dCB0xrDGoW5nIGzDumMgxJHDs2kKxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IGto4bqzbmcgxJHhu4tuaDogIkhhaSB0aMO0bmcgc+G7kSB0csOqbiAoSERMLWNob2xlc3Rlcm9sIHbDoCBMREwtY2hvbGVzdGVyb2wpIGPDsyBnacOhIHRy4buLIGjGoW4gc28gduG7m2kgdGjDtG5nIHPhu5EgY2hvbGVzdGVyb2wgdG/DoG4gcGjhuqduIHRyb25nIGNo4bqpbiDEkW/DoW4gdsOgIHRoxINtIGTDsiBraOG6oyBuxINuZyBi4buLIGLhu4duaCB0aW0gbeG6oWNoIi4KCkPDonUgMzMuIE3hu5l0IGLhu4duaCBuaMOibiBjw7Mga+G6v3QgcXXhuqMgeMOpdCBuZ2hp4buHbSBUQyB2w6AgVEcgdsaw4bujdCBuZ8aw4buhbmcgYsOsbmggdGjGsOG7nW5nLiBUaGVvIHF1eSB0csOsbmggdGjEg20gZMOyIGJpbGFuIGxpcGlkLCBjw6FjIHjDqXQgbmdoaeG7h20gbsOgbyBj4bqnbiDEkcaw4bujYyBjaOG7iSDEkeG7i25oIHRp4bq/cCB0aGVvIMSR4buDIMSRw6FuaCBnacOhIHPDonUgaMahbj8KQS4gxJBp4buHbiBkaSBwcm90ZWluIGh1eeG6v3QgdMawxqFuZwpCLiBIREwtY2hvbGVzdGVyb2wsIEFwb0EgdsOgIEFwb0IKQy4gTWVuIGdhbiB2w6AgY2jhu6ljIG7Eg25nIHRo4bqtbgpELiBDw7RuZyB0aOG7qWMgbcOhdSB2w6AgdOG7kWMgxJHhu5kgbcOhdSBs4bqvbmcKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IGjGsOG7m25nIGThuqtuOiAiS2hpIGvhur90IHF14bqjIGPhu6dhIDIgdGjDtG5nIHPhu5EgbsOgeSAoVEMgdsOgIFRHKSB2xrDhu6N0IGto4buPaSB0cuG7iyBz4buRIGLDrG5oIHRoxrDhu51uZywgY+G6p24gcGjhuqNpIHjDqXQgbmdoaeG7h20gSERMLWNob2xlc3Rlcm9sIHbDoCBBcG9BLCBBcG9CIiDEkeG7gyBjw7MgY8OhaSBuaMOsbiB0b8OgbiBkaeG7h24gaMahbiB24buBIG5ndXkgY8ahIFhWxJBNLgoKQ8OidSAzNC4gWeG6v3UgdOG7kSBuw6BvIHNhdSDEkcOieSBLSMOUTkcgxJHGsOG7o2MgbGnhu4d0IGvDqiB0cm9uZyBzxqEgxJHhu5MgY8OhYyB54bq/dSB04buRIG5ndXkgY8ahIGNow61uaCBnw6J5IHjGoSB24buvYSDEkeG7mW5nIG3huqFjaCAoSMOsbmggOS4xKT8KQS4gVMSDbmcgaHV54bq/dCDDoXAKQi4gSMO6dCB0aHXhu5FjCkMuIFN0cmVzcwpELiBC4buHbmggZ2FuIG3huqFuIHTDrW5oCsSQw6FwIMOhbjogRApHaeG6o2kgdGjDrWNoOiBIw6xuaCA5LjEgbGnhu4d0IGvDqiBjw6FjIHnhur91IHThu5Egbmd1eSBjxqEgYmFvIGfhu5NtOiBLaMO0bmcgaG/huqF0IMSR4buZbmcsIMSQw6FpIHRow6FvIMSRxrDhu51uZywgVMSDbmcgdHLhu41uZywgSMO6dCB0aHXhu5FjLCBUxINuZyBodXnhur90IMOhcCwgRGkgdHJ1eeG7gW4sIFN0cmVzcywgVMSDbmcgxJHDtG5nIG3DoXUsIFTEg25nIGxpcGlkIG3DoXUsIHbDoCBS4buRaSBsb+G6oW4gdGjDoG5oIG3huqFjaC4gQuG7h25oIGdhbiBt4bqhbiB0w61uaCBraMO0bmcgxJHGsOG7o2MgdGjhu4MgaGnhu4duIG5oxrAgbeG7mXQgeeG6v3UgdOG7kSBuZ3V5IGPGoSB0cuG7sWMgdGnhur9wIHRyb25nIHPGoSDEkeG7kyBuw6B5LgoKQ8OidSAzNS4gVHJvbmcgY8ahIHRo4buDLCBjaG9sZXN0ZXJvbCBLSMOUTkcgxJHGsOG7o2Mgc+G7rSBk4bulbmcgbMOgbSBuZ3V5w6puIGxp4buHdSDEkeG7gyB04buVbmcgaOG7o3AgY2jhuqV0IG7DoG8gc2F1IMSRw6J5PwpBLiBNw6BuZyB04bq/IGLDoG8KQi4gSG9ybW9uIHN0ZXJvaWQKQy4gQWNpZCBt4bqtdApELiBBcG9saXBvcHJvdGVpbgrEkMOhcCDDoW46IEQKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbsOqdSBjaG9sZXN0ZXJvbCBsw6Agbmd1ecOqbiBsaeG7h3UgxJHhu4MgInjDonkgZOG7sW5nIGPDoWMgbcOgbmcgY+G7p2EgdOG6vyBiw6BvIHbDoCB04buVbmcgaOG7o3AgaG9ybW9uIHN0ZXJvaWQiLiBOw7MgY8WpbmcgbMOgIHRp4buBbiBjaOG6pXQgxJHhu4MgdOG7lW5nIGjhu6NwIGFjaWQgbeG6rXQg4bufIGdhbi4gQXBvbGlwb3Byb3RlaW4gbMOgIGPDoWMgcGjDom4gdOG7rSBwcm90ZWluLCDEkcaw4bujYyB04buVbmcgaOG7o3AgdOG7qyBhY2lkIGFtaW4gdGhlbyBtw6MgZGkgdHJ1eeG7gW4sIGtow7RuZyBwaOG6o2kgdOG7qyBjaG9sZXN0ZXJvbC4KClBo4bqnbiBJSTogQ2jhuqluIMSQb8OhbiBTaW5oIEjDs2EgdsOgIFRoZW8gRMO1aSBUxINuZyBIdXnhur90IMOBcC4KQ8OidSAzNi4gS2hpIMSRw6FuaCBnacOhIG3hu5l0IGLhu4duaCBuaMOibiB0xINuZyBodXnhur90IMOhcCwgY8OhYyB4w6l0IG5naGnhu4dtIG7DoG8gc2F1IMSRw6J5IMSRxrDhu6NjIHRo4buxYyBoaeG7h24gbmjhurFtIE3hu6VjICDEkcOtY2ggeMOhYyDEkeG7i25oIGPDoWMgeeG6v3UgdOG7kSBuZ3V5IGPGoSBj4bunYSB4xqEgduG7r2EgxJHhu5luZyBt4bqhY2ggxJFpIGvDqG0/CkEuIENo4buJIGPDsyBVcmUgdsOgIENyZWF0aW5pbiBtw6F1CkIuIENo4buJIGPDsyBJb24gxJHhu5MgaHV54bq/dCB0xrDGoW5nCkMuIEdsdWNvc2UgbcOhdSwgVHJpZ2x5Y2VyaWQgdsOgIENob2xlc3Rlcm9sIHRvw6BuIHBo4bqnbgpELiBDaOG7iSBjw7MgUHJvdGVpbiBuaeG7h3UgMjQgZ2nhu50KxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IHBow6JuIGNoaWEgY8OhYyB4w6l0IG5naGnhu4dtIHRoZW8gZMO1aSBi4buHbmggdMSDbmcgaHV54bq/dCDDoXAgdGjDoG5oIGhhaSBuaMOzbS4gTmjDs20gIljDoWMgxJHhu4tuaCB54bq/dSB04buRIG5ndXkgY8ahIGPhu6dhIFhWxJBNIiBiYW8gZ+G7k20gR2x1Y29zZSBtw6F1IHbDoCBuxrDhu5tjIHRp4buDdSwgQWNpZCB1cmljIG3DoXUsIHbDoCBjw6FjIHRow7RuZyBz4buRIGxpcGlkIG3DoXUgKFRHLCBUQykuIEPDoWMgeMOpdCBuZ2hp4buHbSBjw7JuIGzhuqFpIGTDuW5nIMSR4buDIMSRw6FuaCBnacOhIGNo4bupYyBuxINuZyB0aOG6rW4gaG/hurdjIHTDrG0gbmd1ecOqbiBuaMOibiB0aOG7qSBwaMOhdC4KCkPDonUgMzcuIOG7niBt4buZdCBi4buHbmggbmjDom4gdMSDbmcgaHV54bq/dCDDoXAsIHZp4buHYyB4w6l0IG5naGnhu4dtIFVyZSwgQ3JlYXRpbmluIG3DoXUgdsOgIFByb3RlaW4gbmnhu4d1IDI0IGdp4budIGPDsyBN4bulYyAgxJHDrWNoIGNow61uaCBsw6AgZ8OsPwpBLiDEkMOhbmggZ2nDoSBuZ3V5IGPGoSB4xqEgduG7r2EgxJHhu5luZyBt4bqhY2gKQi4gWMOhYyDEkeG7i25oIGPDoWMgdGjDtG5nIHPhu5EgduG7gSB0aOG6rW4sIHTDrG0ga2nhur9tIHThu5VuIHRoxrDGoW5nIGPGoSBxdWFuIMSRw61jaCBob+G6t2MgYuG7h25oIHRo4bqtbiBuZ3V5w6puIHBow6F0CkMuIFThuqdtIHNvw6F0IGLhu4duaCDEkcOhaSB0aMOhbyDEkcaw4budbmcKRC4gVMOsbSBraeG6v20gaOG7mWkgY2jhu6luZyBDb25uCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBDw6FjIHjDqXQgbmdoaeG7h20gVXJlLCBDcmVhdGluaW4gdsOgIFByb3RlaW4gbmnhu4d1IGzDoCBuaOG7r25nIGNo4buJIHPhu5Ega2luaCDEkWnhu4NuIMSR4buDIMSRw6FuaCBnacOhIGNo4bupYyBuxINuZyB0aOG6rW4uIFRyb25nIGLhu5FpIGPhuqNuaCB0xINuZyBodXnhur90IMOhcCwgY2jDum5nIGdpw7pwIHBow6F0IGhp4buHbiB04buVbiB0aMawxqFuZyB0aOG6rW4gZG8gdMSDbmcgaHV54bq/dCDDoXAgKHThu5VuIHRoxrDGoW5nIGPGoSBxdWFuIMSRw61jaCkgaG/hurdjIHjDoWMgxJHhu4tuaCBi4buHbmggbMO9IHThuqFpIHRo4bqtbiBsw6Agbmd1ecOqbiBuaMOibiBnw6J5IHJhIHTEg25nIGh1eeG6v3Qgw6FwIHRo4bupIHBow6F0LgoKQ8OidSAzOC4gKENhIGzDom0gc8OgbmcpIE3hu5l0IGLhu4duaCBuaMOibiBuYW0gMzggdHXhu5VpIMSRxrDhu6NjIGNo4bqpbiDEkW/DoW4gdMSDbmcgaHV54bq/dCDDoXAgKDE3MC8xMDUgbW1IZyksIGtow7Mga2nhu4NtIHNvw6F0IGLhurFuZyB0aHXhu5FjLiBYw6l0IG5naGnhu4dtIG3DoXUgY2hvIHRo4bqleSBu4buTbmcgxJHhu5kgS2FsaSAoSyspIG3DoXUgZ2nhuqNtLCBOYXRyaSAoTmErKSBtw6F1IHTEg25nIG5o4bq5IHbDoCBjw7MgdMOsbmggdHLhuqFuZyBraeG7gW0gY2h1eeG7g24gaMOzYS4gQuG7h25oIGPhuqNuaCBuw6B5IGfhu6NpIMO9IG5oaeG7gXUgbmjhuqV0IMSR4bq/biBuZ3V5w6puIG5ow6JuIHTEg25nIGh1eeG6v3Qgw6FwIHRo4bupIHBow6F0IG7DoG8/CkEuIELhu4duaCB0aOG6rW4gbeG6oW4KQi4gSOG6uXAgxJHhu5luZyBt4bqhY2ggdGjhuq1uCkMuIEjhu5lpIGNo4bupbmcgQ29ubiAodMSDbmcgYWxkb3N0ZXJvbiBuZ3V5w6puIHBow6F0KQpELiBVIHThu6d5IHRoxrDhu6NuZyB0aOG6rW4gKFBoZW9jaHJvbW9jeXRvbWEpCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiDEkMOieSBsw6AgYuG7mSBiYSB0cmnhu4d1IGNo4bupbmcgdsOgIHjDqXQgbmdoaeG7h20ga2luaCDEkWnhu4NuIGPhu6dhIEjhu5lpIGNo4bupbmcgQ29ubiAodMSDbmcgYWxkb3N0ZXJvbiBuZ3V5w6puIHBow6F0KS4gQWxkb3N0ZXJvbiBnw6J5IHTEg25nIHTDoWkgaOG6pXAgdGh1IE5hdHJpIChk4bqrbiDEkeG6v24gdMSDbmcgTmErIG3DoXUgdsOgIGdp4buvIG7GsOG7m2MsIGfDonkgdMSDbmcgaHV54bq/dCDDoXApIHbDoCB0xINuZyDEkcOgbyB0aOG6o2kgS2FsaSAoZ8OieSBo4bqhIEsrIG3DoXUpIGPDuW5nIGlvbiBIKyAoZ8OieSBraeG7gW0gY2h1eeG7g24gaMOzYSkgdOG6oWkg4buRbmcgbMaw4bujbiB4YS4KCkPDonUgMzkuIFRoZW8gxJHhu4tuaCBuZ2jEqWEgdHJvbmcgdMOgaSBsaeG7h3UsIG3hu5l0IG5nxrDhu51pIHRyw6puIDMwIHR14buVaSDEkcaw4bujYyBjaOG6qW4gxJFvw6FuIGzDoCB0xINuZyBodXnhur90IMOhcCBraGkgaHV54bq/dCDDoXAgxJFvIGzDumMgbmdo4buJIG5nxqFpIHbGsOG7o3QgbmfGsOG7oW5nIG7DoG8/CkEuIDE0MC85MCBtbUhnCkIuIDE1MC85MCBtbUhnCkMuIDE2MC85NSBtbUhnCkQuIDE4MC8xMDAgbW1IZwrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgxJHhu4tuaCBuZ2jEqWE6ICJUSEEga2hpIGh1eeG6v3Qgw6FwIOG7nyBuZ8aw4budaSBu4bqxbSBuZ2jhu4kgMTAgcGjDunQgdHLGsOG7m2Mga2hpIMSRbyB2xrDhu6N0IHRy4buLIHPhu5EgMTYwIG1tSGcgdsOgIDk1IG1tSGcg4bufIHR14buVaSA+MzAiLgoKQ8OidSA0MS4gTmd1ecOqbiBuaMOibiBuw6BvIGzDoCBjaOG7pyB54bq/dSB0cm9uZyBjw6FjIHRyxrDhu51uZyBo4bujcCB0xINuZyBodXnhur90IMOhcCB0aOG7qSBwaMOhdCDhu58gYuG7h25oIG5ow6JuIGTGsOG7m2kgNDAgdHXhu5VpPwpBLiBC4buHbmggduG7gSB0aOG6rW4KQi4gSOG7mWkgY2jhu6luZyBDb25uCkMuIFUgdOG7p3kgdGjGsOG7o25nIHRo4bqtbgpELiBC4buHbmggbMO9IHR1eeG6v24gZ2nDoXAKxJDDoXAgw6FuOiBBCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IGNo4buJIHJhIHLhurFuZyDhu58gYuG7h25oIG5ow6JuIFRIQSB0aOG7qSBwaMOhdCB0deG7lWkgPDQwLCBuZ3V5w6puIG5ow6JuIGNo4bunIHnhur91IGzDoCAiQuG7h25oIHbhu4EgdGjhuq1uICgyNSUgY8OhYyB0csaw4budbmcgaOG7o3AgVEhBKSIuCgpDw6J1IDQyLiBI4buHIHRo4buRbmcgbsOgbyBzYXUgxJHDonkgY8OzIHZhaSB0csOyIGzDoG0gaOG6oSDDoXAgc3XhuqV0LCDEkeG7kWkga2jDoW5nIHbhu5tpIGjhu4cgdGjhu5FuZyB0aOG6p24ga2luaCB04buxIMSR4buZbmcgdsOgIGjhu4cgUmVuaW4tQW5naW90ZW5zaW4tQWxkb3N0ZXJvbj8KQS4gSOG7hyB0aOG7kW5nIENhdGVjaG9sYW1pbgpCLiBI4buHIHRo4buRbmcgS2FsaWtyZW5pbi1LaW5pbiB2w6AgUHJvc3RhZ2xhbmRpbgpDLiBI4buHIHRo4buRbmcgbuG7mWkgdGnhur90IHR1eeG6v24gZ2nDoXAKRC4gSOG7hyB0aOG7kW5nIENvcnRpY29pZCB0aMaw4bujbmcgdGjhuq1uCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBW4buBIHNpbmggbMO9IGLhu4duaCwgdMSDbmcgaHV54bq/dCDDoXAgbMOgIHPhu7EgbeG6pXQgY8OibiBi4bqxbmcgZ2nhu69hIGhhaSBo4buHIHRo4buRbmcuIEjhu4cgdGjhu5FuZyB0xINuZyDDoXAgc3XhuqV0IGJhbyBn4buTbSBo4buHIHRo4bqnbiBraW5oIHThu7EgxJHhu5luZyB2w6AgaOG7hyBSZW5pbi1Bbmdpb3RlbnNpbi1BbGRvc3Rlcm9uLiBI4buHIHRo4buRbmcgxJHhu5FpIGtow6FuZywgY8OzIHTDoWMgZOG7pW5nIGjhuqEgw6FwLCBsw6AgaOG7hyB0aOG7kW5nIEthbGlrcmVuaW4tS2luaW4gdsOgIFByb3N0YWdsYW5kaW4uCgpDw6J1IDQzLiBLaGkgbeG7mXQgYuG7h25oIG5ow6JuIHTEg25nIGh1eeG6v3Qgw6FwIGPDsyBr4bq/dCBxdeG6oyBURyB2w6AgVEMgdsaw4bujdCBnaeG7m2kgaOG6oW4gYsOsbmggdGjGsOG7nW5nLCBjw6FjIHjDqXQgbmdoaeG7h20gbGlwaWQgbsOgbyBj4bqnbiDEkcaw4bujYyBjaOG7iSDEkeG7i25oIHRp4bq/cCB0aGVvIMSR4buDIMSRw6FuaCBnacOhIMSR4bqneSDEkeG7pyBoxqFuPwpBLiBDaOG7iSBj4bqnbiDEkWnhu4duIGRpIGxpcG9wcm90ZWluCkIuIEhETC1jaG9sZXN0ZXJvbCwgQXBvQSB2w6AgQXBvQgpDLiBDaOG7iSBj4bqnbiBBcG9BCkQuIENo4buJIGPhuqduIEFwb0IKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTGsMahbmcgdOG7sSBuaMawIHRyb25nIMSRw6FuaCBnacOhIFhWxJBNIG7Ds2kgY2h1bmcsIGtoaSB0aGVvIGTDtWkgYuG7h25oIG5ow6JuIHTEg25nIGh1eeG6v3Qgw6FwLCBu4bq/dSBjw6FjIGNo4buJIHPhu5EgbGlwaWQgYmFuIMSR4bqndSAoVEMsIFRHKSBi4bqldCB0aMaw4budbmcsIGPhuqduIGzDoG0gdGjDqm0gY8OhYyB4w6l0IG5naGnhu4dtIHPDonUgaMahbiBsw6AgIkhETC1jaG9sZXN0ZXJvbCwgQXBvQSB2w6AgQXBvQiIgxJHhu4MgcGjDom4gdOG6p25nIG5ndXkgY8ahIGNow61uaCB4w6FjIGjGoW4uCgpDw6J1IDQ0LiBN4bulYyAgxJHDrWNoIGPhu6dhIHZp4buHYyB4w6l0IG5naGnhu4dtIGdsdWNvc2UgbcOhdSB2w6Agbsaw4bubYyB0aeG7g3Ug4bufIGLhu4duaCBuaMOibiB0xINuZyBodXnhur90IMOhcCBsw6AgZ8OsPwpBLiDEkMOhbmggZ2nDoSBjaOG7qWMgbsSDbmcgZ2FuCkIuIFThuqdtIHNvw6F0IGLhu4duaCBHb3V0CkMuIFjDoWMgxJHhu4tuaCB54bq/dSB04buRIG5ndXkgY8ahIGPhu6dhIFhWxJBNICh04bqnbSBzb8OhdCDEkcOhaSB0aMOhbyDEkcaw4budbmcpCkQuIMSQw6FuaCBnacOhIHTDrG5oIHRy4bqhbmcgbeG6pXQgbsaw4bubYwrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogxJDDoWkgdGjDoW8gxJHGsOG7nW5nIGzDoCBt4buZdCB54bq/dSB04buRIG5ndXkgY8ahIHRpbSBt4bqhY2ggcuG6pXQgcXVhbiB0cuG7jW5nIHbDoCB0aMaw4budbmcgxJFpIGvDqG0gduG7m2kgdMSDbmcgaHV54bq/dCDDoXAuIFZp4buHYyB4w6l0IG5naGnhu4dtIGdsdWNvc2UgbcOhdSB2w6Agbsaw4bubYyB0aeG7g3UgZ2nDunAgcGjDoXQgaGnhu4duIHPhu5ttIGLhu4duaCDEkcOhaSB0aMOhbyDEkcaw4budbmcsIG3hu5l0IHnhur91IHThu5EgbMOgbSB0xINuZyDEkcOhbmcga+G7gyBuZ3V5IGPGoSBYVsSQTSDhu58gYuG7h25oIG5ow6JuIHTEg25nIGh1eeG6v3Qgw6FwLgoKQ8OidSA0NS4gVMSDbmcgaHV54bq/dCDDoXAgdsO0IGPEg24gKG5ndXnDqm4gcGjDoXQpIGPDsyDEkeG6t2MgxJFp4buDbSBnw6w/CkEuIEx1w7RuIGPDsyBuZ3V5w6puIG5ow6JuIHLDtSByw6BuZyB04burIHRo4bqtbgpCLiBDaGnhur9tIHThu7cgbOG7hyBuaOG7jyB0cm9uZyBjw6FjIGNhIHTEg25nIGh1eeG6v3Qgw6FwIChraG/huqNuZyAxMCUpCkMuIEtow7RuZyB4w6FjIMSR4buLbmggxJHGsOG7o2Mgbmd1ecOqbiBuaMOibiBj4bulIHRo4buDIHbDoCBjaGnhur9tIMSRYSBz4buRIGPDoWMgdHLGsOG7nW5nIGjhu6NwIChraG/huqNuZyA2MCUpCkQuIENo4buJIHjhuqN5IHJhIOG7nyBuZ8aw4budaSB0cuG6uyB0deG7lWkKxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IMSR4buLbmggbmdoxKlhOiAiVEhBIHbDtCBjxINuIGhheSBuZ3V5w6puIHBow6F0OiBjaGnhur9tIDYwJSBjw6FjIHRyxrDhu51uZyBo4bujcCBUSEEiLiAiVsO0IGPEg24iIGPDsyBuZ2jEqWEgbMOgIGtow7RuZyB0w6xtIHRo4bqleSBuZ3V5w6puIG5ow6JuIGPhu6UgdGjhu4MgZ8OieSByYSB0w6xuaCB0cuG6oW5nIG7DoHkuCgpQaOG6p24gSUlJOiBDaOG6qW4gxJBvw6FuIFNpbmggSMOzYSBOaOG7k2kgTcOhdSBDxqEgVGltCk3hu6VjIDMuMTogxJDhu5luZyBI4buNYyBDw6FjIEThuqV1IOG6pG4gRW56eW0gVGltIEPhu5UgxJBp4buDbgpDw6J1IDQ2LiBUcm9uZyBuaOG7k2kgbcOhdSBjxqEgdGltIChOTUNUKSwgZW56eW1lIG7DoG8gc2F1IMSRw6J5IHTEg25nIHPhu5ttIG5o4bqldCB0cm9uZyBodXnhur90IHRoYW5oLCB0aMaw4budbmcgc2F1IGtob+G6o25nIDQtOCBnaeG7nT8KQS4gQVNUIChHT1QpCkIuIExESCB0b8OgbiBwaOG6p24KQy4gQ0stTUIKRC4gQUxUIChHUFQpCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUaGVvIELhuqNuZyA5LjcsIENLLU1CIGLhuq90IMSR4bqndSB0xINuZyB0cm9uZyBraG/huqNuZyA0LTggZ2nhu50gc2F1IGtoaSBOTUNUIHjhuqN5IHJhLCBz4bubbSBoxqFuIHNvIHbhu5tpIExESCB0b8OgbiBwaOG6p24gKDEyLTI0IGdp4budKSB2w6AgQVNUICg2LTEwIGdp4budKS4gQ0stTUIgbMOgIG3hu5l0IHRyb25nIG5o4buvbmcgZOG6pXUg4bqlbiB0xINuZyBz4bubbSBuaOG6pXQgdHJvbmcgbmjDs20gZW56eW1lIGPhu5UgxJFp4buDbi4KCkPDonUgNDcuIChDYSBsw6JtIHPDoG5nKSBN4buZdCBi4buHbmggbmjDom4gbmjhuq1wIHZp4buHbiB2w6wgxJFhdSBuZ+G7sWMgZOG7ryBk4buZaS4gWMOpdCBuZ2hp4buHbSBtw6F1IGzDumMgbmjhuq1wIHZp4buHbiBjaG8gdGjhuqV5IGhv4bqhdCDEkeG7mSBDSyB0b8OgbiBwaOG6p24gdsOgIENLLU1CIMSR4buBdSB0xINuZyBjYW8uIELhu4duaCBuaMOibiDEkcaw4bujYyBjaOG6qW4gxJFvw6FuIE5NQ1QgY+G6pXAuIEjhu49pIHNhdSBiYW8gbMOidSB0aMOsIGhv4bqhdCDEkeG7mSBDSy1NQiBk4buxIGtp4bq/biBz4bq9IHRy4bufIHbhu4EgbeG7qWMgYsOsbmggdGjGsOG7nW5nPwpBLiAxMi0yNCBnaeG7nQpCLiAyLTMgbmfDoHkKQy4gNS03IG5nw6B5CkQuIDEwLTEyIG5nw6B5CsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBC4bqjbmcgOS43IGNobyB0aOG6pXkgxJHhu5luZyBo4buNYyBj4bunYSBDSy1NQjogYuG6r3QgxJHhuqd1IHTEg25nIHNhdSA0LTggZ2nhu50sIMSR4bqhdCDEkeG7iW5oIHNhdSAxOC0yMCBnaeG7nSB2w6AgdHLhu58gbOG6oWkgYsOsbmggdGjGsOG7nW5nIHNhdSAyLTMgbmfDoHkuIEtob+G6o25nIHRo4budaSBnaWFuIHTEg25nIG5n4bqvbiBuw6B5IHLhuqV0IGjhu691IMOtY2ggxJHhu4MgcGjDoXQgaGnhu4duIG5o4buTaSBtw6F1IHTDoWkgcGjDoXQuCgpDw6J1IDQ4LiAoQ2EgbMOibSBzw6BuZykgTeG7mXQgbmfGsOG7nWkgxJHDoG4gw7RuZyA3MCB0deG7lWkgxJHGsOG7o2MgxJHGsGEgxJHhur9uIHBow7JuZyBj4bqlcCBj4bupdSA0IG5nw6B5ICg5NiBnaeG7nSkgc2F1IGtoaSBjw7MgY8ahbiDEkWF1IG5n4buxYyBrw6lvIGTDoGkg4bufIG5ow6AuIMSQaeG7h24gdMOibSDEkeG7kyBraMO0bmcgcsO1IHLDoG5nLiBYw6l0IG5naGnhu4dtIGThuqV1IOG6pW4gdGltIG7DoG8gc2F1IMSRw6J5IGPDsyBraOG6oyBuxINuZyB24bqrbiBjw7JuIHTEg25nIGNhbyB2w6AgaOG7r3Ugw61jaCBuaOG6pXQgY2hvIGNo4bqpbiDEkW/DoW4gaOG7k2kgY+G7qXUgdHJvbmcgdHLGsOG7nW5nIGjhu6NwIG7DoHk/CkEuIENLLU1CCkIuIE15b2dsb2JpbgpDLiBMREgKRC4gQVNUCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiDEkMOieSBsw6AgdHLGsOG7nW5nIGjhu6NwIGNo4bqpbiDEkW/DoW4gbXXhu5luLiBUaGVvIELhuqNuZyA5Ljc6CkNLLU1CIHRy4bufIHbhu4EgYsOsbmggdGjGsOG7nW5nIHNhdSAyLTMgbmfDoHkuCkFTVCB0cuG7nyB24buBIGLDrG5oIHRoxrDhu51uZyBzYXUgNC03IG5nw6B5IChjw7MgdGjhu4MgxJHDoyB24buBIGLDrG5oIHRoxrDhu51uZykuCkxESCB0xINuZyBtdeG7mW4gaMahbiB2w6Aga8OpbyBkw6BpIGjGoW4sIGPDsyB0aOG7gyBkdXkgdHLDrCBt4bupYyB0xINuZyDEkeG6v24gOC0xMCBuZ8OgeSwgdGjhuq1tIGNow60gMTItMTUgbmfDoHkgxJHhu5FpIHbhu5tpIExESDEuIERvIMSRw7MsIExESCBsw6AgZOG6pXUg4bqlbiBjw7MgZ2nDoSB0cuG7iyBuaOG6pXQgY2hvIGNo4bqpbiDEkW/DoW4gaOG7k2kgY+G7qXUgdHJvbmcgdMOsbmggaHXhu5FuZyBuw6B5LgoKQ8OidSA0OS4gSG/huqF0IMSR4buZIGPhu6dhIGVuenltZSBDcmVhdGluIEtpbmFzZSAoQ0spIMSR4bqhdCDEkeG7iW5oIHRyb25nIGh1eeG6v3QgdGhhbmggdsOgbyBraG/huqNuZyB0aOG7nWkgZ2lhbiBuw6BvIHNhdSBraGkgeOG6o3kgcmEgTk1DVD8KQS4gNC04IGdp4budCkIuIDEyLTE4IGdp4budCkMuIDI0LTM4IGdp4budCkQuIDQ4LTcyIGdp4budCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBC4bqjbmcgOS43IHbDoCBIw6xuaCA5LjIgxJHhu4F1IGNobyB0aOG6pXkgaG/huqF0IMSR4buZIENLIHRvw6BuIHBo4bqnbiB0xINuZyBjYW8sIMSR4bqhdCDEkeG7iW5oIMSRaeG7g20gKGNoaeG7gXUgY2FvIGPhu6dhIG3FqWkgdMOqbikgc2F1IGtob+G6o25nIDI0LTM4IGdp4budIGvhu4MgdOG7qyBraGkgYuG6r3QgxJHhuqd1IG5o4buTaSBtw6F1LgpDw6J1IDUwLiBU4bu3IGzhu4cgQ0svQVNUIGPDsyB0aOG7gyDEkcaw4bujYyBz4butIGThu6VuZyDEkeG7gyBjaOG6qW4gxJFvw6FuIHBow6JuIGJp4buHdCBnaeG7r2EgdOG7lW4gdGjGsMahbmcgY8ahIHRpbSB2w6AgdOG7lW4gdGjGsMahbmcgY8ahIHjGsMahbmcuIFThu7cgbOG7hyBuw6B5IGPDsyBnacOhIHRy4buLIHRydW5nIGLDrG5oIGtob+G6o25nIGJhbyBuaGnDqnUgdHJvbmcgTk1DVD8KQS4gS2hv4bqjbmcgMQpCLiBLaG/huqNuZyA1CkMuIEtob+G6o25nIDE1CkQuIEtob+G6o25nIDI3CsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBuw6p1IHLDtTogIlThu7cgbOG7hyBuw6B5IGPDsyBnacOhIHRy4buLIHRydW5nIGLDrG5oIGtob+G6o25nIDUgKDItOSkgdHJvbmcgTk1DVCB2w6Aga2hv4bqjbmcgMjcgKDEzLTU2KSB0cm9uZyB04buVbiB0aMawxqFuZyBjxqEgeMawxqFuZyIuIE3hu5l0IHThu7cgbOG7hyB0aOG6pXAgZ+G7o2kgw70gdOG7lW4gdGjGsMahbmcgbmd14buTbiBn4buRYyB04burIHRpbS4KCkPDonUgNTEuIChDYSBsw6JtIHPDoG5nKSBN4buZdCB24bqtbiDEkeG7mW5nIHZpw6puIG1hcmF0aG9uIGLhu4sgxJFhdSBjxqEgZOG7ryBk4buZaSB2w6AgbeG7h3QgbOG6oyBzYXUgY3Xhu5ljIHRoaSwgY8OzIMSR4bq/biBraMOhbS4gWMOpdCBuZ2hp4buHbSBtw6F1IGNobyB0aOG6pXkgQ0sgdG/DoG4gcGjhuqduIHTEg25nIHLhuqV0IGNhbyAoNTAwMCBVL0wpLCBBU1QgY8WpbmcgdMSDbmcuIFThu7cgbOG7hyBDSy9BU1QgxJHGsOG7o2MgdMOtbmggbMOgIDMwLiBL4bq/dCBxdeG6oyBuw6B5IGfhu6NpIMO9IG5oaeG7gXUgbmjhuqV0IMSR4bq/biB0w6xuaCB0cuG6oW5nIG7DoG8/CkEuIE5o4buTaSBtw6F1IGPGoSB0aW0gY+G6pXAKQi4gVOG7lW4gdGjGsMahbmcgY8ahIHjGsMahbmcgKHRpw6p1IGPGoSB2w6JuKQpDLiBU4buVbiB0aMawxqFuZyBnYW4gY+G6pXAKRC4gxJDhu6N0IGPhuqVwIHN1eSB0aW0gbeG6oW4KxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IENLIHRvw6BuIHBo4bqnbiB0xINuZyBy4bqldCBjYW8gbMOgIMSR4bq3YyB0csawbmcgY+G7p2EgdOG7lW4gdGjGsMahbmcgY8ahIHjGsMahbmcuIFF1YW4gdHLhu41uZyBoxqFuLCB04bu3IGzhu4cgQ0svQVNUIGzDoCAzMCwgbuG6sW0gdHJvbmcga2hv4bqjbmcgxJFp4buDbiBow6xuaCBj4bunYSB04buVbiB0aMawxqFuZyBjxqEgeMawxqFuZyAoMTMtNTYpIHbDoCBjYW8gaMahbiBuaGnhu4F1IHNvIHbhu5tpIGtob+G6o25nIGPhu6dhIE5NQ1QgKH41KS4gxJBp4buBdSBuw6B5IGdpw7pwIHBow6JuIGJp4buHdCBuZ3V5w6puIG5ow6JuIHTEg25nIENLIGzDoCBkbyBjxqEgeMawxqFuZyBjaOG7qSBraMO0bmcgcGjhuqNpIGPGoSB0aW0uCgpDw6J1IDUyLiBUcm9uZyBjaOG6qW4gxJFvw6FuIE5NQ1QsIGtoaSBob+G6oXQgxJHhu5kgQ0sgdG/DoG4gcGjhuqduIHTEg25nLCB0acOqdSBjaHXhuqluIG7DoG8gduG7gSBDSy1NQiBnacO6cCBraOG6s25nIMSR4buLbmggdOG7lW4gdGjGsMahbmcgY8OzIG5ndeG7k24gZ+G7kWMgdOG7qyB0aW0/CkEuIEhv4bqhdCDEkeG7mSBDSy1NQiA+IDMlIGhv4bqhdCDEkeG7mSBDSyB0b8OgbiBwaOG6p24KQi4gSG/huqF0IMSR4buZIENLLU1CID4gNSUgaG/huqF0IMSR4buZIENLIHRvw6BuIHBo4bqnbgpDLiBIb+G6oXQgxJHhu5kgQ0stTUIgPiAxMCUgaG/huqF0IMSR4buZIENLIHRvw6BuIHBo4bqnbgpELiBIb+G6oXQgxJHhu5kgQ0stTUIgPiAyMCUgaG/huqF0IMSR4buZIENLIHRvw6BuIHBo4bqnbgrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgxJHGsGEgcmEgcXV5IHThuq9jOiAia2hpIGhv4bqhdCDEkeG7mSBDSz4xNjAgVS9MIHbDoCBob+G6oXQgxJHhu5kgQ0stTUIgPiA1JSBj4bunYSBob+G6oXQgxJHhu5kgQ0sgdG/DoG4gcGjhuqduIHRow6wgY8OzIHRo4buDIG5naGkgbmfhu50gY8OzIE5NQ1QiLiBN4bq3YyBkw7kgY8ahIHjGsMahbmcgY8WpbmcgY8OzIG3hu5l0IGzGsOG7o25nIG5o4buPIENLLU1CIChkxrDhu5tpIDMlKSwgdOG7tyBs4buHIHRyw6puIDUlIMSRxrDhu6NjIHhlbSBsw6AgxJHhurdjIGhp4buHdSBjaG8gdOG7lW4gdGjGsMahbmcgY8ahIHRpbS4KCkPDonUgNTMuIElzb3p5bSBuw6BvIGPhu6dhIExhY3RhdGUgRGVoeWRyb2dlbmFzZSAoTERIKSBjw7MgdMOtbmggxJHhurdjIGhp4buHdSBjYW8gbmjhuqV0IHbhu5tpIGPGoSB0aW0/CkEuIExESDUKQi4gTERINApDLiBMREgzCkQuIExESDEKxJDDoXAgw6FuOiBECkdp4bqjaSB0aMOtY2g6IExESCBjw7MgNSBpc296eW0uIEPGoSB0aW0gcuG6pXQgZ2nDoHUgTERIMSB2w6AgTERIMi4gRG8gxJHDsywga2hpIGPGoSB0aW0gYuG7iyB04buVbiB0aMawxqFuZywgTERIMSDEkcaw4bujYyBnaeG6o2kgcGjDs25nIG5oaeG7gXUgdsOgbyBtw6F1LiBIb+G6oXQgxJHhu5kgY+G7p2EgTERIMSBjw7JuIMSRxrDhu6NjIMSRbyBkxrDhu5tpIHTDqm4gZ+G7jWkgSEJESCAoaHlkcm94eWJ1dHlyYXQgZGVoeWRyb2dlbmFzZSkgdsOgIGzDoCBt4buZdCBk4bqldSDhuqVuIMSR4bq3YyBoaeG7h3UgaMahbiBjaG8gdGltIHNvIHbhu5tpIExESCB0b8OgbiBwaOG6p24uCgpDw6J1IDU0LiBIb+G6oXQgxJHhu5kgY+G7p2EgQVNUIChBc3BhcnRhdCBBbWlub3RyYW5zZmVyYXNlKSB0cm9uZyBOTUNUIGPDsyDEkeG6t2MgxJFp4buDbSDEkeG7mW5nIGjhu41jIG5oxrAgdGjhur8gbsOgbz8KQS4gVMSDbmcgcuG6pXQgc+G7m20gKDEtMiBnaeG7nSkgdsOgIHbhu4EgYsOsbmggdGjGsOG7nW5nIG5oYW5oICgyNCBnaeG7nSkKQi4gVMSDbmcgc2F1IDYtMTAgZ2nhu50sIMSR4bqhdCDEkeG7iW5oIHNhdSAyNC00OCBnaeG7nSwgduG7gSBiw6xuaCB0aMaw4budbmcgc2F1IDQtNyBuZ8OgeQpDLiBUxINuZyBy4bqldCBtdeG7mW4gKHNhdSA0OCBnaeG7nSkgdsOgIGvDqW8gZMOgaSB0csOqbiAyIHR14bqnbgpELiBLaMO0bmcgdMSDbmcgdHJvbmcgTk1DVArEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogQuG6o25nIDkuNyB0w7NtIHThuq90IMSR4buZbmcgaOG7jWMgY+G7p2EgQVNUOiAiVMSDbmcgYuG6r3QgxJHhuqd1IChnaeG7nSk6IDYtMTAiLCAiSG/huqF0IMSR4buZIHThu5FpIMSRYSAoZ2nhu50pOiAyNC00OCIsICJUcuG7nyBs4bqhaSBiw6xuaCB0aMaw4budbmcgKG5nw6B5KTogNC03Ii4gU28gduG7m2kgQ0stTUIsIEFTVCB0xINuZyBjaOG6rW0gaMahbiB2w6Aga8OpbyBkw6BpIGjGoW4gbeG7mXQgY2jDunQuCgpDw6J1IDU1LiBU4bqhaSBzYW8geMOpdCBuZ2hp4buHbSBUcmFuc2FtaW5hc2UgKEFTVCwgQUxUKSBuZ8OgeSBuYXkgw610IMSRxrDhu6NjIMawdSB0acOqbiBz4butIGThu6VuZyB0cm9uZyBjaOG6qW4gxJFvw6FuIE5NQ1QgY+G6pXAgc28gduG7m2kgQ0stTUIgdsOgIFRyb3BvbmluPwpBLiBWw6wgY2jDum5nIGtow7RuZyB0xINuZyB0cm9uZyBOTUNUCkIuIFbDrCBjaMO6bmcgcXXDoSDEkeG6r3QgdGnhu4FuCkMuIFbDrCBjaMO6bmcgw610IG5o4bqheSB2w6Agw610IMSR4bq3YyBoaeG7h3UgaMahbgpELiBWw6wgY2jDum5nIGNo4buJIHTEg25nIOG7nyBnaWFpIMSRb+G6oW4gcuG6pXQgbXXhu5luCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBuaOG6rW4gxJHhu4tuaDogInZp4buHYyB4w6l0IG5naGnhu4dtIGPDoWMgdHJhbnNhbWluYXNlIGh1eeG6v3QgdGhhbmggbmjhuqV0IGzDoCBob+G6oXQgxJHhu5kgQVNUIMOtdCBuaOG6oXkgdsOgIMSR4bq3YyBoaeG7h3Ugc28gduG7m2kgY8OhYyBlbnp5bSBraMOhYywgZG8gxJHDsyBjw7MgdGjhu4Mgw610IMSRxrDhu6NjIGNow7ogw70gaG/hurdjIGtow7RuZyBj4bqnbiB0aeG6v24gaMOgbmggeMOpdCBuZ2hp4buHbSIuIEFTVCBjw7Mg4bufIG5oaeG7gXUgbcO0IGtow6FjIChnYW4sIGPGoSB4xrDGoW5nLCBo4buTbmcgY+G6p3UpLCBkbyDEkcOzIHPhu7EgdMSDbmcgY+G7p2EgbsOzIGtow7RuZyDEkeG6t2MgaGnhu4d1IGNobyB04buVbiB0aMawxqFuZyB0aW0uCgpDw6J1IDU2LiBUcm9uZyBjw6FjIGlzb3p5bSBj4bunYSBDcmVhdGluIEtpbmFzZSAoQ0spLCBDSy1CQiAodHlwIG7Do28pIHRoxrDhu51uZyBraMO0bmcgeHXhuqV0IGhp4buHbiB0cm9uZyBodXnhur90IHRoYW5oIG5nYXkgY+G6oyBraGkgY8OzIHThu5VuIHRoxrDGoW5nIG7Do28uIEzDvSBkbyBjaMOtbmggbMOgIGfDrD8KQS4gQ0stQkIga2jDtG5nIMSRxrDhu6NjIGdp4bqjaSBwaMOzbmcga2jhu49pIHThur8gYsOgbyBuw6NvCkIuIENLLUJCIGLhu4sgcGjDoSBo4buneSBuZ2F5IGzhuq1wIHThu6ljIHRyb25nIG3DoXUKQy4gQ0stQkIga2jDtG5nIHRo4buDIHRo4bqlbSBxdWEgaMOgbmcgcsOgbyBtw6F1LW7Do28gbmd1ecOqbiB24bq5bgpELiBDSy1CQiBjaOG7iSBjw7Mg4bufIG7Do28gbOG7o24sIGtow7RuZyBjw7Mg4bufIG5nxrDhu51pCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBnaeG6o2kgdGjDrWNoIHLhurFuZyBDSy1CQiBjw7MgdHJvbmcgbsOjbyBuaMawbmcgImtow7RuZyB0aOG6qW0gcXVhIG3DoG5nIGNo4bqvbiBtw6F1IC0gbsOjbyBuZ3V5w6puIHbhurluIi4gRG8gxJHDsywgdHLhu6sga2hpIGjDoG5nIHLDoG8gbsOgeSBi4buLIHBow6EgduG7oSBuZ2hpw6ptIHRy4buNbmcsIENLLUJCIHPhur0ga2jDtG5nIGzhu410IHbDoG8gdHXhuqduIGhvw6BuIHbDoCBraMO0bmcgdGjhu4MgcGjDoXQgaGnhu4duIMSRxrDhu6NjIHRyb25nIGh1eeG6v3QgdGhhbmguCgpDw6J1IDU3LiBT4buxIHTEg25nIGhv4bqhdCDEkeG7mSBrw6lvIGTDoGkgY+G7p2EgQVNUIHbDoCBBTFQgc2F1IG3hu5l0IGPGoW4gTk1DVCBjw7MgdGjhu4MgZ+G7o2kgw70gYmnhur9uIGNo4bupbmcgZ8OsPwpBLiBC4buHbmggbmjDom4gxJFhbmcgaOG7k2kgcGjhu6VjIHThu5F0CkIuIFRoaeG7g3UgbsSDbmcgdGltIGPhuqVwIGhv4bq3YyB0aeG6v24gdHJp4buDbiwgbmdo4bq9biBt4bqhY2ggcGjhu5VpCkMuIFThu5VuIHRoxrDGoW5nIHRo4bqtbiBj4bqlcApELiBOaOG7k2kgbcOhdSB0w6FpIHBow6F0CsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBsxrB1IMO9OiAiTeG7jWkgc+G7sSB0xINuZyBi4bqldCB0aMaw4budbmcga8OpbyBkw6BpIGPhu6dhIEFTVCB2w6AgQUxUIGPhuqduIGzGsHUgw70gxJHhur9uIGto4bqjIG7Eg25nIGPDsyBiaeG6v24gY2jhu6luZyBuaMawIHRoaeG7g3UgbsSDbmcgdGltIGPhuqVwIGhv4bq3YyB0aeG6v24gdHJp4buDbiwgcuG7kWkgbG/huqFuIG5o4buLcCB0aW0sIG5naOG6vW4gbeG6oWNoIHBo4buVaSIuIFN1eSB0aW0gY8OzIHRo4buDIGfDonkgc3VuZyBodXnhur90IGdhbiwgbMOgbSB0xINuZyBtZW4gZ2FuIChBU1QsIEFMVCksIGRvIMSRw7Mgc+G7sSB0xINuZyBrw6lvIGTDoGkgbsOgeSBsw6AgbeG7mXQgZOG6pXUgaGnhu4d1IGPhuqNuaCBiw6FvLgoKQ8OidSA1OC4gQ2hp4buBdSBjYW8gY+G7p2EgxJHhu4luaCBob+G6oXQgxJHhu5kgQ0sgdHJvbmcgaHV54bq/dCB0aGFuaCBzYXUgTk1DVCBwaOG6o24gw6FuaCDEkWnhu4F1IGfDrD8KQS4gVHXhu5VpIGPhu6dhIGLhu4duaCBuaMOibgpCLiBUaOG7nWkgZ2lhbiB04burIGzDumMga2jhu59pIHBow6F0IHRyaeG7h3UgY2jhu6luZwpDLiBEaeG7h24gY+G7p2EgdsO5bmcgY8ahIHRpbSBi4buLIG5o4buTaSBtw6F1CkQuIE3hu6ljIMSR4buZIHTEg25nIGh1eeG6v3Qgw6FwIGPhu6dhIGLhu4duaCBuaMOibgrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbcO0IHThuqMgxJHhu5luZyBo4buNYyBj4bunYSBDSzogIi4uLnTEg25nIHRoZW8gaMOsbmggbcWpaSB0w6puIG3DoCBjaGnhu4F1IGNhbyBwaOG6o24gw6FuaCBkaeG7h24gY+G7p2EgdsO5bmcgYuG7iyBuaOG7k2kgbcOhdSIuIMSQaeG7gXUgbsOgeSBjw7MgbmdoxKlhIGzDoCBt4buZdCB2w7luZyBuaOG7k2kgbcOhdSBjw6BuZyBs4bubbiB0aMOsIGzGsOG7o25nIGVuenltZSBnaeG6o2kgcGjDs25nIHbDoG8gbcOhdSBjw6BuZyBuaGnhu4F1LCBk4bqrbiDEkeG6v24gxJHhu4luaCBob+G6oXQgxJHhu5kgQ0sgY8OgbmcgY2FvLgoKQ8OidSA1OS4gVGhlbyBuZ3V5w6puIHThuq9jIGNodW5nIGtoaSBiaeG7h24gbHXhuq1uIGvhur90IHF14bqjIGVuenltZSwgdmnhu4djIGhv4bqhdCDEkeG7mSBjw6FjIGVuenltZSB0cuG7nyBs4bqhaSBiw6xuaCB0aMaw4budbmcgbmhhbmggY2jDs25nIHRyb25nIHbDoGkgbmfDoHkgYmnhu4N1IGhp4buHbiDEkWnhu4F1IGfDrD8KQS4gVGnDqm4gbMaw4bujbmcgeOG6pXUKQi4gVGnDqm4gbMaw4bujbmcgdOG7kXQKQy4gQ2jhuqluIMSRb8OhbiBzYWkKRC4gQ+G6p24gcGjhuqNpIHjDqXQgbmdoaeG7h20gbOG6oWkKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IE3hu5l0IHRyb25nIGJhIG5ndXnDqm4gdOG6r2MgY2h1bmcgxJHGsOG7o2MgbsOqdSBsw6A6ICJIb+G6oXQgxJHhu5kgY+G7p2EgY8OhYyBlbnp5bSB0cuG7nyBs4bqhaSBiw6xuaCB0aMaw4budbmcgbmhhbmggY2jDs25nIHRyb25nIHbDoGkgbmfDoHkgaG/hurdjIHbDoGkgdHXhuqduIGJp4buDdSBoaeG7h24gdGnDqm4gbMaw4bujbmcgdOG7kXQiLiDEkGnhu4F1IG7DoHkgY2hvIHRo4bqleSB04buVbiB0aMawxqFuZyDEkcOjIMSRxrDhu6NjIGdp4bubaSBo4bqhbiB2w6Aga2jDtG5nIHRp4bq/cCB04bulYyB0aeG6v24gdHJp4buDbi4KCkPDonUgNjAuIEVuenltZSBuw6BvIGPDsyB0cm9uZyBiw6BvIHTGsMahbmcgdOG6vyBiw6BvIHbDoCBk4buFIGTDoG5nIMSRxrDhu6NjIGdp4bqjaSBwaMOzbmcga2hpIGPGoSB0aW0gYuG7iyB04buVbiB0aMawxqFuZz8KQS4gQ2jhu4kgY8OzIENLIHbDoCBBU1QKQi4gQ2jhu4kgY8OzIExESCB2w6AgSEJESApDLiBD4bqjIENLLCBBU1QsIExESCB2w6AgSEJESApELiBDaOG7iSBjw7MgVHJvcG9uaW4KxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IMSR4buBIGPhuq1wIMSR4bq/biBDSywgQVNULCBMREgsIEhCREggbmjGsCBsw6AgY8OhYyBlbnp5bWUgxJHhurdjIGhp4buHdSDEkcaw4bujYyB0aG/DoXQgcmEgdOG7qyBjxqEgdGltIHbDoG8gaHV54bq/dCB0xrDGoW5nIGtoaSBi4buLIE5NQ1QuIExESCB2w6AgSEJESCDEkcaw4bujYyBuaOG6pW4gbeG6oW5oIHRow6ptIGzDoCAiY8OhYyBlbnp5bSBjw7MgdHJvbmcgYsOgbyB0xrDGoW5nIHThur8gYsOgbywgZOG7hSBkw6BuZyDEkcaw4bujYyBnaeG6o2kgcGjDs25nIGtoaSBjxqEgdGltIGLhu4sgdOG7lW4gdGjGsMahbmciLgoKTeG7pWMgMy4yOiBUcm9wb25pbiBUaW0KQ8OidSA2MS4gVHJvcG9uaW4gVCBj4bunYSBjxqEgdGltIChjVG5UKSDEkcaw4bujYyB4ZW0gbMOgIG3hu5l0IGThuqV1IOG6pW4gxJHhurdjIGhp4buHdSBj4bunYSB0aW0gduG7m2kgxJHhu5kgbmjhuqF5IGNhby4gTMO9IGRvIGNow61uaCBj4bunYSB0w61uaCDEkeG6t2MgaGnhu4d1IG7DoHkgbMOgIGfDrD8KQS4gY1RuVCBjaOG7iSDEkcaw4bujYyBnaeG6o2kgcGjDs25nIGtoaSBjw7MgaG/huqFpIHThu60gdOG6vyBiw6BvIGPGoSB0aW0gcuG6pXQgbOG7m24KQi4gY1RuVCBjw7MgY+G6pXUgdHLDumMga2jDoWMgYmnhu4d0IHLDtSBy4buHdCB24bubaSBUcm9wb25pbiBUIGPhu6dhIGPGoSB4xrDGoW5nCkMuIGNUblQgY8OzIHRo4budaSBnaWFuIGLDoW4gaOG7p3kgcuG6pXQgbmfhuq9uIHRyb25nIG3DoXUKRC4gY1RuVCBjaOG7iSB0xINuZyB0cm9uZyBOTUNUIHbDoCBraMO0bmcgdMSDbmcgdHJvbmcgY8OhYyB04buVbiB0aMawxqFuZyB0aW0ga2jDoWMKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IG5o4bqlbiBt4bqhbmg6ICJN4bq3YyBkw7kgY2jhu6ljIG7Eg25nIGPhu6dhIFRuVCBnaeG7kW5nIG5oYXUg4bufIHThuqV0IGPhuqMgY8ahIHbDom4sIFRuVCBjw7Mgbmd14buTbiBn4buRYyB04burIGPGoSB0aW0gKFRuVCBjxqEgdGltLi4uKSBraMOhYyBiaeG7h3QgcuG6pXQgcsO1IHbhu5tpIFRuVCBjxqEgeMawxqFuZy4gVsOsIHTDrW5oIMSR4bq3YyBoaeG7h3UgdOG7lSBjaOG7qWMgY2FvIGPhu6dhIG7DsywgdHJvcG9uaW4gVCBj4bunYSBjxqEgdGltIChjVG5UKSBsw6AgbeG7mXQgZOG6pXUg4bqlbiAobWFya2VyKSDEkeG6t2MgaGnhu4d1IGPhu6dhIHRpbSIuIFPhu7Ega2jDoWMgYmnhu4d0IHbhu4EgY+G6pXUgdHLDumMgYWNpZCBhbWluIGNobyBwaMOpcCB04bqhbyByYSBjw6FjIGtow6FuZyB0aOG7gyBjaOG7iSBuaOG6rW4gZGnhu4duIGThuqFuZyBj4bunYSB0aW0sIHThuqFvIG7Dqm4gdMOtbmggxJHhurdjIGhp4buHdSBjYW8uCgpDw6J1IDYyLiAoQ2EgbMOibSBzw6BuZykgTeG7mXQgYuG7h25oIG5ow6JuIMSR4bq/biBraMOhbSA3IG5nw6B5IHNhdSBt4buZdCBjxqFuIMSRYXUgbmfhu7FjIHRob8OhbmcgcXVhIG3DoCDDtG5nIMSRw6MgYuG7jyBxdWEuIEVDRyBoaeG7h24gdOG6oWkga2jDtG5nIMSRaeG7g24gaMOsbmguIFjDqXQgbmdoaeG7h20gbcOhdSBuw6BvIGzDoCBkdXkgbmjhuqV0IHbDoCB04buRdCBuaOG6pXQgxJHhu4MgeMOhYyDEkeG7i25oIHhlbSBi4buHbmggbmjDom4gY8OzIGLhu4sgbeG7mXQgY8ahbiBOTUNUIG5o4buPICgibWljcm9pbmZhcmN0IikgaGF5IGtow7RuZz8KQS4gQ0stTUIKQi4gQVNUCkMuIExESApELiBUcm9wb25pbiBUIChjVG5UKQrEkMOhcCDDoW46IEQKR2nhuqNpIHRow61jaDogVOG6oWkgdGjhu51pIMSRaeG7g20gNyBuZ8OgeSwgQ0stTUIgdsOgIEFTVCBjaOG6r2MgY2jhuq9uIMSRw6MgdHLhu58gduG7gSBiw6xuaCB0aMaw4budbmcuIExESCBjw7MgdGjhu4MgduG6q24gY8OybiB0xINuZyBuaMawbmcgxJHhu5kgbmjhuqF5IGtow7RuZyBjYW8gYuG6sW5nIFRyb3BvbmluLiBUcm9wb25pbiBUIGPDsyBj4butYSBz4buVIGNo4bqpbiDEkW/DoW4gcuG6pXQgcuG7mW5nLCAiY8OzIHRo4buDIGR1eSB0csOsIG3hu6ljIHTEg25nIG7DoHkgxJHhur9uIDE0IG5nw6B5Ii4gSMahbiBu4buvYSwgbsOzIHLhuqV0IG5o4bqheSwgY8OzIHRo4buDIHBow6F0IGhp4buHbiBjw6FjIHThu5VuIHRoxrDGoW5nIGPGoSB0aW0gcuG6pXQgbmjhu48gKE5NQ1QgZGnhu4duIHLhuqV0IG5o4buPKSBtw6AgY8OhYyBlbnp5bWUga2jDoWMgY8OzIHRo4buDIGLhu48gc8OzdC4gRG8gxJHDsywgY1RuVCBsw6AgeMOpdCBuZ2hp4buHbSB04buRdCBuaOG6pXQgdHJvbmcgdHLGsOG7nW5nIGjhu6NwIG7DoHkuCgpDw6J1IDYzLiBTbyB24bubaSBDSy1NQiwgY+G7rWEgc+G7lSBjaOG6qW4gxJFvw6FuIGPhu6dhIFRyb3BvbmluIFQgdHJvbmcgTk1DVCBjw7MgxJHhurdjIMSRaeG7g20gZ8OsIG7hu5VpIGLhuq10PwpBLiBI4bq5cCBoxqFuLCBjaOG7iSBjw7MgZ2nDoSB0cuG7iyB0cm9uZyAyNCBnaeG7nSDEkeG6p3UKQi4gVMawxqFuZyB04buxIG5oxrAgQ0stTUIKQy4gUuG7mW5nIGjGoW4gxJHDoW5nIGvhu4MsIGJhbyBn4buTbSBj4bqjIGdpYWkgxJFv4bqhbiBz4bubbSB2w6AgZ2lhaSDEkW/huqFuIG114buZbgpELiBDaOG7iSBjw7MgZ2nDoSB0cuG7iyDhu58gZ2lhaSDEkW/huqFuIG114buZbiAoc2F1IDEgdHXhuqduKQrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVHJvcG9uaW4gVCBjw7MgxrB1IMSRaeG7g20ga8OpcDogbsOzIHTEg25nIHPhu5ttIChraG/huqNuZyAzLTQgZ2nhu50sIHTGsMahbmcgxJHGsMahbmcgQ0stTUIpIHbDoCBkdXkgdHLDrCBt4bupYyB0xINuZyBy4bqldCBsw6J1ICjEkeG6v24gMTQgbmfDoHksIGTDoGkgaMahbiBj4bqjIExESCkuIMSQaeG7gXUgbsOgeSB04bqhbyByYSBt4buZdCBj4butYSBz4buVIGNo4bqpbiDEkW/DoW4gcuG6pXQgcuG7mW5nLCBjaG8gcGjDqXAgcGjDoXQgaGnhu4duIE5NQ1Qg4bufIGPhuqMgYuG7h25oIG5ow6JuIMSR4bq/biBz4bubbSB2w6AgxJHhur9uIG114buZbi4KCkPDonUgNjQuIE5nb8OgaSB2YWkgdHLDsiBjaOG6qW4gxJFvw6FuLCBu4buTbmcgxJHhu5kgVHJvcG9uaW4gVCBjw7JuIGPDsyDDvSBuZ2jEqWEgcXVhbiB0cuG7jW5nIG7DoG8ga2jDoWMg4bufIGLhu4duaCBuaMOibiBjw7MgaOG7mWkgY2jhu6luZyBt4bqhY2ggdsOgbmggY+G6pXA/CkEuIMSQw6FuaCBnacOhIGNo4bupYyBuxINuZyB0aOG6rW4KQi4gVGnDqm4gbMaw4bujbmcga+G6v3QgcXXhuqMgbmfhuq9uIGjhuqFuLCB0cnVuZyBo4bqhbiB2w6AgZMOgaSBo4bqhbgpDLiBUaGVvIGTDtWkgaGnhu4d1IHF14bqjIGPhu6dhIHRodeG7kWMgY2jhu5FuZyDEkcO0bmcKRC4gQ2jhuqluIMSRb8OhbiBwaMOibiBiaeG7h3QgduG7m2kgdmnDqm0gcGjhu5VpCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBraOG6s25nIMSR4buLbmg6ICJUcm9wb25pbiBUIGzDoCBt4buZdCBk4bqldSDhuqVuIHRpw6puIGzGsOG7o25nIMSR4buZYyBs4bqtcCwgY8OzIHRo4buDIHRpw6puIMSRb8OhbiBr4bq/dCBxdeG6oyB0cm9uZyB0aOG7nWkgZ2lhbiBn4bqnbiwgdHJ1bmcgYsOsbmggdsOgIHRo4bqtbSBjaMOtIGTDoGkgY+G7p2EgYuG7h25oIG5ow6JuIGPDsyBo4buZaSBjaOG7qW5nIG3huqFjaCB2w6BuaCBj4bqlcCAoQUNTKSIuIE3hu6ljIFRyb3BvbmluIGPDoG5nIGNhbywgdGnDqm4gbMaw4bujbmcgY8OgbmcgeOG6pXUuCgpDw6J1IDY1LiAoQ2EgbMOibSBzw6BuZykgSGFpIGLhu4duaCBuaMOibiBjw7luZyBi4buLIE5NQ1QgY+G6pXAuIELhu4duaCBuaMOibiBBIGPDsyDEkeG7iW5oIFRyb3BvbmluIFQgbMOgIDUgbmcvbUwuIELhu4duaCBuaMOibiBCIGPDsyDEkeG7iW5oIFRyb3BvbmluIFQgbMOgIDE1IG5nL21MLiBE4buxYSB2w6BvIHRow7RuZyB0aW4gbsOgeSwgY8OzIHRo4buDIMSRxrBhIHJhIG5o4bqtbiDEkeG7i25oIHRpw6puIGzGsOG7o25nIG7DoG8/CkEuIELhu4duaCBuaMOibiBBIGPDsyB0acOqbiBsxrDhu6NuZyB44bqldSBoxqFuCkIuIELhu4duaCBuaMOibiBCIGPDsyB0acOqbiBsxrDhu6NuZyB44bqldSBoxqFuCkMuIFRpw6puIGzGsOG7o25nIGPhu6dhIGhhaSBi4buHbmggbmjDom4gbMOgIG5oxrAgbmhhdQpELiBLaMO0bmcgdGjhu4MgZOG7sWEgdsOgbyBu4buTbmcgxJHhu5kgVHJvcG9uaW4gxJHhu4MgdGnDqm4gbMaw4bujbmcKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IE7hu5NuZyDEkeG7mSBUcm9wb25pbiBUIGdp4bqjaSBwaMOzbmcgdsOgbyBtw6F1IHTGsMahbmcgcXVhbiB24bubaSBt4bupYyDEkeG7mSBob+G6oWkgdOG7rSBjxqEgdGltLiBEbyDEkcOzLCBt4buZdCBu4buTbmcgxJHhu5kgxJHhu4luaCBjYW8gaMahbiAoMTUgbmcvbUwgc28gduG7m2kgNSBuZy9tTCkgY2hvIHRo4bqleSBt4buZdCB2w7luZyBuaOG7k2kgbcOhdSBs4bubbiBoxqFuLCB2w6AgZG8gxJHDsywgdGnDqm4gbMaw4bujbmcgZMOgaSBo4bqhbiAobmd1eSBjxqEgc3V5IHRpbSwgdOG7rSB2b25nKSBj4bunYSBi4buHbmggbmjDom4gQiBz4bq9IHjhuqV1IGjGoW4gYuG7h25oIG5ow6JuIEEuCgpDw6J1IDY2LiBT4buxIGdp4bqjaSBwaMOzbmcgVHJvcG9uaW4gVCB0cm9uZyBuZ8OgeSDEkeG6p3UgY+G7p2EgTk1DVCBwaOG7pSB0aHXhu5ljIHbDoG8geeG6v3UgdOG7kSBuw6BvPwpBLiBUdeG7lWkgY+G7p2EgYuG7h25oIG5ow6JuCkIuIETDsm5nIGNo4bqjeSBj4bunYSBtw6F1ICh0w6xuaCB0cuG6oW5nIHTGsOG7m2kgbcOhdSkKQy4gTuG7k25nIMSR4buZIGNob2xlc3Rlcm9sIG3DoXUKRC4gTeG7qWMgxJHhu5kgaG/huqF0IMSR4buZbmcgdGjhu4MgY2jhuqV0IGPhu6dhIGLhu4duaCBuaMOibgrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbsOqdTogIlRyb25nIG5nw6B5IMSR4bqndSBj4bunYSBOTUNULCBz4buxIGdp4bqjaSBwaMOzbmcgdHJvcG9uaW4gVCBwaOG7pSB0aHXhu5ljIHbDoG8gZMOybmcgY2jhuqN5IGPhu6dhIG3DoXUiLiBO4bq/dSBt4bqhY2ggdsOgbmggYuG7iyB04bqvYyDEkcaw4bujYyB0w6FpIHRow7RuZyBz4bubbSAoY2FuIHRoaeG7h3AgaG/hurdjIHRpw6p1IHPhu6NpIGh1eeG6v3QpLCBUcm9wb25pbiBz4bq9IMSRxrDhu6NjICJy4butYSB0csO0aSIgdsOgbyB0deG6p24gaG/DoG4gbmhhbmggaMahbiwgZ8OieSByYSDEkeG7iW5oIHPhu5ttIHbDoCBjYW8gaMahbi4KCkPDonUgNjcuIEtoaSBi4buLIG5o4buTaSBtw6F1LCBu4buTbmcgxJHhu5kgVHJvcG9uaW4gVCBjw7MgdGjhu4MgdMSDbmcgZ+G6pXAgYmFvIG5oacOqdSBs4bqnbiBzbyB24bubaSBt4bupYyBiw6xuaCB0aMaw4budbmc/CkEuIDEwIGzhuqduCkIuIDUwIGzhuqduCkMuIDEwMCBs4bqnbgpELiAzMDAgbOG6p24KxJDDoXAgw6FuOiBECkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IG5o4bqlbiBt4bqhbmggbeG7qWMgxJHhu5kgdMSDbmcgcuG6pXQgbOG7m24gY+G7p2EgVHJvcG9uaW46ICJLaGkgYuG7iyBuaOG7k2kgbcOhdSwgbuG7k25nIMSR4buZIHRyb3BvbmluIFQgdMSDbmcgZ+G6pXAgMzAwIGzhuqduIHNvIHbhu5tpIGLDrG5oIHRoxrDhu51uZyIuCgpDw6J1IDY4LiBTbyB24bubaSDEkeG7mW5nIGjhu41jIGPhu6dhIENLLCBiaeG6v24gxJHhu5VpIG7hu5NuZyDEkeG7mSBUcm9wb25pbiBUIHRyb25nIG5o4buvbmcgbmfDoHkgxJHhuqd1IHNhdSBOTUNUIGPDsyDEkeG6t2MgxJFp4buDbSBnw6w/CkEuIEhvw6BuIHRvw6BuIGtow6FjIGJp4buHdApCLiBUxrDGoW5nIHThu7EgbmjGsCBiaeG6v24gxJHhu5VpIGPhu6dhIGhv4bqhdCDEkeG7mSBDSwpDLiBDaOG6rW0gaMahbiDEkcOhbmcga+G7gwpELiBOaGFuaCBoxqFuIMSRw6FuZyBr4buDCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBjaOG7iSByYSBy4bqxbmc6ICJCaeG6v24gxJHhu5VpIGPhu6dhIG7hu5NuZyDEkeG7mSB0cm9wb25pbiBUIGdp4buRbmcgbmjGsCBiaeG6v24gxJHhu5VpIGPhu6dhIGhv4bqhdCDEkeG7mSBDSyIgdHJvbmcgZ2lhaSDEkW/huqFuIMSR4bqndS4gQ+G6oyBoYWkgxJHhu4F1IHTEg25nIHPhu5ttIHbDoCDEkeG6oXQgxJHhu4luaCB0cm9uZyBraG/huqNuZyAyNCBnaeG7nSDEkeG6p3UuIFPhu7Ega2jDoWMgYmnhu4d0IGzhu5tuIG7hurFtIOG7nyBnaWFpIMSRb+G6oW4gc2F1LCBraGkgQ0sgduG7gSBiw6xuaCB0aMaw4budbmcgbmhhbmggY2jDs25nIGPDsm4gVHJvcG9uaW4gduG6q24gdMSDbmcgY2FvLgoKQ8OidSA2OS4gVHJvcG9uaW4gVCBsw6AgbeG7mXQgdGjDoG5oIHBo4bqnbiBj4bunYSBj4bqldSB0csO6YyBuw6BvIHRyb25nIHThur8gYsOgbyBjxqE/CkEuIE3DoG5nIHThur8gYsOgbyAoc2FyY29sZW1tYSkKQi4gVHkgdGjhu4MKQy4gSOG7hyB0aOG7kW5nIGNvIGR14buXaSBj4bunYSBo4buHIGPGoSB2w6JuCkQuIE5ow6JuIHThur8gYsOgbwrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgxJHhu4tuaCBuZ2jEqWE6ICJUcm9wb25pbiBUIChUblQpIGzDoCBt4buZdCBwcm90ZWluIHRow6BuaCBwaOG6p24gY+G7p2EgaOG7hyB0aOG7kW5nIGNvIGR14buXaSBj4bunYSBo4buHIGPGoSB2w6JuIi4gUGjhu6ljIGjhu6NwIHRyb3BvbmluIChiYW8gZ+G7k20gVHJvcG9uaW4gVCwgSSwgdsOgIEMpIMSRw7NuZyB2YWkgdHLDsiDEkWnhu4F1IGjDsmEgc+G7sSB0xrDGoW5nIHTDoWMgZ2nhu69hIGFjdGluIHbDoCBteW9zaW4gdHJvbmcgcXXDoSB0csOsbmggY28gY8ahLgoKQ8OidSA3MC4gVHJvcG9uaW4gVCBjw7MgZ2nDoSB0cuG7iyBjaOG6qW4gxJFvw6FuIGhp4buHdSBxdeG6oyB0cm9uZyB0w6xuaCBodeG7kW5nIGzDom0gc8OgbmcgbsOgbyBzYXUgxJHDonksIG7GoWkgbcOgIGPDoWMgZW56eW1lIGPhu5UgxJFp4buDbiBjw7MgdGjhu4Mga2jDtG5nIMSR4bunIG5o4bqheT8KQS4gTk1DVCBkaeG7h24gcuG6pXQgbmjhu48g4bufIGLhu4duaCBuaMOibiBraMO0bmcgY8OzIGPGoW4gxJFhdSBuZ+G7sWMgdGjGsOG7nW5nIHh1ecOqbgpCLiBDaOG6qW4gxJFvw6FuIHN1eSB0aW0gc3VuZyBodXnhur90CkMuIFRoZW8gZMO1aSBi4buHbmggdMSDbmcgaHV54bq/dCDDoXAKRC4gxJDDoW5oIGdpw6Egbmd1eSBjxqEgeMahIHbhu69hIMSR4buZbmcgbeG6oWNoCsSQw6FwIMOhbjogQQpHaeG6o2kgdGjDrWNoOiBN4buZdCB0cm9uZyBuaOG7r25nIMawdSDEkWnhu4NtIGzhu5tuIGPhu6dhIFRyb3BvbmluIGzDoCDEkeG7mSBuaOG6oXkgY2FvLCBjaG8gcGjDqXAgY2jhuqluIMSRb8OhbiAiTk1DVCBj4bqlcCwgYsOhbiBj4bqlcCB2w6AgTk1DVCBkaeG7h24gcuG6pXQgbmjhu48gKGNoxrBhIGPDsyBob+G6oWkgdOG7rSDhu58gbmjhu69uZyBi4buHbmggbmjDom4ga2jDtG5nIGPDsyBjxqFuIMSRYXUgbmfhu7FjIHRoxrDhu51uZyB4dXnDqm4pIi4gxJDDonkgbMOgIG5o4buvbmcgdHLGsOG7nW5nIGjhu6NwIHThu5VuIHRoxrDGoW5nIGPGoSB0aW0gdOG7kWkgdGhp4buDdSBtw6AgQ0stTUIgY8OzIHRo4buDIMOibSB0w61uaC4KCkPDonUgNzEuIFRo4budaSBnaWFuIHTEg25nIGvDqW8gZMOgaSB2w6AgYuG7gW4gduG7r25nIGPhu6dhIFRyb3BvbmluIFQgc28gduG7m2kgQ0sgdsOgIExESCBjw7Mgw70gbmdoxKlhIGfDrD8KQS4gQ2hvIHBow6lwIGNo4bqpbiDEkW/DoW4gaOG7k2kgY+G7qXUgdsOgIHjDoWMgxJHhu4tuaCBjw6FjIGJp4bq/biBj4buRIHRpbSBt4bqhY2ggxJHDoyB44bqjeSByYSBuaGnhu4F1IG5nw6B5IHRyxrDhu5tjCkIuIEfDonkga2jDsyBraMSDbiBjaG8gdmnhu4djIGNo4bqpbiDEkW/DoW4gbmjhu5NpIG3DoXUgdMOhaSBwaMOhdApDLiBD4bqjIEEgdsOgIEIgxJHhu4F1IMSRw7puZwpELiBD4bqjIEEgdsOgIEIgxJHhu4F1IHNhaQrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVGjhu51pIGdpYW4gdMSDbmcga8OpbyBkw6BpICjEkeG6v24gMTQgbmfDoHkpIGzDoCBt4buZdCDGsHUgxJFp4buDbSBs4bubbiBjaG8gY2jhuqluIMSRb8OhbiBtdeG7mW4gKGjhu5NpIGPhu6l1KS4gVHV5IG5oacOqbiwgbsOzIGPFqW5nIGzDoCBt4buZdCBuaMaw4bujYyDEkWnhu4NtOiBu4bq/dSBi4buHbmggbmjDom4gYuG7iyBuaOG7k2kgbcOhdSB0w6FpIHBow6F0IHRyb25nIHbDsm5nIHbDoGkgbmfDoHksIG7hu5NuZyDEkeG7mSBUcm9wb25pbiBu4buBbiDEkcOjIGNhbyBz4bq1biBz4bq9IGfDonkga2jDsyBraMSDbiBjaG8gdmnhu4djIHBow6F0IGhp4buHbiBt4buZdCDEkeG7o3QgdMSDbmcgbeG7m2kuIFRyb25nIGtoaSDEkcOzLCBDSy1NQiB24buBIGLDrG5oIHRoxrDhu51uZyBuaGFuaCAoMi0zIG5nw6B5KSBuw6puIHLhuqV0IGjhu691IMOtY2ggxJHhu4MgY2jhuqluIMSRb8OhbiBuaOG7k2kgbcOhdSB0w6FpIHBow6F0LgoKQ8OidSA3Mi4gVHJvbmcgaOG7mWkgY2jhu6luZyBt4bqhY2ggdsOgbmggY+G6pXAsIFRyb3BvbmluIFQgY8OzIHRo4buDIMSRxrDhu6NjIHPhu60gZOG7pW5nIMSR4buDOgpBLiBDaOG7iSBjaOG6qW4gxJFvw6FuIE5NQ1QgY8OzIFNUIGNow6puaCBsw6puIChTVEVNSSkKQi4gQ2jhu4kgY2jhuqluIMSRb8OhbiDEkWF1IHRo4bqvdCBuZ+G7sWMga2jDtG5nIOG7lW4gxJHhu4tuaApDLiBDaOG6qW4gxJFvw6FuIHBow6JuIGJp4buHdCBnaeG7r2EgxJFhdSB0aOG6r3Qgbmfhu7FjIGtow7RuZyDhu5VuIMSR4buLbmggdsOgIE5NQ1Qga2jDtG5nIFNUIGNow6puaCBsw6puIChOU1RFTUkpCkQuIFRoYXkgdGjhur8gaG/DoG4gdG/DoG4gxJFp4buHbiB0w6JtIMSR4buTCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUcm9uZyBo4buZaSBjaOG7qW5nIG3huqFjaCB2w6BuaCBj4bqlcCwgYuG7h25oIG5ow6JuIGPDsyB0aOG7gyBi4buLIMSRYXUgdGjhuq90IG5n4buxYyBraMO0bmcg4buVbiDEkeG7i25oIChraMO0bmcgY8OzIGhv4bqhaSB04butIGPGoSB0aW0pIGhv4bq3YyBOTUNUIChjw7MgaG/huqFpIHThu60pLiBUcm9wb25pbiBsw6AgZOG6pXUg4bqlbiBxdXnhur90IMSR4buLbmguIE7hur91IFRyb3BvbmluIMOibSB0w61uaCwgxJHDsyBsw6AgxJFhdSB0aOG6r3Qgbmfhu7FjIGtow7RuZyDhu5VuIMSR4buLbmguIE7hur91IFRyb3BvbmluIGTGsMahbmcgdMOtbmgsIMSRw7MgbMOgIE5TVEVNSSAobuG6v3UgRUNHIGtow7RuZyBjw7MgU1QgY2jDqm5oIGzDqm4pIGhv4bq3YyBTVEVNSSAobuG6v3UgRUNHIGPDsyBTVCBjaMOqbmggbMOqbikuIERvIMSRw7MsIG7DsyBjw7MgdmFpIHRyw7IgdGhlbiBjaOG7kXQgdHJvbmcgdmnhu4djIHBow6JuIHThuqduZyBi4buHbmggbmjDom4uCgpDw6J1IDczLiBT4buxIGdp4bqjaSBwaMOzbmcgVHJvcG9uaW4gVCBrw6lvIGTDoGkgc2F1IE5NQ1QgxJHGsOG7o2MgY2hvIGzDoCBkbyDEkcOidT8KQS4gRG8gc+G7sSB04buVbmcgaOG7o3AgVHJvcG9uaW4gbeG7m2kgdOG6oWkgdsO5bmcgdOG7lW4gdGjGsMahbmcKQi4gRG8gc+G7sSBnaeG6o2kgcGjDs25nIGNo4bqtbSBjaOG6oXAgY+G7p2EgcGjDom4gdOG7rSBuw6B5IHJhIGto4buPaSB2w7luZyBi4buLIG5o4buTaSBtw6F1CkMuIERvIHN1eSBnaeG6o20gY2jhu6ljIG7Eg25nIHRo4bqjaSB0cuG7qyBj4bunYSB0aOG6rW4KRC4gRG8gVHJvcG9uaW4gZ+G6r24ga+G6v3QgduG7m2kgY8OhYyBwcm90ZWluIGh1eeG6v3QgdMawxqFuZyBraMOhYwrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgZ2nhuqNpIHRow61jaCBy4bqxbmcgbuG7k25nIMSR4buZIGNhbyBj4bunYSBUcm9wb25pbiBjw7MgdGjhu4Mga8OpbyBkw6BpIHRyw6puIDEwIG5nw6B5LCBjaOG7qW5nIHThu48gInPhu7EgZ2nhuqNpIHBow7NuZyBt4buZdCBjw6FjaCBjaOG6rW0gY2jhuqFwIGPhu6dhIHBow6JuIHThu60gbsOgeSByYSBraOG7j2kgdsO5bmcgYuG7iyBuaOG7k2kgbcOhdSIuIEJhbiDEkeG6p3UsIFRyb3BvbmluIHThu6sgYsOgbyB0xrDGoW5nIMSRxrDhu6NjIGdp4bqjaSBwaMOzbmcgbmhhbmgsIHNhdSDEkcOzIFRyb3BvbmluIHThu6sgYuG7mSBtw6F5IGNvIGPGoSBi4buLIHBow6JuIGjhu6d5IHPhur0gxJHGsOG7o2MgZ2nhuqNpIHBow7NuZyB04burIHThu6ssIGfDonkgcmEgdMOsbmggdHLhuqFuZyB0xINuZyBrw6lvIGTDoGkuCgpDw6J1IDc0LiBUcuG7jW5nIGzGsOG7o25nIHBow6JuIHThu60gY+G7p2EgVHJvcG9uaW4gVCBjxqEgdGltIChjVG5UKSBsw6AgYmFvIG5oacOqdT8KQS4gMjIuNSBrRApCLiAzOS43IGtECkMuIDg2IGtECkQuIDE1MCBrRArEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgY3VuZyBj4bqlcCB0aMO0bmcgdGluIGPhu6UgdGjhu4M6ICJUblQgY8OzIG5ndeG7k24gZ+G7kWMgdOG7qyBjxqEgdGltIChUblQgY8ahIHRpbSwgdHLhu41uZyBsxrDhu6NuZyBwaMOibiB04butIDM5Ljcga0QpIi4KCkPDonUgNzUuIFNvIHbhu5tpIGPDoWMgZW56eW1lIHRpbSwgVHJvcG9uaW4gVCBjw7MgxJHhu5kgbmjhuqF5IHbDoCDEkeG7mSDEkeG6t2MgaGnhu4d1IG5oxrAgdGjhur8gbsOgbyB0cm9uZyBjaOG6qW4gxJFvw6FuIHThu5VuIHRoxrDGoW5nIGPGoSB0aW0/CkEuIMSQ4buZIG5o4bqheSBjYW8gaMahbiBuaMawbmcgxJHhu5kgxJHhurdjIGhp4buHdSB0aOG6pXAgaMahbgpCLiDEkOG7mSBuaOG6oXkgdGjhuqVwIGjGoW4gbmjGsG5nIMSR4buZIMSR4bq3YyBoaeG7h3UgY2FvIGjGoW4KQy4gQ+G6oyDEkeG7mSBuaOG6oXkgdsOgIMSR4buZIMSR4bq3YyBoaeG7h3UgxJHhu4F1IGNhbyBoxqFuCkQuIEPhuqMgxJHhu5kgbmjhuqF5IHbDoCDEkeG7mSDEkeG6t2MgaGnhu4d1IMSR4buBdSB0aOG6pXAgaMahbgrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVHJvcG9uaW4gVCDEkcaw4bujYyBtw7QgdOG6oyBsw6AgIm3hu5l0IGThuqV1IOG6pW4gKG1hcmtlcikgxJHhurdjIGhp4buHdSBj4bunYSB0aW0gduG7m2kgxJHhu5kgbmjhuqF5IGNhbyBjaG8gdOG7lW4gdGjGsMahbmcgY8ahIHRpbSIuIE7DsyB2xrDhu6N0IHRy4buZaSBoxqFuIGPDoWMgZW56eW1lIGPhu5UgxJFp4buDbiDhu58gY+G6oyBoYWkgcGjGsMahbmcgZGnhu4duOiDEkeG6t2MgaGnhu4d1IGjGoW4gKGRvIGPhuqV1IHRyw7pjIHJpw6puZyBiaeG7h3QgY+G7p2EgdGltKSB2w6AgbmjhuqF5IGjGoW4gKHBow6F0IGhp4buHbiDEkcaw4bujYyB04buVbiB0aMawxqFuZyBuaOG7jykuCgpN4bulYyAzLjM6IEPDoWMgROG6pXUg4bqkbiBWacOqbSB2w6AgVGnDqm4gTMaw4bujbmcKQ8OidSA3Ni4gQy1SZWFjdGl2ZSBQcm90ZWluIChDUlApIGzDoCBt4buZdCBwcm90ZWluIGPhu6dhIHBoYSBj4bqlcC4g4bueIG5o4buvbmcgYuG7h25oIG5ow6JuIGPDsyBo4buZaSBjaOG7qW5nIG3huqFjaCB2w6BuaCBj4bqlcCAoQUNTKSwgZ2nDoSB0cuG7iyBiYW4gxJHhuqd1IGPhu6dhIENSUCBjw7Mgw70gbmdoxKlhIGNow61uaCBsw6AgZ8OsPwpBLiBDaOG6qW4gxJFvw6FuIHjDoWMgxJHhu4tuaCBOTUNUCkIuIFRpw6puIGzGsOG7o25nIGdpYWkgxJFv4bqhbiBkw6BpCkMuIFRoZW8gZMO1aSDEkcOhcCDhu6luZyB24bubaSB0aHXhu5FjIHRpw6p1IHPhu6NpIGh1eeG6v3QKRC4gxJDDoW5oIGdpw6EgY2jhu6ljIG7Eg25nIHRo4bqldCB0csOhaQrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbsOqdSByw7UgdmFpIHRyw7IgY+G7p2EgQ1JQIGtow7RuZyBwaOG6o2kgbMOgIGNo4bqpbiDEkW/DoW4gbcOgIGzDoCB0acOqbiBsxrDhu6NuZzogIuG7niBuaOG7r25nIGLhu4duaCBuaMOibiBjw7MgQUNTLCBnacOhIHRy4buLIGJhbiDEkeG6p3UgY+G7p2EgQ1JQIGPDsyDDvSBuZ2jEqWEgdGnDqm4gbMaw4bujbmcuLi4gQ1JQIHRow6ptIHbDoG8gY2hvIHRpw6puIGzGsOG7o25nIGdpYWkgxJFv4bqhbiBkw6BpIi4gTeG7qWMgQ1JQIGNhbyBwaOG6o24gw6FuaCB0w6xuaCB0cuG6oW5nIHZpw6ptIGjhu4cgdGjhu5FuZyBt4bqhbmggbeG6vSwgbGnDqm4gcXVhbiDEkeG6v24gbmd1eSBjxqEgdMOhaSBwaMOhdCBjw6FjIGJp4bq/biBj4buRIHRpbSBt4bqhY2ggdHJvbmcgdMawxqFuZyBsYWkuCgpDw6J1IDc3LiBDw6FjIGN5dG9raW5lIG7DoG8gc2F1IMSRw6J5IMSRxrDhu6NjIMSR4buBIGPhuq1wIGzDoCBjw7MgdmFpIHRyw7Iga8OtY2ggdGjDrWNoIGdhbiB04buVbmcgaOG7o3AgQ1JQIHbDoCB0aGFtIGdpYSB2w6BvIHF1w6EgdHLDrG5oIHBow6F0IHRyaeG7g24geMahIHbhu69hIMSR4buZbmcgbeG6oWNoPwpBLiBJbnRlcmZlcm9uLWdhbW1hIHbDoCBUR0YtYmV0YQpCLiBJbnRlcmxldWtpbi0xIChJTC0xKSB2w6AgSW50ZXJsZXVraW4tNiAoSUwtNikKQy4gRXJ5dGhyb3BvaWV0aW4gdsOgIFRocm9tYm9wb2lldGluCkQuIFnhur91IHThu5EgdMSDbmcgdHLGsOG7n25nIG7hu5lpIG3huqFjIG3huqFjaCBtw6F1IChWRUdGKQrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgY2jhu4kgcmEgcuG6sW5nICJZ4bq/dSB04buRIGhv4bqhaSB04butIG3DtCAodGlzc3VlIG5lY3Jvc2lzIGZhY3Rvci1UTkYpIHbDoCBpbnRlcmxldWtpbiAxIChJTC0xKSwgaW50ZXJsZXVraW4tNiAoSUwtNikgZ8OieSBuw6puIHPhu7EgdOG7lW5nIGjhu6NwIENSUCDhu58gZ2FuIi4gQ8OhYyBjeXRva2luZSB0aeG7gW4gdmnDqm0gbsOgeSDEkcOzbmcgdmFpIHRyw7IgdHJ1bmcgdMOibSB0cm9uZyBxdcOhIHRyw6xuaCB2acOqbSBj4bunYSBt4bqjbmcgeMahIHbhu69hLgoKQ8OidSA3OC4gVOG7kWMgxJHhu5kgbOG6r25nIG3DoXUgKFZTLCBFU1IpIHRyb25nIE5NQ1QgY8OzIMSR4bq3YyDEkWnhu4NtIGfDrD8KQS4gS2jDtG5nIHRoYXkgxJHhu5VpCkIuIFTEg25nIGNhbyB0cm9uZyBuaOG7r25nIGdp4budIMSR4bqndSB2w6AgZ2nhuqNtIGThuqduIHNhdSA0LTYgdHXhuqduCkMuIEdp4bqjbSB0cm9uZyBuaOG7r25nIGdp4budIMSR4bqndSB2w6AgdMSDbmcgc2F1IDEgdHXhuqduCkQuIENo4buJIHTEg25nIGtoaSBjw7MgYmnhur9uIGNo4bupbmcgbmhp4buFbSB0csO5bmcKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFThu5FjIMSR4buZIGzhuq9uZyBtw6F1IGzDoCBt4buZdCBjaOG7iSBz4buRIHZpw6ptIGtow7RuZyDEkeG6t2MgaGnhu4d1LiBUcm9uZyBOTUNULCBuw7MgInTEg25nIDcwLTEwMCBtbSB0cm9uZyBuaOG7r25nIGdp4budIMSR4bqndSBj4bunYSBOTUNUIHbDoCBnaeG6o20gZOG6p24gc2F1IDQtNiB0deG6p24iLiDDnSBuZ2jEqWEgY+G7p2EgbsOzIGzDoCBuw7MgduG6q24gY8OybiB0xINuZyBzYXUga2hpIGPDoWMgZW56eW1lIHRpbSDEkcOjIHbhu4EgYsOsbmggdGjGsOG7nW5nLCBjdW5nIGPhuqVwIGLhurFuZyBjaOG7qW5nIHbhu4EgbeG7mXQgcXXDoSB0csOsbmggdmnDqm0gdsOgIGhv4bqhaSB04butIMSRw6MgeOG6o3kgcmEuCgpDw6J1IDc5LiBTbyBzw6FuaCB2YWkgdHLDsiB0acOqbiBsxrDhu6NuZyBj4bunYSBUcm9wb25pbiB2w6AgQ1JQIHRyb25nIGjhu5lpIGNo4bupbmcgbeG6oWNoIHbDoG5oIGPhuqVwLCBuaOG6rW4gxJHhu4tuaCBuw6BvIGzDoCBwaMO5IGjhu6NwIG5o4bqldCB0aGVvIHTDoGkgbGnhu4d1PwpBLiBDaOG7iSBjw7MgVHJvcG9uaW4gY8OzIGdpw6EgdHLhu4sgdGnDqm4gbMaw4bujbmcKQi4gQ2jhu4kgY8OzIENSUCBjw7MgZ2nDoSB0cuG7iyB0acOqbiBsxrDhu6NuZwpDLiBUcm9wb25pbiBsw6AgeeG6v3UgdOG7kSB0acOqbiBsxrDhu6NuZyBnaWFpIMSRb+G6oW4gbmfhuq9uLCBDUlAgdGjDqm0gdsOgbyBjaG8gdGnDqm4gbMaw4bujbmcgZ2lhaSDEkW/huqFuIGTDoGkKRC4gQ1JQIGzDoCB54bq/dSB04buRIHRpw6puIGzGsOG7o25nIGdpYWkgxJFv4bqhbiBuZ+G6r24sIFRyb3BvbmluIHRow6ptIHbDoG8gY2hvIHRpw6puIGzGsOG7o25nIGdpYWkgxJFv4bqhbiBkw6BpCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSB0w7NtIHThuq90OiAiVHJvbmcgaOG6p3UgaOG6v3QgY8OhYyBuZ2hpw6puIGPhu6l1IGNobyB0aOG6pXkgdmnhu4djIMSRbyBsxrDhu51uZyB0cm9wb25pbiB0aW0gbMOgIHnhur91IHThu5EgdGnDqm4gbMaw4bujbmcgdHJvbmcgZ2lhaSDEkW/huqFuIG5n4bqvbiB2w6AgQ1JQIHRow6ptIHbDoG8gY2hvIHRpw6puIGzGsOG7o25nIGdpYWkgxJFv4bqhbiBkw6BpIi4gVHJvcG9uaW4gcGjhuqNuIMOhbmggbeG7qWMgxJHhu5kgaG/huqFpIHThu60gY+G6pXAgdMOtbmggKG5ndXkgY8ahIG5n4bqvbiBo4bqhbiksIHRyb25nIGtoaSBDUlAgcGjhuqNuIMOhbmggZ8OhbmggbuG6t25nIHZpw6ptIHRvw6BuIHRow6JuIChuZ3V5IGPGoSBkw6BpIGjhuqFuKS4KCkPDonUgODAuIFPhu7EgdGhheSDEkeG7lWkgY+G7p2EgYuG6oWNoIGPhuqd1IHRydW5nIHTDrW5oIHRyb25nIE5NQ1QgZGnhu4VuIHJhIG5oxrAgdGjhur8gbsOgbz8KQS4gR2nhuqNtIHRyb25nIG5o4buvbmcgbmfDoHkgxJHhuqd1CkIuIFTEg25nIHbDoCBwaOG6o2kgdHLhu58gduG7gSBiw6xuaCB0aMaw4budbmcgc2F1IGtob+G6o25nIDE1IG5nw6B5CkMuIEtow7RuZyB0aGF5IMSR4buVaQpELiBDaOG7iSB0xINuZyBraGkgY8OzIGLhu5lpIG5oaeG7hW0gdmkga2h14bqpbgrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogSG/huqFpIHThu60gY8ahIHRpbSBnw6J5IHJhIG3hu5l0IMSRw6FwIOG7qW5nIHZpw6ptIGjhu4cgdGjhu5FuZywgdHJvbmcgxJHDsyBjw7Mgdmnhu4djIGh1eSDEkeG7mW5nIGLhuqFjaCBj4bqndS4gVMOgaSBsaeG7h3UgZ2hpIG5o4bqtbjogIkLhuqFjaCBj4bqndSB0cnVuZyB0w61uaCB0xINuZyB0cm9uZyBOTUNUIHbDoCBwaOG6o2kgdHLhu58gduG7gSBiw6xuaCB0aMaw4budbmcgc2F1IGtob+G6o25nIDE1IG5nw6B5Ii4KCkPDonUgODEuIE3hu5l0IHPhu5EgbmdoacOqbiBj4bupdSBjaG8gdGjhuqV5IGN5dG9raW5lIG7DoG8gY8OzIHRo4buDIGPDsyBnacOhIHRy4buLIHRpw6puIGzGsOG7o25nIGjGoW4gY+G6oyBDUlAgdHJvbmcgaOG7mWkgY2jhu6luZyBt4bqhY2ggdsOgbmggY+G6pXA/CkEuIElMLTIKQi4gSUwtNApDLiBJTC02CkQuIElMLTEwCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSDEkeG7gSBj4bqtcDogIk3hu5l0IHPhu5EgbmdoacOqbiBj4bupdSBjaG8gdGjhuqV5IElMLTYgY8OzIGdpw6EgdHLhu4sgdGnDqm4gbMaw4bujbmcgaMahbiBDUlAiLiBJTC02IGzDoCBt4buZdCBjeXRva2luZSAidGjGsOG7o25nIG5ndeG7k24iLCB0cuG7sWMgdGnhur9wIGvDrWNoIHRow61jaCBnYW4gc+G6o24geHXhuqV0IENSUCwgZG8gxJHDsyBuw7MgY8OzIHRo4buDIHBo4bqjbiDDoW5oIHF1w6EgdHLDrG5oIHZpw6ptIHPhu5ttIGjGoW4gdsOgIG5o4bqheSBoxqFuLgoKQ8OidSA4Mi4gQ8OhYyBjeXRva2luZSBuaMawIFRORiwgSUwtMSwgSUwtNiDhuqNuaCBoxrDhu59uZyDEkeG6v24gcXXDoSB0csOsbmggeMahIHbhu69hIMSR4buZbmcgbeG6oWNoIHRow7RuZyBxdWEgY8ahIGNo4bq/IG7DoG8/CkEuIEvDrWNoIHRow61jaCBob+G6t2Mg4bupYyBjaOG6vyBjw6FjIGxldWtvY3l0ZSwgxJHhurdjIGJp4buHdCBsw6AgbW9ub2N5dGUKQi4gR8OieSBjbyBt4bqhY2ggdsOgbmggdHLhu7FjIHRp4bq/cApDLiBMw6BtIGdp4bqjbSBu4buTbmcgxJHhu5kgSERMLWNob2xlc3Rlcm9sCkQuIFTEg25nIGPGsOG7nW5nIGjhuqVwIHRodSBsaXBpZCDhu58gcnXhu5l0CsSQw6FwIMOhbjogQQpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBtw7QgdOG6ozogIk5o4buvbmcgY3l0b2tpbiBuw6B5IGvDrWNoIHRow61jaCBob+G6t2Mg4bupYyBjaOG6vyBjw6FjIGxldWtvY3l0ZSwgdGjGsOG7nW5nIHF1YSB04bq/IGLDoG8gVCB2w6Ag4bqjbmggaMaw4bufbmcgdHLDqm4gY8OhYyBtb25vY3l0ZSAtIGzDoCBjw6FjIHTDoWMgbmjDom4gZ8OieSBYVsSQTSIuIE1vbm9jeXRlIHjDom0gbmjhuq1wIHbDoG8gdGjDoG5oIG3huqFjaCB2w6AgYmnhu4d0IGjDs2EgdGjDoG5oIMSR4bqhaSB0aOG7sWMgYsOgbyBsw6AgbeG7mXQgYsaw4bubYyBraOG7n2kgxJHhuqd1IHF1YW4gdHLhu41uZyB0cm9uZyB2aeG7h2MgaMOsbmggdGjDoG5oIG3huqNuZyB4xqEgduG7r2EuCgpDw6J1IDgzLiBU4bqhaSBzYW8gdOG7kWMgxJHhu5kgbOG6r25nIG3DoXUgKFZTKSBjw7Mgw70gbmdoxKlhIGzDom0gc8Ogbmcg4bufIGdpYWkgxJFv4bqhbiBtdeG7mW4gY+G7p2EgTk1DVCAodsOtIGThu6Ugc2F1IDItMyB0deG6p24pPwpBLiBWw6wgbsOzIMSR4bq3YyBoaeG7h3UgaMahbiBUcm9wb25pbgpCLiBWw6wgdOG6oWkgdGjhu51pIMSRaeG7g20gbsOgeSwgaG/huqF0IMSR4buZIGPDoWMgZW56eW1lIHRpbSDEkcOjIHRy4bufIHbhu4EgYsOsbmggdGjGsOG7nW5nCkMuIFbDrCBuw7MgZ2nDunAgY2jhuqluIMSRb8OhbiBuaOG7k2kgbcOhdSB0w6FpIHBow6F0CkQuIFbDrCBuw7MgcGjhuqNuIMOhbmggY2jDrW5oIHjDoWMga8OtY2ggdGjGsOG7m2MgdsO5bmcgbmjhu5NpIG3DoXUKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IG7DqnUgcsO1OiAieMOpdCBuZ2hp4buHbSBuw6B5IGPDsyDDvSBuZ2jEqWEgbMOibSBzw6BuZyB2w6wg4bufIHRo4budaSBnaWFuIG7DoHksIGhv4bqhdCDEkeG7mSBjw6FjIGVuenltIGPhu6dhIHRpbSB0cm9uZyBodXnhur90IHRoYW5oIMSRw6MgdHLhu58gduG7gSBiw6xuaCB0aMaw4budbmciLiBWUyBrw6lvIGTDoGkgY2hvIHRo4bqleSBxdcOhIHRyw6xuaCB2acOqbSB2w6Agc+G7rWEgY2jhu69hIG3DtCB24bqrbiDEkWFuZyBkaeG7hW4gcmEsIG5nYXkgY+G6oyBraGkgY8OhYyBtYXJrZXIgaG/huqFpIHThu60gY+G6pXAgdMOtbmggxJHDoyBo4bq/dC4KCkPDonUgODQuIE3hu5l0IHRyb25nIG5o4buvbmcgYmnhu4N1IGhp4buHbiBj4bunYSDEkcOhcCDhu6luZyBwaGEgY+G6pXAgc2F1IE5NQ1QgbMOgIHPhu5F0LiBIaeG7h24gdMaw4bujbmcgbsOgeSB0aMaw4budbmcgeHXhuqV0IGhp4buHbiBzYXUgYmFvIGzDonU/CkEuIE5nYXkgbOG6rXAgdOG7qWMgdHJvbmcgZ2nhu50gxJHhuqd1CkIuIFNhdSAyLTMgbmfDoHkKQy4gU2F1IDEgdHXhuqduCkQuIEtow7RuZyBnw6J5IHPhu5F0IG7hur91IGtow7RuZyBjw7Mgbmhp4buFbSB0csO5bmcKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IG3DtCB04bqjIGPDoWMgYmnhu4N1IGhp4buHbiBj4bunYSBwaOG6o24g4bupbmcgdmnDqm0gdsOgIHnhur9tIGtow606ICJzYXUgMi0zIG5nw6B5IGPDsyBiaeG7g3UgaGnhu4duIHPhu5F0LCB04buRYyDEkeG7mSBs4bqvbmcgbcOhdSB0xINuZywgYuG6oWNoIGPhuqd1IMSRYSBuaMOibiB0cnVuZyB0w61uaCB0xINuZyB24burYS4uLiIuCgpDw6J1IDg1LiBWaeG7h2Mgc+G7rSBk4bulbmcgQ1JQIHRyb25nIHRpw6puIGzGsOG7o25nIGLhu4duaCBj4bqnbiBjaMO6IMO9IMSRaeG7gXUgZ8OsPwpBLiBDUlAgY2jhu4kgdMSDbmcga2hpIGPDsyBob+G6oWkgdOG7rSBjxqEgdGltCkIuIENSUCBraMO0bmcgYuG7iyDhuqNuaCBoxrDhu59uZyBi4bufaSBjw6FjIHTDrG5oIHRy4bqhbmcgdmnDqm0ga2jDoWMKQy4gS2hpIGPDsyBz4buxIGhv4bqhaSB04butIHThur8gYsOgbyBjxqEgdGltLCBDUlAgdMSDbmcgdsOgIGPhuqduIGNow7ogw70gc+G7rSBk4bulbmcgbsOzIHRyb25nIHRpw6puIGzGsOG7o25nIGLhu4duaApELiBDUlAgbMOgIG3hu5l0IGThuqV1IOG6pW4g4buVbiDEkeG7i25oLCBraMO0bmcgdGhheSDEkeG7lWkgdGhlbyB0aOG7nWkgZ2lhbgrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgbMawdSDDvTogIktoaSBjw7Mgc+G7sSBob+G6oWkgdOG7rSB04bq/IGLDoG8gY8ahIHRpbSwgQ1JQIHTEg25nIHbDoCBj4bqnbiBjaMO6IMO9IHPhu60gZOG7pW5nIG7DsyB0cm9uZyB0acOqbiBsxrDhu6NuZyBi4buHbmgiLiDEkGnhu4F1IG7DoHkgbmfhu6Ugw70gcuG6sW5nIENSUCBraMO0bmcgxJHhurdjIGhp4buHdSwgbsOzIGPDsyB0aOG7gyB0xINuZyBkbyBuaGnhu4F1IG5ndXnDqm4gbmjDom4gdmnDqm0ga2jDoWMuIFR1eSBuaGnDqm4sIHRyb25nIGLhu5FpIGPhuqNuaCDEkcOjIHjDoWMgxJHhu4tuaCBjw7MgaG/huqFpIHThu60gY8ahIHRpbSAoYuG6sW5nIFRyb3BvbmluKSwgdGjDrCBt4bupYyDEkeG7mSB0xINuZyBj4bunYSBDUlAgY3VuZyBj4bqlcCB0aMO0bmcgdGluIHRpw6puIGzGsOG7o25nIGLhu5Ugc3VuZyBjw7MgZ2nDoSB0cuG7iy4KCk3hu6VjIDMuNDogQ8OhYyB0aMO0bmcgc+G7kSBraMOhYyAKQ8OidSA4Ni4gKENhIGzDom0gc8OgbmcgdOG7lW5nIGjhu6NwKSBN4buZdCBi4buHbmggbmjDom4gbmFtIDY1IHR14buVaSBuaOG6rXAgdmnhu4duIDEyIGdp4budIHNhdSBraOG7n2kgcGjDoXQgxJFhdSBuZ+G7sWMuIEvhur90IHF14bqjIHjDqXQgbmdoaeG7h206IENLIHRvw6BuIHBo4bqnbiA4MDAgVS9MLCBDSy1NQiA2MCBVL0wsIFRyb3BvbmluIFQgMi41IG5nL21MLiBU4bu3IGzhu4cgQ0stTUIvQ0sgdG/DoG4gcGjhuqduIGzDoCBiYW8gbmhpw6p1IHbDoCBr4bq/dCBxdeG6oyBuw6B5IOG7p25nIGjhu5kgY2jhuqluIMSRb8OhbiBnw6w/CkEuIDcuNSUsIOG7p25nIGjhu5kgY2jhuqluIMSRb8OhbiBOaOG7k2kgbcOhdSBjxqEgdGltCkIuIDEzLjMlLCDhu6duZyBo4buZIGNo4bqpbiDEkW/DoW4gVOG7lW4gdGjGsMahbmcgY8ahIHjGsMahbmcKQy4gNy41JSwga2jDtG5nIMSR4bunIMSR4buDIGNo4bqpbiDEkW/DoW4KRC4gMS4zJSwg4bunbmcgaOG7mSBjaOG6qW4gxJFvw6FuIFThu5VuIHRoxrDGoW5nIGdhbgrEkMOhcCDDoW46IEEKR2nhuqNpIHRow61jaDogVOG7tyBs4buHIENLLU1CL0NLIHRvw6BuIHBo4bqnbiA9ICg2MCAvIDgwMCkgKiAxMDAlID0gNy41JS4gVOG7tyBs4buHIG7DoHkgbOG7m24gaMahbiA1JSwgbMOgIG5nxrDhu6FuZyBn4bujaSDDvSBt4bqhbmggbeG6vSB04buVbiB0aMawxqFuZyBjw7Mgbmd14buTbiBn4buRYyB04burIGPGoSB0aW0uIEvhur90IGjhu6NwIHbhu5tpIFRyb3BvbmluIFQgdMSDbmcgY2FvLCBjaOG6qW4gxJFvw6FuIG5o4buTaSBtw6F1IGPGoSB0aW0gY+G6pXAgbMOgIGNo4bqvYyBjaOG6r24uCgpDw6J1IDg3LiBUaGVvIEjDrG5oIDkuNSwgdGjhu6kgdOG7sSDEkeG6oXQgxJHhu4luaCBob+G6oXQgxJHhu5kgY+G7p2EgY8OhYyBlbnp5bWUgdOG7qyBz4bubbSBuaOG6pXQgxJHhur9uIG114buZbiBuaOG6pXQgbMOgIGfDrD8KQS4gR09UIC0+IENQSyAtPiBMREgKQi4gQ1BLIC0+IEdPVCAtPiBMREgKQy4gTERIIC0+IEdPVCAtPiBDUEsKRC4gR1BUIC0+IEdPVCAtPiBDUEsKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFF1YW4gc8OhdCDEkeG7kyB0aOG7iyBIw6xuaCA5LjUsIMSR4buJbmggY+G7p2EgxJHGsOG7nW5nIGNvbmcgQ1BLICh04bupYyBDSykgeHXhuqV0IGhp4buHbiBz4bubbSBuaOG6pXQgKGtob+G6o25nIG5nw6B5IDEpLCB0aeG6v3AgdGhlbyBsw6AgxJHhu4luaCBj4bunYSBHT1QgKHThu6ljIEFTVCkgbXXhu5luIGjGoW4gbeG7mXQgY2jDunQsIHbDoCBjdeG7kWkgY8O5bmcgbMOgIMSR4buJbmggY+G7p2EgTERILCB4deG6pXQgaGnhu4duIG114buZbiBuaOG6pXQgKGtob+G6o25nIG5nw6B5IDItMykuCgpDw6J1IDg4LiBUcm9uZyBnaWFpIMSRb+G6oW4gY+G6pXAgY+G7p2EgTk1DVCwgdMOsbmggdHLhuqFuZyB54bq/bSBraMOtIHThuqFpIG3DtCBjw7MgdGjhu4MgZOG6q24gxJHhur9uIHPhu7EgZ2lhIHTEg25nIGPhu6dhIGNo4bqldCBuw6BvIHRyb25nIG3DoXU/CkEuIEdsdWNvc2UKQi4gQWNpZCB1cmljCkMuIEFjaWQgbGFjdGljCkQuIEJpbGlydWJpbgrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogS2hpIGPGoSB0aW0gYuG7iyB0aGnhur91IG94eSwgbsOzIGNodXnhu4NuIHNhbmcgY2h1eeG7g24gaMOzYSB54bq/bSBraMOtLiBT4bqjbiBwaOG6qW0gY3Xhu5FpIGPDuW5nIGPhu6dhIGNvbiDEkcaw4budbmcgbsOgeSBsw6AgYWNpZCBsYWN0aWMuIFTDoGkgbGnhu4d1IMSR4buBIGPhuq1wOiAiWeG6v20ga2jDrTogc2F1IDItMyBuZ8OgeS4uLiBhY2lkIGxhY3RpYyB0xINuZyB0cm9uZyBtw6F1Ii4KCkPDonUgODkuIFPhu7EgdMSDbmcgaG/huqF0IMSR4buZIGvDqW8gZMOgaSBj4bunYSBjw6FjIGVuenltZSB0aW0gdHJvbmcgbmhp4buBdSB0aMOhbmcgYmnhu4N1IGhp4buHbiDEkWnhu4F1IGfDrD8KQS4gVGnDqm4gbMaw4bujbmcgdOG7kXQsIGPGoSB0aOG7gyDEkWFuZyB04buxIHPhu61hIGNo4buvYQpCLiBUacOqbiBsxrDhu6NuZyB44bqldSwgY8OzIHRo4buDIGzDoCB04buVbiB0aMawxqFuZyB0aeG6v24gdHJp4buDbiBob+G6t2Mga2jDtG5nIGjhu5NpIHBo4bulYwpDLiBC4buHbmggbmjDom4ga2jDtG5nIHR1w6JuIHRo4bunIMSRaeG7gXUgdHLhu4sKRC4gS+G6v3QgcXXhuqMgeMOpdCBuZ2hp4buHbSBi4buLIHNhaQrEkMOhcCDDoW46IEIKR2nhuqNpIHRow61jaDogTmd1ecOqbiB04bqvYyB0aOG7qSBiYSBraGkgYmnhu4duIGx14bqtbiBr4bq/dCBxdeG6oyBlbnp5bWUgbMOgOiAiU+G7sSB0xINuZyBob+G6oXQgxJHhu5kga8OpbyBkw6BpIG5oaeG7gXUgdGjDoW5nIGJp4buDdSBoaeG7h24gdGnDqm4gbMaw4bujbmcgeOG6pXUiLiDEkGnhu4F1IG7DoHkgY2hvIHRo4bqleSBt4buZdCBxdcOhIHRyw6xuaCB04buVbiB0aMawxqFuZyB04bq/IGLDoG8gxJFhbmcgZGnhu4VuIHJhIGxpw6puIHThu6VjLCBraMO0bmcgxJHGsOG7o2Mga2nhu4NtIHNvw6F0LgoKQ8OidSA5MC4gVHJvbmcgY8OhYyBk4bqldSDhuqVuIHNpbmggaOG7jWMgxJHGsOG7o2MgdGjhuqNvIGx14bqtbiwgZOG6pXUg4bqlbiBuw6BvIGPDsyBj4butYSBz4buVIGNo4bqpbiDEkW/DoW4gcuG7mW5nIG5o4bqldCwgaOG7r3Ugw61jaCBjaG8gY+G6oyBjaOG6qW4gxJFvw6FuIHPhu5ttIHbDoCBjaOG6qW4gxJFvw6FuIG114buZbiBOTUNUPwpBLiBBU1QKQi4gQ0stTUIKQy4gTERICkQuIFRyb3BvbmluIFQKxJDDoXAgw6FuOiBECkdp4bqjaSB0aMOtY2g6IFRyb3BvbmluIFQga+G6v3QgaOG7o3AgxrB1IMSRaeG7g20gY+G7p2EgY+G6oyBoYWkgbmjDs206IHTEg25nIHPhu5ttIG5oxrAgQ0stTUIgKDMtNCBnaeG7nSkgdsOgIGR1eSB0csOsIHTEg25nIHLhuqV0IGzDonUgbmjGsCBMREgsIHRo4bqtbSBjaMOtIGzDonUgaMahbiAoxJHhur9uIDE0IG5nw6B5KS4gxJBp4buBdSBuw6B5IG1hbmcgbOG6oWkgY2hvIG7DsyBt4buZdCBj4butYSBz4buVIGNo4bqpbiDEkW/DoW4gdsaw4bujdCB0cuG7mWkgdsOgIHLhu5luZyBuaOG6pXQuCgpQaOG6p24gSVY6IEThuqV1IOG6pG4gU2luaCBI4buNYyB0cm9uZyBTdXkgVGltCkPDonUgOTEuIEvDrWNoIHRow61jaCBzaW5oIGzDvSBjaMOtbmggZ8OieSByYSBz4buxIGdp4bqjaSBwaMOzbmcgQi10eXBlIE5hdHJpdXJldGljIFBlcHRpZGUgKEJOUCkgdOG7qyB0w6JtIHRo4bqldCBj4bunYSB0aW0gbMOgIGfDrD8KQS4gVMSDbmcgbuG7k25nIMSR4buZIE5hdHJpIG3DoXUKQi4gR2nhuqNtIG7hu5NuZyDEkeG7mSBLYWxpIG3DoXUKQy4gU+G7sSBnacOjbiBj4bunYSB0aMOgbmggdMOibSB0aOG6pXQgZG8gcXXDoSB04bqjaSB0aOG7gyB0w61jaCBob+G6t2Mgw6FwIGzhu7FjCkQuIEvDrWNoIHRow61jaCBj4bunYSBo4buHIHRo4bqnbiBraW5oIGdpYW8gY+G6o20KxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IG7DqnUgcuG6pXQgcsO1IGPGoSBjaOG6vzogIkFOUCB2w6AgQk5QIMSRxrDhu6NjIGdp4bqjaSBwaMOzbmcga2hpIMSRw6FwIOG7qW5nIHbhu5tpIHPhu7EgZ2nDo24gY+G7p2EgdMOibSBuaMSpIHbDoCBob+G6t2MgdMOibSB0aOG6pXQgZG8gdGjhu4MgdMOtY2ggdHXhuqduIGhvw6BuIHF1w6EgdOG6o2kiLiBCTlAgbMOgIG3hu5l0IGhvcm1vbiDEkcaw4bujYyB04bq/IGLDoG8gY8ahIHRpbSB0w6JtIHRo4bqldCB0aeG6v3QgcmEga2hpIGNow7puZyBi4buLICJjxINuZyIgaGF5ICJnacOjbiIgcmEsIMSRw6J5IGzDoCBk4bqldSBoaeG7h3UgY+G7p2EgdMOsbmggdHLhuqFuZyBxdcOhIHThuqNpIGh1eeG6v3QgxJHhu5luZywgxJHhurdjIHRyxrBuZyBj4bunYSBzdXkgdGltLgoKQ8OidSA5Mi4gQk5QIGJhbiDEkeG6p3UgxJHGsOG7o2MgcGjDoXQgaGnhu4duIHbDoCBjaGnhur90IHh14bqldCB04burIG3DtCBuw6BvPwpBLiBNw7QgdMOibSBuaMSpIG5nxrDhu51pCkIuIE3DtCB0w6JtIHRo4bqldCBs4bujbgpDLiBNw7QgbsOjbyBs4bujbgpELiBNw7QgdGjhuq1uIG5nxrDhu51pCsSQw6FwIMOhbjogQwpHaeG6o2kgdGjDrWNoOiBUw6puIGfhu41pICJCcmFpbiIgKG7Do28pIE5hdHJpdXJldGljIFBlcHRpZGUgeHXhuqV0IHBow6F0IHThu6sgbmd14buTbiBn4buRYyBwaMOhdCBoaeG7h24gYmFuIMSR4bqndTogIkJyYWluIChob+G6t2MgQi10eXBlKSBuYXRyaXVyZXRpYyBwZXB0aWQgKEJOUCkgbMOgIGhvcm1vbiDEkcaw4bujYyBjaGnhur90IHN14bqldCDEkeG6p3UgdGnDqm4gdOG7qyBtw7QgbsOjbyBj4bunYSBs4bujbiIuIFR1eSBuaGnDqm4sIOG7nyBuZ8aw4budaSwgbmd14buTbiBjaMOtbmggY+G7p2EgQk5QIHRyb25nIHR14bqnbiBob8OgbiBs4bqhaSBsw6AgdMOibSB0aOG6pXQuCgpDw6J1IDkzLiBUcm9uZyBtw6F1IHR14bqnbiBob8OgbiwgcHJvQk5QIMSRxrDhu6NjIG3hu5l0IGVuenltZSBjw7MgdMOqbiBsw6AgY29yaW4gY+G6r3QgdGjDoG5oIGhhaSBt4bqjbmguIEhhaSBt4bqjbmggxJHDsyBsw6AgZ8OsPwpBLiBCTlAgY8OzIGhv4bqhdCB0w61uaCB2w6AgbeG7mXQgxJFv4bqhbiBwZXB0aWQgdMOtbiBoaeG7h3UKQi4gSGFpIHBow6JuIHThu60gQk5QIGPDsyBob+G6oXQgdMOtbmgKQy4gTlQtcHJvQk5QIChraMO0bmcgY8OzIGhv4bqhdCB0w61uaCkgdsOgIEJOUCAoY8OzIGhv4bqhdCB0w61uaCkKRC4gQU5QIHbDoCBDTlAKxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IFPGoSDEkeG7kyBIw6xuaCA5LjYgdsOgIG3DtCB04bqjIGNobyB0aOG6pXkgcHJvQk5QICgxMDggYWEpIHRyb25nIG3DoXUgxJHGsOG7o2MgZW56eW1lIGNvcmluIGPhuq90IMSR4buDIGdp4bqjaSBwaMOzbmcgIkJOUCAxLTMyIChwcm9CTlAgNzctMTA4KSIgbMOgIGhvcm1vbiBjw7MgaG/huqF0IHTDrW5oIHNpbmggbMO9LCB2w6AgIk5ULXByb0JOUCAxLTc2IiBsw6AgbeG6o25oIE4tdGVybWluYWwga2jDtG5nIGPDsyBjaOG7qWMgbsSDbmcgaG9ybW9uIMSRw6MgYmnhur90LiBD4bqjIGhhaSDEkeG7gXUgxJHGsOG7o2Mgc+G7rSBk4bulbmcgbMOgbSBk4bqldSDhuqVuIHRyb25nIGzDom0gc8OgbmcuCgpDw6J1IDk0LiAoQ2EgbMOibSBzw6BuZykgTeG7mXQgYuG7h25oIG5ow6JuIDc1IHR14buVaSBjw7MgdGnhu4FuIHPhu60gYuG7h25oIHRo4bqtbiBt4bqhbiBnaWFpIMSRb+G6oW4gY3Xhu5FpLCDEkWFuZyBjaOG6oXkgdGjhuq1uIG5ow6JuIHThuqFvLCBuaOG6rXAgdmnhu4duIHbDrCBraMOzIHRo4bufLiBYw6l0IG5naGnhu4dtIGNobyB0aOG6pXkgbuG7k25nIMSR4buZIE5ULXByb0JOUCBy4bqldCBjYW8uIERp4buFbiBnaeG6o2kgbsOgbyB24buBIGvhur90IHF14bqjIE5ULXByb0JOUCBuw6B5IGzDoCBjaMOtbmggeMOhYyBuaOG6pXQ/CkEuIENo4bqvYyBjaOG6r24gYuG7h25oIG5ow6JuIGLhu4sgxJHhu6N0IGPhuqVwIHN1eSB0aW0gc3VuZyBodXnhur90LgpCLiBL4bq/dCBxdeG6oyBOVC1wcm9CTlAga2jDtG5nIGPDsyBnacOhIHRy4buLIHbDrCBi4buHbmggbmjDom4gYuG7iyBi4buHbmggdGjhuq1uLgpDLiBOVC1wcm9CTlAgdMSDbmcgY2FvIGPDsyB0aOG7gyBkbyBj4bqjIHN1eSB0aW0gdsOgIHN1eSB0aOG6rW4sIGPhuqduIGvhur90IGjhu6NwIHbhu5tpIGtow6FtIGzDom0gc8OgbmcgdsOgIGPDoWMgeMOpdCBuZ2hp4buHbSBraMOhYyDEkeG7gyBjaOG6qW4gxJFvw6FuLgpELiBC4buHbmggbmjDom4gY+G6p24gxJHGsOG7o2MgdMSDbmcgbGnhu4F1IGzhu6NpIHRp4buDdSBuZ2F5IGzhuq1wIHThu6ljLgrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogxJDDonkgbMOgIG3hu5l0IMSRaeG7g20gcuG6pXQgcXVhbiB0cuG7jW5nIHbhu4EgdMOtbmggxJHhurdjIGhp4buHdS4gVMOgaSBsaeG7h3UgY+G6o25oIGLDoW8gcuG6sW5nIHPhu7EgdMSDbmcgY+G7p2EgY8OhYyBwZXB0aWRlIGLDoGkgbmnhu4d1IGtow7RuZyBob8OgbiB0b8OgbiDEkeG6t2MgaGnhu4d1IGNobyBzdXkgdGltLiBDaMO6bmcgY8WpbmcgdMSDbmcgdHJvbmcgY8OhYyBi4buHbmggY8OzIHF1w6EgdOG6o2kgdGjhu4MgdMOtY2gga2jDoWMsIGJhbyBn4buTbSAiYuG7h25oIHRo4bqtbiwgYuG7h25oIGdhbi4uLiIuIFbDrCBOVC1wcm9CTlAgxJHGsOG7o2MgdGjhuqNpIHRy4burIHF1YSB0aOG6rW4sIG7Dqm4g4bufIGLhu4duaCBuaMOibiBzdXkgdGjhuq1uLCBu4buTbmcgxJHhu5kgY+G7p2EgbsOzIHPhur0gdMSDbmcgY2FvIG5nYXkgY+G6oyBraGkga2jDtG5nIGPDsyBzdXkgdGltLiBEbyDEkcOzLCBr4bq/dCBxdeG6oyBuw6B5IHBo4bqjaSDEkcaw4bujYyBkaeG7hW4gZ2nhuqNpIG3hu5l0IGPDoWNoIHRo4bqtbiB0cuG7jW5nIHRyb25nIGLhu5FpIGPhuqNuaCBsw6JtIHPDoG5nIGNodW5nLCBraMO0bmcgdGjhu4Mga+G6v3QgbHXhuq1uIHbhu5lpIHbDoG5nLgoKQ8OidSA5NS4gTmdvw6BpIHN1eSB0aW0sIHTDrG5oIHRy4bqhbmcgbsOgbyBzYXUgxJHDonkgY8WpbmcgY8OzIHRo4buDIGfDonkgdMSDbmcgbuG7k25nIMSR4buZIEJOUC9OVC1wcm9CTlAgdHJvbmcgbcOhdT8KQS4gVMSDbmcgaHV54bq/dCDDoXAgdsOgIGLhu4duaCBDdXNoaW5nCkIuIE3huqV0IG7GsOG7m2MgbuG6t25nCkMuIEjhuqEgaHV54bq/dCDDoXAgdMawIHRo4bq/CkQuIELhu4duaCBuaMaw4bujYyBjxqEKxJDDoXAgw6FuOiBBCkdp4bqjaSB0aMOtY2g6IFTDoGkgbGnhu4d1IGxp4buHdCBrw6ogbeG7mXQgbG/huqF0IGPDoWMgdMOsbmggdHLhuqFuZyBnw6J5IHTEg25nIE5QIGRvIHF1w6EgdOG6o2kgdGjhu4MgdMOtY2gsIGJhbyBn4buTbSAic3V5IHRpbSBzdW5nIGh1eeG6v3QgdsOgIHTEg25nIGh1eeG6v3Qgw6FwIiwgImLhu4duaCB0aOG6rW4sIGLhu4duaCBnYW4gdsOgIG3hu5l0IHPhu5EgYuG7h25oIG7hu5lpIHRp4bq/dCAoYuG7h25oIEN1c2hpbmcsIHTEg25nIGFsZG9zdGVyb24gbmd1ecOqbiBwaMOhdCwuLi4pIi4KCkPDonUgOTYuIE5ndeG7k24gZ+G7kWMgY2jDrW5oIGPhu6dhIEJOUCB0cm9uZyBtw6F1IHR14bqnbiBob8OgbiDhu58gbmfGsOG7nWkgbMOgIHThu6sgxJHDonU/CkEuIE7Do28KQi4gVMOibSBuaMSpCkMuIFTDom0gdGjhuqV0CkQuIFRo4bqtbgrEkMOhcCDDoW46IEMKR2nhuqNpIHRow61jaDogTeG6t2MgZMO5IMSRxrDhu6NjIHBow6F0IGhp4buHbiBs4bqnbiDEkeG6p3UgdHJvbmcgbsOjbyBs4bujbiwgdMOgaSBsaeG7h3Uga2jhurNuZyDEkeG7i25oOiAi4bufIG5nxrDhu51pLCBuZ3Xhu5NuIGNow61uaCBj4bunYSBCTlAgdHJvbmcgbcOhdSB0deG6p24gaG/DoG4gdOG7qyB0w6JtIHRo4bqldCBj4bunYSB0aW0iLgoKQ8OidSA5Ny4gSG9ybW9uIEJOUCBjw7MgdMOhYyBk4bulbmcgc2luaCBo4buNYyB0xrDGoW5nIHThu7EgbmjGsCBob3Jtb24gbsOgbyBzYXUgxJHDonk/CkEuIEFsZG9zdGVyb24KQi4gQW5naW90ZW5zaW4gSUkKQy4gQXRyaWFsIE5hdHJpdXJldGljIFBlcHRpZGUgKEFOUCkKRC4gVmFzb3ByZXNzaW4gKEFESCkKxJDDoXAgw6FuOiBDCkdp4bqjaSB0aMOtY2g6IEJOUCB0aHXhu5ljIGjhu40gY8OhYyBwZXB0aWRlIGLDoGkgbmnhu4d1IChOYXRyaXVyZXRpYyBQZXB0aWRlcyAtIE5QKS4gVMOgaSBsaeG7h3UgbsOqdSByw7UgbsOzICJjw7MgdMOhYyBk4bulbmcgc2luaCBo4buNYyB0xrDGoW5nIHThu7EgYXRyaWFsIG5hdHJpdXJldGljIHBlcHRpZGUgKEFOUCkiLiBD4bqjIGhhaSDEkeG7gXUgY8OzIHTDoWMgZOG7pW5nIGzhu6NpIG5p4buHdSwgdGjhuqNpIG5hdHJpIHbDoCBnacOjbiBt4bqhY2ggxJHhu4MgbMOgbSBnaeG6o20gZ8OhbmggbuG6t25nIGNobyB0aW0uCgpDw6J1IDk4LiBCTlAgxJHGsOG7o2MgdOG7lW5nIGjhu6NwIGJhbiDEkeG6p3UgdHJvbmcgdOG6vyBiw6BvIGPGoSB0aW0gZMaw4bubaSBk4bqhbmcgdGnhu4FuIGNo4bqldCBuw6BvPwpBLiBwcm9CTlAKQi4gcHJlcHJvQk5QCkMuIE5ULXByb0JOUApELiBDTlAKxJDDoXAgw6FuOiBCCkdp4bqjaSB0aMOtY2g6IFRoZW8gc8ahIMSR4buTIHNpbmggdOG7lW5nIGjhu6NwIChIw6xuaCA5LjYpLCBxdcOhIHRyw6xuaCBi4bqvdCDEkeG6p3UgduG7m2kgcGjDom4gdOG7rSBs4bubbiBuaOG6pXQgbMOgIHByZXByb0JOUCAoMTM0IGFhKS4gUGjDom4gdOG7rSBuw6B5IHNhdSDEkcOzIMSRxrDhu6NjIHjhu60gbMO9IChj4bqvdCBi4buPIMSRb+G6oW4gcGVwdGlkIHTDrW4gaGnhu4d1KSDEkeG7gyB04bqhbyB0aMOgbmggcHJvQk5QICgxMDggYWEpIHRyb25nIHThur8gYsOgbywgdHLGsOG7m2Mga2hpIMSRxrDhu6NjIGLDoGkgdGnhur90IHbDoCB44butIGzDvSB0aeG6v3AgdHJvbmcgbcOhdS4KCkPDonUgOTkuIFThuqFpIHNhbyBCTlAgxJHGsOG7o2MgY29pIGzDoCBt4buZdCAiZOG6pXUg4bqlbiBuaOG6oXkgY+G6o20gY+G7p2Egc+G7sSB0aGF5IMSR4buVaSB24buBIHNpbmggbMO9IGjhu41jIGPhu6dhIHTDom0gdGjhuqV0Ij8KQS4gVsOsIG7DsyBjaOG7iSB0xINuZyBraGkgdMOibSB0aOG6pXQgxJHDoyBi4buLIHThu5VuIHRoxrDGoW5nIGtow7RuZyBo4buTaSBwaOG7pWMKQi4gVsOsIG7hu5NuZyDEkeG7mSBj4bunYSBuw7MgdGhheSDEkeG7lWkgbmhhbmggY2jDs25nIHbDoCB0cuG7sWMgdGnhur9wIHRoZW8gc+G7sSB0aGF5IMSR4buVaSB24buBIHRo4buDIHTDrWNoIHbDoCDDoXAgbOG7sWMgdHJvbmcgYnXhu5NuZyB0aOG6pXQKQy4gVsOsIG7DsyBjaOG7iSDEkcaw4bujYyBz4bqjbiB4deG6pXQgYuG7n2kgdMOibSB0aOG6pXQgdHLDoWkKRC4gVsOsIG7DsyBjw7MgdGjhu51pIGdpYW4gYsOhbiBo4buneSBy4bqldCBkw6BpCsSQw6FwIMOhbjogQgpHaeG6o2kgdGjDrWNoOiBUw6BpIGxp4buHdSBtw7QgdOG6oyBCTlAgbMOgICJk4bqldSDhuqVuIG5o4bqheSBj4bqjbSBj4bunYSBz4buxIHRoYXkgxJHhu5VpIHbhu4Egc2luaCBsw70gaOG7jWMgY+G7p2EgdMOibSB0aOG6pXQiIHbDrCBuw7MgxJHGsOG7o2MgZ2nhuqNpIHBow7NuZyDEkeG7gyDEkcOhcCDhu6luZyB24bubaSBjw6FjIHN0cmVzcyBodXnhur90IMSR4buZbmcgbmjGsCBz4buxIGdpw6NuIHRpbS4gTuG7k25nIMSR4buZIGPhu6dhIG7DsyBwaOG6o24gw6FuaCB0cuG7sWMgdGnhur9wIHTDrG5oIHRy4bqhbmcgImPEg25nIiBj4bunYSB0w6JtIHRo4bqldCB04bqhaSBt4buZdCB0aOG7nWkgxJFp4buDbSwgZG8gxJHDsyBuw7MgcuG6pXQgY8OzIMO9IG5naMSpYSBraGkgY8OzIHPhu7EgdGhheSDEkeG7lWkgduG7gSB0aOG7gyB0w61jaCB2w6AgaG/huqF0IMSR4buZbmcgY+G7p2EgdGltLgoKQ8OidSAxMDAuIEPDoWMgcGVwdGlkZSBiw6BpIG5p4buHdSAoTlApIMSRxrDhu6NjIGLDoGkgdGnhur90IMSR4buDIMSRaeG7gXUgaMOyYSBjw6FjIHF1w6EgdHLDrG5oIHNpbmggbMO9IG7DoG8gc2F1IMSRw6J5PwpBLiBDaOG7iSBjw7MgdGjhu4MgdMOtY2ggZOG7i2NoCkIuIENo4buJIGPDsyBodXnhur90IMOhcApDLiBDaOG7iSBjw7MgY8OibiBi4bqxbmcgxJFp4buHbiBnaeG6o2kKRC4gQ+G6oyB0aOG7gyB0w61jaCBk4buLY2gsIGh1eeG6v3Qgw6FwIHbDoCBjw6JuIGLhurFuZyDEkWnhu4duIGdp4bqjaQrEkMOhcCDDoW46IEQKR2nhuqNpIHRow61jaDogVMOgaSBsaeG7h3UgxJHhu4tuaCBuZ2jEqWEgdmFpIHRyw7IgY+G7p2EgaOG7jSBOUDogIkPDoWMgcGVwdGlkIHTDoWMgZOG7pW5nIMSRw6BvIHRo4bqjaSBuYXRyaSAoTmF0cml1cmV0aWMgUGVwdGlkZS1OUCkgxJHGsOG7o2MgYsOgaSB0aeG6v3QgxJHhu4MgxJFp4buBdSBow7JhIHRo4buDIHTDrWNoIGThu4tjaCwgaHV54bq/dCDDoXAgdsOgIGPDom4gYuG6sW5nIMSRaeG7h24gZ2nhuqNpIi4KCg==</script>
+<script type="text/babel">
+
+const { useState, useEffect, useRef } = React;
+
+function parseQuizData(text) {
+    const lines = text.split('\n').map(l => l.trim()).filter(l => l);
+    const questions = [];
+    let currentQ = null;
+    let currentMode = 'context';
+    let currentContext = "";
+    let isBuildingContext = false;
+
+    lines.forEach(line => {
+        line = line.replace(/^[\u2022\u00b7\-\*]\s*/, '').trim();
+        if (!line) return;
+
+        const isSection = line.match(/^(?:PHẦN|Phần)\s+[I|V|X|\d]+/i);
+        if (isSection) {
+            currentContext = "";
+            isBuildingContext = false;
+        }
+
+        const isCaseStart = line.match(/^(?:TÌNH HUỐNG LÂM SÀNG|Case lâm sàng|Tình huống|Case\s*\d+)/i);
+        const isQ = line.match(/^(?:Câu|Question)[^\d]*([\d\.]+)(?:[^a-z0-9]*[:\.\-])?\s*(.*)/i);
+        const isOpt = line.match(/^([A-E])[\.\)\:\-\/]\s*(.*)/i);
+        const isAns = line.match(/^(?:Đáp án(?: đúng)?|Answer)\s*[:\.\-]?\s*([A-E])/i);
+
+        if (isCaseStart && !isQ) {
+            if (currentMode === 'question') {
+                currentQ.question += (currentQ.question ? '\n' : '') + line;
+                return;
+            }
+            currentContext = line + '\n';
+            isBuildingContext = true;
+            currentMode = 'context';
+            return;
+        }
+
+        if (isQ && !isAns) {
+            isBuildingContext = false;
+            if (currentQ) questions.push(currentQ);
+            
+            currentQ = { 
+                id: questions.length + 1, 
+                originalId: isQ[1], 
+                context: currentContext.trim(), 
+                question: isQ[2] || '', 
+                options: {}, 
+                answer: '' 
+            };
+            currentMode = 'question';
+            return;
+        }
+
+        if (isAns && currentQ) {
+            currentQ.answer = isAns[1].toUpperCase();
+            currentMode = 'skip';
+            return;
+        }
+        
+        if (line.match(/^(Giải thích|Tại sao các lựa chọn khác|Tài liệu được biên soạn|Nghiêm cấm sao chép|Đúng:|Sai:|Đáp án và Giải thích)/i)) {
+            currentMode = 'skip';
+            return;
+        }
+
+        if (currentMode === 'skip') return;
+
+        if (isBuildingContext) {
+            if (!line.match(/^(TRẮC NGHIỆM|BASEDOW|BỆNH LÝ BASEDOW|HỘI CHỨNG|ĐỘT QUỴ|ĐỘNG KINH|COPD|ĐÁI MÁU|NỘI KHOA|TEAMDRCAT|==========|Tài liệu được|Nghiêm cấm|\[🛑)/i)) {
+                currentContext += line + '\n';
+            }
+            return;
+        }
+
+        if (currentQ) {
+            if (isOpt) {
+                currentQ.options[isOpt[1].toUpperCase()] = isOpt[2].trim();
+                currentMode = 'options';
+            } else if (currentMode === 'question') {
+                currentQ.question += '\n' + line;
+            } else if (currentMode === 'options') {
+                const keys = Object.keys(currentQ.options);
+                if (keys.length > 0) {
+                    const lastKey = keys[keys.length - 1];
+                    currentQ.options[lastKey] += '\n' + line;
+                }
+            } 
+        }
+    });
+    if (currentQ) questions.push(currentQ);
+    const cln = (s) => (s||'').replace(/\\n\\n/gi, ' ').replace(/\\n/gi, ' ').trim();
+    questions.forEach(q => { if(q.context) q.context=cln(q.context); if(q.question) q.question=cln(q.question); for(let k in q.options) q.options[k]=cln(q.options[k]); });
+    return questions;
+}
+
+const playCorrectSound = () => {
+    try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(600, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 0.1);
+        gain.gain.setValueAtTime(0.1, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.15);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.15);
+    } catch (e) { console.error(e); }
+};
+
+const playIncorrectSound = () => {
+    try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(300, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.2);
+        gain.gain.setValueAtTime(0.1, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.2);
+    } catch (e) { console.error(e); }
+};
+
+
+const RealTimeClock = () => {
+    const [time, setTime] = React.useState(new Date());
+    React.useEffect(() => {
+        const timer = setInterval(() => setTime(new Date()), 1000);
+        return () => clearInterval(timer);
+    }, []);
+    const formatTime = (date) => {
+        const d = date.getDay();
+        const days = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+        const dayStr = days[d];
+        const dateStr = date.toLocaleDateString('vi-VN', {day:'2-digit', month:'2-digit', year:'numeric'});
+        const timeStr = date.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit', second:'2-digit'});
+        return `${timeStr} - ${dayStr}, ${dateStr}`;
+    };
+    return (
+        <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-300 font-mono text-xs font-bold shadow-sm">
+            <i className="fa-regular fa-clock text-rose-500"></i>
+            {formatTime(time)}
+        </div>
+    );
+};
+
+
+const GoogleSearch = () => {
+    const [query, setQuery] = React.useState('');
+    const [isOpen, setIsOpen] = React.useState(false);
+    const inputRef = React.useRef(null);
+
+    React.useEffect(() => {
+        if (isOpen && inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [isOpen]);
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if(query.trim()) {
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            setQuery('');
+            setIsOpen(false);
+        }
+    };
+
+    return (
+        <div className="relative z-50">
+            <button onClick={() => setIsOpen(!isOpen)} className={`p-2 rounded-xl transition-all duration-300 border shadow-sm ${isOpen ? 'bg-blue-100 dark:bg-blue-900/50 border-rose-300 dark:border-blue-700 text-blue-600 dark:text-blue-400' : 'bg-white/60 dark:bg-slate-700/60 hover:bg-white dark:hover:bg-slate-600 border-white/40 dark:border-slate-600/50 text-slate-600 dark:text-slate-300'}`} title="Tra cứu Google">
+                <i className="fa-brands fa-google text-base"></i>
+            </button>
+            {isOpen && (
+                <React.Fragment>
+                    <div className="fixed inset-0 z-[998] cursor-pointer" onTouchStart={(e) => { e.preventDefault(); setIsOpen(false); }} onMouseDown={(e) => { e.preventDefault(); setIsOpen(false); }}></div>
+                    <div className="fixed left-4 right-4 top-24 sm:absolute sm:left-auto sm:right-0 sm:top-full mt-3 p-3 glass-panel rounded-2xl shadow-2xl border border-white/60 dark:border-slate-700/60 sm:w-[350px] z-[999] animate-in fade-in slide-in-from-top-2 duration-300">
+                    <form onSubmit={handleSearch} className="flex items-center gap-2">
+                        <div className="relative flex-1">
+                            <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                            <input 
+                                ref={inputRef}
+                                type="text" 
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}
+                                placeholder="Tra cứu Google y khoa..." 
+                                className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-white/90 dark:bg-slate-800/90 focus:ring-2 focus:ring-blue-500 focus:border-rose-500 outline-none text-base text-slate-700 dark:text-slate-200 font-medium transition-all shadow-inner"
+                            />
+                        </div>
+                        <button type="submit" className="p-2.5 btn-gradient text-white rounded-xl shadow-md hover:-translate-y-0.5 transition-transform"><i className="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div className="mt-2 text-[10px] text-center text-slate-400 dark:text-slate-500 font-semibold uppercase tracking-widest">Mở trong Tab mới</div>
+                <button type="button" onClick={() => setIsOpen(false)} className="mt-3 w-full border border-red-200 bg-red-50 text-red-500 dark:bg-red-900/40 dark:border-red-800 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-red-100 transition-colors shadow-sm">Đóng Tìm Kiếm <i className="fas fa-times ml-1"></i></button>
+                </div>
+                </React.Fragment>
+            )}
+        </div>
+    );
+};
+
+function App() {
+    const [appState, setAppState] = useState('locked');
+    const [passwordInput, setPasswordInput] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [pwError, setPwError] = useState(false);
+    const [unlockCountdown, setUnlockCountdown] = useState(3);
+    const [questions, setQuestions] = useState([]);
+    const diseaseName = document.title.replace('NỘI KHOA: ', '').replace(' - TEAMDRCAT', '').replace('TEAMDRCAT | ', '').trim() || 'LÂM SÀNG';
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [answers, setAnswers] = useState({});
+    const [flagged, setFlagged] = useState(new Set());
+    const [timeRemaining, setTimeRemaining] = useState(0); 
+    const [showMatrix, setShowMatrix] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
+        const [isDarkMode, setIsDarkMode] = useState(false);
+    const [showDrNote, setShowDrNote] = useState(false);
+    const [drNoteContent, setDrNoteContent] = useState("");
+    const [notePos, setNotePos] = useState({x: window.innerWidth - 320, y: 100});
+    const [isSoundEnabled, setIsSoundEnabled] = useState(true);
+      const [zoomLevel, setZoomLevel] = useState(100);
+    
+    const scrollContainerRef = useRef(null);
+    const [vantaEffect, setVantaEffect] = useState(null);
+    
+        useEffect(() => {
+        const rootEl = document.getElementById('root');
+        if (!vantaEffect && window.VANTA && window.VANTA.NET && rootEl) {
+            try {
+                if (window.innerWidth < 1025) return; 
+                const isMobile = window.innerWidth < 768;
+                /* Vanta completely disabled */
+            
+            } catch(e) {
+                console.warn("Vanta initialize skipped", e);
+            }
+        }
+        return () => {
+            if (vantaEffect) vantaEffect.destroy();
+        }
+    }, [vantaEffect]);
+
+    useEffect(() => {
+        if (vantaEffect && typeof vantaEffect.setOptions === 'function') {
+            try {
+                vantaEffect.setOptions({
+                    color: isDarkMode ? 0x22d3ee : 0x0284c7,
+                    backgroundColor: isDarkMode ? 0x020617 : 0xf0f9ff
+                })
+            } catch(e) {}
+        }
+    }, [isDarkMode, vantaEffect]);
+
+
+    const playHeartbeatSound = () => {
+        try {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            if (!AudioContext) return;
+            const ctx = new AudioContext();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(60, ctx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(30, ctx.currentTime + 0.1);
+            gain.gain.setValueAtTime(0.5, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2);
+            osc.start(ctx.currentTime);
+            osc.stop(ctx.currentTime + 0.2);
+        } catch (e) { }
+    };
+
+    useEffect(() => {
+        function b64DecodeUnicode(str) {
+            return decodeURIComponent(atob(str).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+        }
+        const rawB64 = document.getElementById('quizData').textContent.trim() || '';
+        let rawData = '';
+        try { rawData = b64DecodeUnicode(rawB64); } catch(e) { rawData = rawB64; }
+        const parsedQs = parseQuizData(rawData);
+        setQuestions(parsedQs);
+        
+        const unlockKey = 'teamdrcat_unlocked_' + document.title;
+        if (localStorage.getItem(unlockKey) === 'true') {
+            setAppState('intro');
+        }
+        
+        const storageKey = 'teamdrcat_' + document.title;
+        const saved = localStorage.getItem(storageKey);
+        if(saved) {
+            try {
+                const data = JSON.parse(saved);
+                setAnswers(data.answers || {});
+                setFlagged(new Set(data.flagged || []));
+                if (data.timeRemaining) setTimeRemaining(data.timeRemaining);
+                else setTimeRemaining(parsedQs.length * 60);
+                if (data.currentIndex) setCurrentIndex(data.currentIndex);
+                if (data.drNoteContent) setDrNoteContent(data.drNoteContent);
+            } catch(e) {
+                setTimeRemaining(parsedQs.length * 60);
+            }
+        } else {
+            setTimeRemaining(parsedQs.length * 60);
+        }
+    }, []);
+
+    useEffect(() => {
+        const preventDefault = (e) => e.preventDefault();
+        const preventKeyboard = (e) => {
+            if (e.keyCode === 123) e.preventDefault();
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault();
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault();
+            if (e.ctrlKey && e.keyCode === 85) e.preventDefault();
+            if (e.ctrlKey && e.keyCode === 83) e.preventDefault();
+        };
+        document.addEventListener('contextmenu', preventDefault);
+        document.addEventListener('keydown', preventKeyboard);
+        document.addEventListener('dragstart', preventDefault);
+        return () => {
+            document.removeEventListener('contextmenu', preventDefault);
+            document.removeEventListener('keydown', preventKeyboard);
+            document.removeEventListener('dragstart', preventDefault);
+        }
+    }, []);
+
+    useEffect(() => {
+        if(questions.length > 0 && appState === 'quiz') {
+            const storageKey = 'teamdrcat_' + document.title;
+            localStorage.setItem(storageKey, JSON.stringify({
+                answers: answers,
+                flagged: Array.from(flagged),
+                timeRemaining: timeRemaining,
+                currentIndex: currentIndex,
+                drNoteContent: drNoteContent
+            }));
+        }
+    }, [answers, flagged, timeRemaining, questions.length, appState, currentIndex, drNoteContent]);
+
+    useEffect(() => {
+        if (appState === 'result' && scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, [appState]);
+
+    useEffect(() => {
+        let timer;
+        if (appState === 'quiz' && !isPaused && timeRemaining > 0) {
+            timer = setInterval(() => {
+                setTimeRemaining(p => {
+                    if (p <= 10 && p > 0 && isSoundEnabled) playHeartbeatSound();
+                    return p - 1;
+                });
+            }, 1000);
+        } else if (timeRemaining <= 0 && appState === 'quiz') {
+            setAppState('result');
+        }
+        
+        return () => clearInterval(timer);
+    }, [appState, timeRemaining, isPaused, isSoundEnabled]);
+
+    useEffect(() => {
+        if (appState === 'unlocking') {
+            if (unlockCountdown > 0) {
+                const timer = setTimeout(() => {
+                    setUnlockCountdown(c => c - 1);
+                    if (isSoundEnabled) playCorrectSound();
+                }, 1000);
+                return () => clearTimeout(timer);
+            } else {
+                setAppState('intro');
+            }
+        }
+    }, [appState, unlockCountdown, isSoundEnabled]);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if(appState !== 'quiz' || isPaused) return;
+            if(e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            
+            const q = questions[currentIndex];
+            if(!q) return;
+            const optKeys = Object.keys(q.options);
+            const keyMap = {'1':0, '2':1, '3':2, '4':3, 'a':0, 'b':1, 'c':2, 'd':3};
+            const mappedIdx = keyMap[e.key.toLowerCase()];
+            
+            if(mappedIdx !== undefined && mappedIdx < optKeys.length) {
+                const selectedKey = optKeys[mappedIdx];
+                if (!answers[currentIndex]) {
+                    setAnswers(prev => ({ ...prev, [currentIndex]: selectedKey }));
+                    if (isSoundEnabled) {
+                        q.answer === selectedKey ? playCorrectSound() : playIncorrectSound();
+                    }
+                }
+            }
+            if(e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                setCurrentIndex(p => Math.min(questions.length - 1, p + 1));
+            }
+            if(e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                setCurrentIndex(p => Math.max(0, p - 1));
+            }
+            if(e.key === ' ' || e.code === 'Space') {
+                e.preventDefault();
+                setFlagged(prev => {
+                    const newFlagged = new Set(prev);
+                    if (newFlagged.has(currentIndex)) newFlagged.delete(currentIndex);
+                    else newFlagged.add(currentIndex);
+                    return newFlagged;
+                });
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [appState, isPaused, currentIndex, questions, answers, isSoundEnabled]);
+
+    useEffect(() => {
+        if (isDarkMode) document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+    }, [isDarkMode]);
+
+      useEffect(() => {
+          document.documentElement.style.fontSize = `${zoomLevel}%`;
+      }, [zoomLevel]);
+
+    const formatTime = (seconds) => {
+        const h = Math.floor(seconds / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        const s = seconds % 60;
+        if (h > 0) return `${h}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    };
+
+    const startQuiz = () => {
+        if (questions.length === 0) {
+            alert("Lỗi tải dữ liệu câu hỏi. Vui lòng kiểm tra lại file data.");
+            return;
+        }
+        setAppState('quiz');
+        // Restart logic
+        if(Object.keys(answers).length === questions.length) {
+            setAnswers({}); setFlagged(new Set()); setTimeRemaining(questions.length * 60); setCurrentIndex(0);
+        }
+        setIsPaused(false);
+    };
+
+    const restartQuiz = () => {
+        setAppState('intro');
+        setAnswers({});
+        setFlagged(new Set());
+        setTimeRemaining(questions.length * 60);
+        setCurrentIndex(0);
+        setShowMatrix(false);
+        const storageKey = 'teamdrcat_' + document.title;
+        localStorage.removeItem(storageKey);
+        if (scrollContainerRef.current) scrollContainerRef.current.scrollTo({ top: 0 });
+    };
+
+    const togglePause = () => {
+        if (appState === 'quiz') setIsPaused(!isPaused);
+    };
+
+    const handleSelectAnswer = (key) => {
+        if (isSoundEnabled) {
+            try {
+                const a = new Audio("https://actions.google.com/sounds/v1/foley/pen_click.ogg");
+                a.volume = 0.5;
+                a.play().catch(e=>{});
+            } catch(e){}
+        }
+        if (answers[currentIndex] || appState !== 'quiz' || isPaused) return;
+        
+        const isCorrect = questions[currentIndex].answer === key;
+        if (isSoundEnabled) {
+            if (isCorrect) {
+                playCorrectSound();
+            } else {
+                playIncorrectSound();
+            }
+        }
+        
+        setAnswers(prev => ({ ...prev, [currentIndex]: key }));
+    };
+
+    const toggleFlag = () => {
+        const newFlagged = new Set(flagged);
+        if (newFlagged.has(currentIndex)) newFlagged.delete(currentIndex);
+        else newFlagged.add(currentIndex);
+        setFlagged(newFlagged);
+    };
+
+    const calculateScore = () => questions.reduce((acc, q, i) => (answers[i] === q.answer ? acc + 1 : acc), 0);
+
+    const getEncouragement = () => {
+        if (questions.length === 0) return null;
+        const score = calculateScore();
+        const percent = score / questions.length;
+        if (percent >= 0.9) return { title: "BÁC SĨ CHUYÊN KHOA CẤP CAO", text: "Vinh danh bạn! Chẩn đoán vô cùng chính xác và hoàn hảo.", icon: "fa-award", color: "text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/40 border-blue-400" };
+        if (percent >= 0.7) return { title: "BÁC SĨ NỘI TRÚ XUẤT SẮC", text: "Tuyệt vời. Tư duy lâm sàng của bạn rất vững.", icon: "fa-stethoscope", color: "text-cyan-600 dark:text-cyan-300 bg-cyan-50 dark:bg-cyan-900/40 border-cyan-400" };
+        if (percent >= 0.5) return { title: "THỰC TẬP SINH TRIỂN VỌNG", text: "Có nền tảng. Cần nạp thêm kiến thức để xử lý ca phức tạp nhé!", icon: "fa-user-nurse", color: "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/40 border-emerald-400" };
+        return { title: "CẤP CỨU VIÊN TẬP SỰ", text: "Mức độ khẩn cấp! Kỹ năng trực giác chưa đủ, bạn cần học bài ngay!", icon: "fa-truck-medical", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/40 border-rose-400" };
+    };
+
+    
+    const renderQuizContent = () => {
+        if (isPaused) {
+            return (
+                <div className="glass-panel rounded-3xl p-16 text-center shadow-2xl animate-in fade-in zoom-in duration-300 mt-10 relative z-10">
+                    <div className="w-24 h-24 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i className="fa-solid fa-pause text-5xl"></i>
+                    </div>
+                    <h2 className="text-3xl font-black text-slate-800 dark:text-slate-100 mb-4">Bài thi đang tạm dừng</h2>
+                    <button onClick={togglePause} className="btn-gradient text-white px-12 py-4 rounded-2xl font-bold text-xl shadow-lg shadow-blue-300/50 dark:shadow-none hover:shadow-blue-400/50 transition-all">Tiếp tục ngay</button>
+                </div>
+            );
+        }
+
+        if (appState === 'result') {
+            const msg = getEncouragement();
+            const percent = questions.length > 0 ? calculateScore() / questions.length : 0;
+            return (
+                <div className="space-y-8 animate-in slide-in-from-bottom-8 duration-500 mt-4 relative z-10">
+                    <div className="glass-panel p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
+                        
+                        <div className="relative bg-[#0b1221] dark:bg-black p-8 rounded-[2rem] mb-12 shadow-2xl overflow-hidden border border-slate-700/50">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl"></div>
+                            
+                            <div className="flex flex-col md:flex-row items-center justify-between relative z-10">
+                                <div className="flex items-center gap-6 text-left w-full md:w-auto">
+                                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white shadow-[0_0_30px_rgba(59,130,246,0.3)] shrink-0">
+                                        <i className="fa-solid fa-heart-pulse text-4xl"></i>
+                                    </div>
+                                    <div>
+                                        <h2 className="text-rxl md:text-3xl font-black text-white tracking-tight uppercase mb-1">Báo Cáo Hội Chẩn</h2>
+                                        <div className="flex items-center gap-3 flex-wrap">
+                                            <span className="text-blue-400 font-bold uppercase tracking-widest text-xs">TeamDrCat E-Health</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-6 md:mt-0 w-full md:w-auto flex justify-end">
+                                    {percent < 0.5 ? (
+                                        <div className="px-5 py-2.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-500 font-black text-sm uppercase tracking-widest flex items-center gap-3 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+                                            <div className="relative flex items-center justify-center w-3 h-3"><span className="absolute w-3 h-3 rounded-full bg-red-500 animate-ping"></span><span className="relative w-2 h-2 rounded-full bg-red-500"></span></div>
+                                            KHẨN CẤP
+                                        </div>
+                                    ) : (percent < 0.8 ? (
+                                        <div className="px-5 py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 font-black text-sm uppercase tracking-widest flex items-center gap-3 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                                            <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                                            TRUNG BÌNH
+                                        </div>
+                                    ) : (
+                                        <div className="px-5 py-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 font-black text-sm uppercase tracking-widest flex items-center gap-3 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                                            THÔNG THƯỜNG
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-12 w-full">
+                            <div className="relative shrink-0">
+                                <svg className="w-56 h-56 transform -rotate-90">
+                                    <circle cx="112" cy="112" r="90" stroke="currentColor" strokeWidth="16" fill="transparent" className="text-slate-100 dark:text-slate-800" />
+                                    <circle cx="112" cy="112" r="90" stroke="currentColor" strokeWidth="16" fill="transparent"
+                                        strokeDasharray="565.48"
+                                        strokeDashoffset={565.48 - (percent * 565.48)}
+                                        strokeLinecap="round"
+                                        className="text-rose-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all duration-[2000ms] ease-out" />
+                                </svg>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span className="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-br from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 drop-shadow-sm">{calculateScore()}</span>
+                                    <span className="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">/ {questions.length} ĐIỂM</span>
+                                </div>
+                            </div>
+                            
+                            {msg && (
+                                <div className={`p-8 rounded-[2rem] border min-w-[300px] max-w-md w-full flex flex-col gap-3 ${msg.color}  shadow-xl relative overflow-hidden group`}>
+                                    <div className="absolute -right-10 -bottom-10 opacity-[0.07] group-hover:scale-110 group-hover:rotate-12 transition-all duration-700">
+                                        <i className={`fa-solid ${msg.icon} text-9xl`}></i>
+                                    </div>
+                                    <div className="flex items-center gap-4 relative z-10">
+                                        <div className="bg-white/50 w-14 h-14 rounded-full flex items-center justify-center shadow-sm shrink-0">
+                                            <i className={`fa-solid ${msg.icon} text-2xl`}></i>
+                                        </div>
+                                        <h3 className="text-xl font-black uppercase tracking-wide leading-tight">{msg.title}</h3>
+                                    </div>
+                                    <p className="text-base font-semibold opacity-90 relative z-10 leading-relaxed mt-2">{msg.text}</p>
+                                </div>
+                            )}
+                        </div>
+                        
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 text-left">
+                            <div className="relative glass-panel overflow-hidden group hover:scale-[1.02] transition-all duration-300 rounded-[2rem] border-t-4 border-t-emerald-400 p-6 shadow-xl">
+                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-emerald-400/20 rounded-full blur-2xl group-hover:bg-emerald-400/40 transition-all"></div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-sm font-black uppercase text-emerald-600 dark:text-emerald-400 tracking-wider">Đúng</h3>
+                                    <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm shrink-0">
+                                        <i className="fa-solid fa-check text-xl"></i>
+                                    </div>
+                                </div>
+                                <p className="text-4xl font-black text-slate-800 dark:text-slate-100 mb-1">{calculateScore()}</p>
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest hidden md:block">Câu trả lời</p>
+                            </div>
+                            
+                            <div className="relative glass-panel overflow-hidden group hover:scale-[1.02] transition-all duration-300 rounded-[2rem] border-t-4 border-t-rose-400 p-6 shadow-xl">
+                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-rose-400/20 rounded-full blur-2xl group-hover:bg-rose-400/40 transition-all"></div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-sm font-black uppercase text-rose-600 dark:text-rose-400 tracking-wider">Sai</h3>
+                                    <div className="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center text-rose-600 dark:text-rose-400 shadow-sm shrink-0">
+                                        <i className="fa-solid fa-xmark text-xl"></i>
+                                    </div>
+                                </div>
+                                <p className="text-4xl font-black text-slate-800 dark:text-slate-100 mb-1">{Object.keys(answers).length - calculateScore()}</p>
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest hidden md:block">Câu sai sót</p>
+                            </div>
+                            
+                            <div className="relative glass-panel overflow-hidden group hover:scale-[1.02] transition-all duration-300 rounded-[2rem] border-t-4 border-t-slate-400 p-6 shadow-xl">
+                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-slate-400/20 rounded-full blur-2xl group-hover:bg-slate-400/40 transition-all"></div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-sm font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Chưa làm</h3>
+                                    <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-300 shadow-sm shrink-0">
+                                        <i className="fa-solid fa-forward text-lg"></i>
+                                    </div>
+                                </div>
+                                <p className="text-4xl font-black text-slate-800 dark:text-slate-100 mb-1">{questions.length - Object.keys(answers).length}</p>
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest hidden md:block">Bỏ qua / Hết giờ</p>
+                            </div>
+                            
+                            <div className="relative glass-panel overflow-hidden group hover:scale-[1.02] transition-all duration-300 rounded-[2rem] border-t-4 border-t-amber-400 p-6 shadow-xl">
+                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-amber-400/20 rounded-full blur-2xl group-hover:bg-amber-400/40 transition-all"></div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-sm font-black uppercase text-amber-600 dark:text-amber-400 tracking-wider">Lưu ý</h3>
+                                    <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center text-amber-600 dark:text-amber-400 shadow-sm shrink-0">
+                                        <i className="fa-solid fa-flag text-lg"></i>
+                                    </div>
+                                </div>
+                                <p className="text-4xl font-black text-slate-800 dark:text-slate-100 mb-1">{flagged.size}</p>
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest hidden md:block">Câu có cờ</p>
+                            </div>
+                        </div>
+
+                        <div className="mb-8 p-6 bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div className="flex items-center gap-4 text-left">
+                                <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 text-indigo-500 flex justify-center items-center shrink-0">
+                                    <i className="fa-solid fa-stopwatch text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p className="text-slate-500 font-bold uppercase text-xs tracking-widest">Thời gian trung bình</p>
+                                    <p className="text-xl md:text-2xl font-black text-slate-800 dark:text-slate-100">
+                                        {Object.keys(answers).length > 0 ? ((questions.length * 60 - timeRemaining) / Object.keys(answers).length).toFixed(1) : 0} giây <span className="text-sm font-semibold opacity-70">/ câu</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="px-5 py-2.5 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 font-bold text-sm shrink-0">
+                                <i className="fa-solid fa-bolt mr-2"></i> Quyết định thần tốc!
+                            </div>
+                        </div>
+
+                        <div className="mt-8 mb-10 p-5 bg-blue-50/50 dark:bg-blue-900/10 rounded-2xl border border-blue-100 dark:border-blue-800/30 flex items-center gap-4 text-left shadow-sm">
+                            <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center shadow-sm shrink-0">
+                                <i className="fa-solid fa-file-pdf text-rose-500 text-xl"></i>
+                            </div>
+                            <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 leading-snug">Bạn có thể tra cứu giải thích đáp án chi tiết trong file PDF do <strong>TEAMDRCAT</strong> biên soạn.</span>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-5">
+                            <button onClick={restartQuiz} className="flex-1 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-lg font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-sm  uppercase tracking-widest ">
+                                <i className="fa-solid fa-rotate-right text-xl"></i> Làm lại bài
+                            </button>
+                            <button onClick={() => { setAppState('review'); setCurrentIndex(0); }} className="flex-1 btn-gradient text-white text-lg font-black py-5 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_15px_30px_-10px_rgba(59,130,246,0.8)] uppercase tracking-widest  border border-white/20 relative overflow-hidden group">
+                                <i className="fa-solid fa-eye text-2xl relative z-10 shrink-0"></i> 
+                                <span className="relative z-10">Xem đáp án chi tiết</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        if (appState === 'review') {
+            return (
+                <div className="space-y-6 animate-in fade-in duration-300 relative z-10">
+                    <div className="glass-panel p-5 rounded-2xl border-l-4 border-l-orange-500 flex items-center justify-between shadow-lg sticky top-0 z-20">
+                        <h2 className="text-lg font-black text-orange-600 dark:text-orange-400 uppercase tracking-tight flex items-center gap-2"><i className="fa-solid fa-list-check text-xl"></i> Review Đáp Án</h2>
+                    </div>
+                    
+                    {questions.length > 0 && questions.map((q, index) => {
+                        const isSelected = !!answers[index];
+                        const isCorrect = answers[index] === q.answer;
+                        const isFlagged = flagged.has(index);
+                        const showContext = q.context && (index === 0 || q.context !== questions[index - 1].context);
+                        
+                        let qStatus = <span className="text-slate-500 dark:text-slate-400 font-bold text-sm bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-lg"><i className="fa-solid fa-minus mr-1"></i>Chưa làm</span>;
+                        let qTagClass = "px-4 py-1.5 rounded-lg text-xs font-black uppercase tracking-widest text-white shadow-sm bg-slate-400 dark:bg-slate-600";
+                        let qBoxClass = "fast-render-box glass-panel rounded-[1.5rem] shadow-lg p-6 md:p-8 relative overflow-hidden";
+
+                        if (isSelected) {
+                            if (isCorrect) {
+                                qStatus = <span className="text-green-700 dark:text-green-300 font-bold text-sm bg-green-100 dark:bg-green-900/50 px-3 py-1 rounded-lg border border-green-200 dark:border-green-800"><i className="fa-solid fa-check mr-1"></i>Chính xác</span>;
+                                qTagClass = "px-4 py-1.5 rounded-lg text-xs font-black uppercase tracking-widest text-white shadow-sm bg-green-500 dark:bg-green-600";
+                                qBoxClass = "glass-panel rounded-[1.5rem] shadow-lg border-l-4 border-l-green-500 p-6 md:p-8 relative overflow-hidden";
+                            } else {
+                                qStatus = <span className="text-red-700 dark:text-red-300 font-bold text-sm bg-red-100 dark:bg-red-900/50 px-3 py-1 rounded-lg border border-red-200 dark:border-red-800"><i className="fa-solid fa-xmark mr-1"></i>Sai</span>;
+                                qTagClass = "px-4 py-1.5 rounded-lg text-xs font-black uppercase tracking-widest text-white shadow-sm bg-red-500 dark:bg-red-600";
+                                qBoxClass = "glass-panel rounded-[1.5rem] shadow-lg border-l-4 border-l-red-500 p-6 md:p-8 relative overflow-hidden";
+                            }
+                        }
+                        
+                        return (
+                            <div key={index} id={`review-q-${index}`} className={qBoxClass}>
+                                {showContext && (
+                                    <div className="medical-record-box rounded-xl p-5 mb-8 shadow-sm text-left">
+                                        <div className="flex items-center gap-2 mb-3 border-b border-blue-200 dark:border-blue-800 pb-2">
+                                            <i className="fa-solid fa-notes-medical text-blue-600 dark:text-blue-400 text-lg"></i>
+                                            <span className="font-black text-blue-800 dark:text-blue-300 uppercase text-sm tracking-wide">TÌNH HUỐNG LÂM SÀNG</span>
+                                        </div>
+                                        <p className="text-slate-800 dark:text-slate-200 text-lg md:text-xl font-bold leading-relaxed whitespace-pre-wrap">{q.context}</p>
+                                    </div>
+                                )}
+                                <div className="flex justify-between items-center mb-6">
+                                    <div className="flex items-center gap-3">
+                                        <span className={qTagClass}>Câu {q.id}</span>
+                                        {isFlagged && <span className="text-orange-600 dark:text-orange-400 font-bold text-sm bg-orange-100 dark:bg-orange-900/50 px-3 py-1 rounded-lg border border-orange-200 dark:border-orange-800"><i className="fa-solid fa-flag mr-1"></i>Đã cờ</span>}
+                                        {qStatus}
+                                    </div>
+                                </div>
+                                <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-slate-100 leading-relaxed mb-6 whitespace-pre-wrap">{q.question}</h3>
+                                <div className="grid gap-3 mb-2">
+                                    {['A', 'B', 'C', 'D', 'E'].map(key => {
+                                        const label = q.options[key];
+                                        if (!label) return null;
+                                        
+                                        const isUserChoice = answers[index] === key;
+                                        const isCorrectOption = q.answer === key;
+                                        
+                                        let btnClass = "w-full p-4 rounded-xl border border-slate-200/60 dark:border-slate-600/60 text-left flex items-center gap-4 relative bg-white/40 dark:bg-slate-700/40 text-slate-600 dark:text-slate-300 opacity-80";
+                                        let spanClass = "w-8 h-8 rounded-lg flex items-center justify-center font-bold text-base shrink-0 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 shadow-sm border border-slate-200 dark:border-slate-600";
+                                        
+                                        if (isCorrectOption) {
+                                            btnClass = "w-full p-4 rounded-xl border-2 text-left flex items-center gap-4 relative bg-blue-50/80 dark:bg-blue-900/30 border-rose-500 dark:border-blue-600 text-blue-800 dark:text-blue-200 shadow-md ring-1 ring-blue-500 opacity-100 grayscale-0";
+                                            spanClass = "w-8 h-8 rounded-lg flex items-center justify-center font-bold text-base shrink-0 bg-rose-500 dark:bg-blue-600 text-white shadow-sm border-none";
+                                        } else if (isUserChoice) {
+                                            btnClass = "w-full p-4 rounded-xl border-2 text-left flex items-center gap-4 relative bg-red-50/80 dark:bg-red-900/30 border-red-400 dark:border-red-600 text-red-800 dark:text-red-200 shadow-md opacity-100 grayscale-0";
+                                            spanClass = "w-8 h-8 rounded-lg flex items-center justify-center font-bold text-base shrink-0 bg-red-500 dark:bg-red-600 text-white shadow-sm border-none";
+                                        }
+                                        
+                                        return (
+                                            <div key={key} className={btnClass}>
+                                                <span className={spanClass}>{key}</span>
+                                                <span className="text-base font-medium leading-relaxed flex-1 pr-8 whitespace-pre-wrap">{label}</span>
+                                                {isCorrectOption && <i className="fa-solid fa-circle-check text-2xl text-rose-500 dark:text-blue-400 absolute right-4 top-1/2 -translate-y-1/2 drop-shadow-sm"></i>}
+                                                {isUserChoice && !isCorrectOption && <i className="fa-solid fa-circle-xmark text-2xl text-red-500 dark:text-red-400 absolute right-4 top-1/2 -translate-y-1/2 drop-shadow-sm"></i>}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            );
+        }
+
+        const currentQ = questions[currentIndex];
+        const hasAnsweredCurrent = !!answers[currentIndex];
+        
+        return (
+            <div className="space-y-4 relative z-10">
+                {questions.length > 0 && currentQ && (
+                    <div className="glass-panel rounded-[2rem] shadow-2xl p-6 md:p-8 md:px-10 relative overflow-hidden border-t-4 border-t-blue-500/80">
+                        {currentQ.context && (
+                            <div className="medical-record-box rounded-2xl p-5 md:p-6 mb-8 shadow-sm text-left animate-in fade-in slide-in-from-top-4 duration-500">
+                                <div className="flex items-center gap-3 mb-3 border-b border-blue-200 dark:border-blue-800 pb-3">
+                                    <div className="bg-blue-100 dark:bg-blue-900 p-2 rounded-lg">
+                                        <i className="fa-solid fa-file-waveform text-blue-600 dark:text-blue-400 text-lg"></i>
+                                    </div>
+                                    <span className="font-black text-blue-800 dark:text-blue-300 uppercase text-sm tracking-wider">TÌNH HUỐNG LÂM SÀNG (Dùng cho câu {currentQ.id})</span>
+                                </div>
+                                <p className="text-slate-800 dark:text-slate-200 text-lg md:text-xl font-bold leading-relaxed whitespace-pre-wrap">{currentQ.context}</p>
+                            </div>
+                        )}
+                                                <div className="mb-8">
+                            <div className="flex justify-between items-center mb-3">
+                                <div className="flex items-center gap-2">
+                                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-5 py-2 rounded-xl text-sm font-black uppercase tracking-widest shadow-md">Câu {currentQ.id}</span>
+                                    <span className="text-slate-500 dark:text-slate-400 font-bold text-xs tracking-widest uppercase ml-1">/ {questions.length}</span>
+                                </div>
+                                <button onClick={toggleFlag} className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold border transition-all duration-300 shadow-sm hover:-translate-y-0.5 ${flagged.has(currentIndex) ? 'bg-orange-100 dark:bg-orange-900/60 border-orange-400 text-orange-600 dark:text-orange-400' : 'bg-white/80 dark:bg-slate-800/80 border-slate-200/80 dark:border-slate-600/80 text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:border-slate-300 dark:hover:border-slate-500'}`}>
+                                    <i className={`fa-solid fa-flag text-sm ${flagged.has(currentIndex) ? 'animate-pulse' : ''}`}></i>
+                                    <span>Đánh dấu cờ</span>
+                                </button>
+                            </div>
+                            
+                            <div className="flex items-center gap-3 w-full group" title="Tiến độ làm bài">
+                                <i className="fa-solid fa-syringe text-blue-600 dark:text-blue-400 text-xl transform -rotate-45"></i>
+                                <div className="flex-1 h-4 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden border border-slate-300 dark:border-slate-600 shadow-inner relative">
+                                    <div className="h-full bg-gradient-to-r from-emerald-400 to-blue-500 transition-all duration-500 relative" style={{ width: `${(Object.keys(answers).length / questions.length) * 100}%` }}>
+                                        <div className="absolute inset-0 bg-white/10" style={{ backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)', backgroundSize: '1rem 1rem' }}></div>
+                                    </div>
+                                    <div className="absolute top-0 right-0 h-full w-2 bg-slate-300 dark:bg-slate-600"></div>
+                                </div>
+                                <span className="text-xs font-black text-blue-700 dark:text-blue-300">{Math.round((Object.keys(answers).length / questions.length) * 100)}%</span>
+                            </div>
+                        </div>
+                        <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-slate-100 leading-relaxed mb-8 whitespace-pre-wrap drop-shadow-sm">{currentQ.question}</h3>
+                        <div className="grid gap-4">
+                            {['A', 'B', 'C', 'D', 'E'].map(key => {
+                                const label = currentQ.options[key];
+                                if (!label) return null;
+                                
+                                const isSelected = answers[currentIndex] === key;
+                                const isCorrect = currentQ.answer === key;
+                                const showAnswerState = hasAnsweredCurrent;
+                                
+                                let btnClass = "group w-full p-4 md:p-5 rounded-2xl border border-white/60 dark:border-slate-600/50 text-left flex items-center gap-4 option-transition relative bg-white/70 dark:bg-slate-800/70 hover:border-blue-400 dark:hover:border-rose-500 hover:bg-white dark:hover:bg-slate-800 shadow-sm hover:shadow-sm transform  active:scale-[0.98]";
+                                let spanClass = "w-10 h-10 rounded-xl flex items-center justify-center font-black text-base shrink-0 transition-all duration-300 bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400 shadow-sm group-hover:bg-rose-500 dark:group-hover:bg-blue-600 group-hover:text-white border border-slate-200 dark:border-slate-600 group-hover:border-transparent";
+                                
+                                if (showAnswerState) {
+                                    if (isCorrect) {
+                                        btnClass = "group w-full p-4 md:p-5 rounded-2xl border-2 text-left flex items-center gap-4 option-transition relative bg-green-50/95 dark:bg-green-900/40 border-green-500 dark:border-green-500 text-green-900 dark:text-green-100 shadow-md ring-4 ring-green-500/20 transform scale-[1.02] z-10";
+                                        spanClass = "w-10 h-10 rounded-xl flex items-center justify-center font-black text-base shrink-0 transition-all bg-green-500 dark:bg-green-500 text-white shadow-sm border-none";
+                                    } else if (isSelected) {
+                                        btnClass = "group w-full p-4 md:p-5 rounded-2xl border-2 text-left flex items-center gap-4 option-transition relative bg-red-50/95 dark:bg-red-900/40 border-red-400 dark:border-red-500 text-red-900 dark:text-red-100 shadow-md ring-4 ring-red-500/20";
+                                        spanClass = "w-10 h-10 rounded-xl flex items-center justify-center font-black text-base shrink-0 transition-all bg-red-500 dark:bg-red-500 text-white shadow-sm border-none";
+                                    } else {
+                                        btnClass = "group w-full p-4 md:p-5 rounded-2xl border text-left flex items-center gap-4 option-transition relative border-slate-200/50 dark:border-slate-700/50 bg-white/30 dark:bg-slate-800/40 text-slate-600 dark:text-slate-400 opacity-70";
+                                        spanClass = "w-10 h-10 rounded-xl flex items-center justify-center font-black text-base shrink-0 transition-all bg-slate-100/50 dark:bg-slate-700/60 text-slate-500 dark:text-slate-400 shadow-none border border-slate-200/50 dark:border-slate-600/50";
+                                    }
+                                }
+                                
+                                return (
+                                    <button key={key} onClick={() => handleSelectAnswer(key)} disabled={showAnswerState} className={btnClass}>
+                                        <span className={spanClass}>{key}</span>
+                                        <span className="text-base font-semibold leading-relaxed flex-1 pr-8 whitespace-pre-wrap dark:text-slate-200">{label}</span>
+                                        {showAnswerState && isCorrect && <i className="fa-solid fa-circle-check text-3xl text-rose-500 dark:text-blue-400 absolute right-5 top-1/2 -translate-y-1/2 drop-shadow-md will-change-transform"></i>}
+                                        {showAnswerState && isSelected && !isCorrect && <i className="fa-solid fa-circle-xmark text-3xl text-red-500 dark:text-red-400 absolute right-5 top-1/2 -translate-y-1/2 drop-shadow-md will-change-transform"></i>}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+
+                {questions.length > 0 && (
+                    <React.Fragment>
+                    <div className="flex items-center justify-between gap-4 pt-6 pb-4 relative z-10">
+                        <button onClick={() => setCurrentIndex(p => Math.max(0, p - 1))} disabled={currentIndex === 0} className="flex-1 glass-panel px-6 py-4 rounded-2xl font-bold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-rose-300 dark:hover:border-blue-600 disabled:opacity-0 transition-all duration-300 flex items-center justify-center gap-2 uppercase tracking-wide text-sm shadow-sm  ">
+                            <i className="fa-solid fa-arrow-left text-base"></i> 
+                            <span className="hidden sm:inline">Câu trước</span>
+                        </button>
+                        <button onClick={() => setCurrentIndex(p => Math.min(questions.length - 1, p + 1))} disabled={currentIndex === questions.length - 1} className="flex-1 btn-gradient text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 shadow-lg hover:shadow-blue-500/40 flex items-center justify-center gap-2 uppercase tracking-wide text-sm ">
+                            <span className="hidden sm:inline">Câu tiếp</span> 
+                            <i className="fa-solid fa-arrow-right text-base"></i>
+                        </button>
+                    </div>
+                    {/* NỘP BÀI BUTTON ADDED */}
+                    <div className="mt-2 pb-16 flex justify-center w-full animate-in fade-in slide-in-from-bottom-5 duration-700">
+                        <button onClick={() => { window.customConfirmDialog('Bạn có chắc chắn muốn nộp bài chứ?', () => { setAppState('result'); setShowMatrix(false); }) }} className="w-full sm:w-2/3 md:w-1/2 bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white font-black py-4 px-8 rounded-[1.5rem] shadow-[0_10px_25px_-5px_rgba(239,68,68,0.5)] hover:shadow-[0_15px_30px_-5px_rgba(239,68,68,0.6)] transform  transition-all flex items-center justify-center gap-4 text-lg border border-red-400">
+                            <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center  shadow-inner shrink-0">
+                                <i className="fa-solid fa-paper-plane text-xl"></i>
+                            </div>
+                            <span className="uppercase tracking-[0.2em] drop-shadow-sm">Nộp Bài Ngay</span>
+                        </button>
+                    </div>
+                    </React.Fragment>
+                )}
+            </div>
+        );
+    };
+
+    const handleUnlock = () => {
+        if(passwordInput === 'topcaodrcat2026') {
+            const unlockKey = 'teamdrcat_unlocked_' + document.title;
+            localStorage.setItem(unlockKey, 'true');
+            setAppState('intro');
+        } else {
+            setPwError(true);
+        }
+    };
+
+    if (appState === 'locked') {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden bg-transparent z-40 text-center animate-in fade-in duration-500">
+                <div className={`max-w-md w-full glass-panel rounded-[2.5rem] shadow-2xl p-10 flex flex-col items-center transform transition-all duration-300 ${pwError ? 'animate-shake' : ''}`}>
+                    <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-inner mb-6 relative group">
+                        <div className="absolute inset-0 bg-blue-400 rounded-full opacity-20 group-hover:scale-150 transition-transform duration-700"></div>
+                        <i className="fa-solid fa-lock text-3xl"></i>
+                    </div>
+                    <h2 className="text-2xl font-black uppercase text-slate-800 dark:text-slate-100 mb-2 tracking-tighter">Bảo mật truy cập</h2>
+                    <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-8 border-b border-slate-200 dark:border-slate-700/50 pb-6 w-full">Vui lòng nhập mật khẩu tài liệu.</p>
+                    
+                    <div className="relative mb-6">
+                        <input 
+                            type={showPassword ? "text" : "password"} 
+                            value={passwordInput}
+                            onChange={(e) => { setPasswordInput(e.target.value); setPwError(false); }}
+                            onKeyDown={(e) => { if(e.key === 'Enter') handleUnlock(); }}
+                            className={`w-full px-5 py-4 rounded-xl font-bold bg-white/70 dark:bg-slate-800/70 border-2 outline-none transition-all shadow-sm text-center tracking-[0.3em] text-lg ${pwError ? 'border-red-400 text-red-500 bg-red-50' : 'border-slate-200 dark:border-slate-700 focus:border-rose-500 text-slate-800 dark:text-slate-100'}`}
+                            placeholder="••••••••••"
+                        />
+                        <button 
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-rose-500 transition-colors w-10 h-10 flex items-center justify-center rounded-full hover:bg-blue-50 dark:hover:bg-slate-700"
+                        >
+                            <i className={`fa-solid ${showPassword ? 'fa-eye-slash' : 'fa-eye'} text-xl`}></i>
+                        </button>
+                    </div>
+                    
+                    {pwError && <p className="text-red-500 text-xs font-bold uppercase mb-4 tracking-widest flex items-center justify-center gap-2 animate-in slide-in-from-top-1"><i className="fa-solid fa-triangle-exclamation"></i> Mật khẩu chưa đúng</p>}
+                    
+                    <button onClick={handleUnlock} className="w-full btn-gradient text-white text-lg font-black py-4 rounded-2xl flex items-center justify-center gap-3 shadow-lg  transition-all border border-white/20">
+                        <i className="fa-solid fa-key"></i> Xác nhận
+                    </button>
+                    <p className="mt-8 text-[10px] font-black text-slate-400 uppercase tracking-widest opacity-80">Tài liệu nội bộ TEAMDRCAT</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (appState === 'unlocking') {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden bg-transparent z-40 text-center">
+                <div key={unlockCountdown} className="animate-heartbeat flex flex-col items-center justify-center" style={{ animationDuration: '1s' }}>
+                    <div className="text-[180px] md:text-[220px] font-black leading-none bg-clip-text text-transparent bg-gradient-to-b from-blue-400 to-cyan-500 drop-shadow-[0_0_40px_rgba(37,99,235,0.8)] filter">
+                        {unlockCountdown}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    if (appState === 'intro') {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden bg-transparent">
+                
+                <div className="absolute top-4 right-4 z-50 flex gap-3">
+                    <button onClick={() => setIsSoundEnabled(!isSoundEnabled)} className="p-3 glass-panel shadow-lg rounded-full hover:bg-white/90 dark:hover:bg-slate-700/90 transition-all duration-300 text-slate-600 dark:text-slate-300 hover:scale-110">
+                        {isSoundEnabled ? <i className="fa-solid fa-volume-high text-xl text-rose-500"></i> : <i className="fa-solid fa-volume-xmark text-xl text-slate-400"></i>}
+                    </button>
+                    <button onClick={() => setZoomLevel(prev => Math.min(prev + 10, 150))} title="Phóng to" className="p-3 glass-panel shadow-lg rounded-full hover:bg-white/90 dark:hover:bg-slate-700/90 transition-all duration-300 text-slate-600 dark:text-slate-300 hover:scale-110">
+                          <i className="fa-solid fa-magnifying-glass-plus text-xl text-emerald-500"></i>
+                      </button>
+                      <button onClick={() => setZoomLevel(prev => Math.max(prev - 10, 50))} title="Thu nhỏ" className="p-3 glass-panel shadow-lg rounded-full hover:bg-white/90 dark:hover:bg-slate-700/90 transition-all duration-300 text-slate-600 dark:text-slate-300 hover:scale-110">
+                          <i className="fa-solid fa-magnifying-glass-minus text-xl text-emerald-500"></i>
+                      </button>
+                      <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-3 glass-panel shadow-lg rounded-full hover:bg-white/90 dark:hover:bg-slate-700/90 transition-all duration-300 text-slate-600 dark:text-slate-300 hover:scale-110">
+                        {isDarkMode ? <i className="fa-solid fa-sun text-xl text-amber-500"></i> : <i className="fa-solid fa-moon text-xl text-rose-500"></i>}
+                    </button>
+                </div>
+                <div className="max-w-2xl w-full glass-panel rounded-[2.5rem] shadow-2xl overflow-hidden relative z-10 border-t border-l border-white/80 dark:border-slate-700/50 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    <div className="p-12 pb-8 flex flex-col items-center text-center relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 to-cyan-600/10 dark:from-blue-900/20 dark:to-cyan-900/20 pointer-events-none"></div>
+                        <div className="w-24 h-24 bg-white dark:bg-slate-800 rounded-full mb-6 shadow-xl border border-blue-100 dark:border-slate-700 flex items-center justify-center relative group">
+                            <div className="absolute inset-0 bg-blue-400 rounded-full opacity-20 group-hover:scale-150 transition-transform duration-700"></div>
+                            <i className="fa-solid fa-staff-snake text-5xl bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-cyan-600 drop-shadow-sm text-rose-500"></i>
+                        </div>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter mb-3 z-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 drop-shadow-sm">TRẮC NGHIỆM HÓA SINH LÂM SÀNG</h1>
+                        <p className="text-blue-700 dark:text-blue-300 text-lg font-bold tracking-widest uppercase z-10 opacity-80">CHUYÊN ĐỀ: {diseaseName}</p>
+                    </div>
+                    <div className="p-10 pt-2 bg-white/40 dark:bg-slate-900/85 ">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div className="flex items-center gap-4 bg-white/70 dark:bg-slate-800/70 p-5 rounded-2xl border border-white/50 dark:border-slate-700/50 shadow-sm transition-transform duration-300  ">
+                                <div className="bg-blue-100 dark:bg-blue-900/50 w-12 h-12 flex items-center justify-center rounded-xl text-blue-600 dark:text-blue-400 shadow-inner"><i className="fa-solid fa-layer-group text-xl"></i></div>
+                                <div><p className="text-[10px] text-slate-500 dark:text-slate-400 font-black uppercase tracking-widest mb-1">Tổng câu hỏi</p><p className="text-2xl font-black text-slate-800 dark:text-slate-100 leading-none">{questions.length}</p></div>
+                            </div>
+                            <div className="flex items-center gap-4 bg-white/70 dark:bg-slate-800/70 p-5 rounded-2xl border border-white/50 dark:border-slate-700/50 shadow-sm transition-transform duration-300  ">
+                                <div className="bg-cyan-100 dark:bg-cyan-900/50 w-12 h-12 flex items-center justify-center rounded-xl text-cyan-600 dark:text-cyan-400 shadow-inner"><i className="fa-regular fa-hourglass-half text-xl"></i></div>
+                                <div><p className="text-[10px] text-slate-500 dark:text-slate-400 font-black uppercase tracking-widest mb-1">Thời gian</p><p className="text-2xl font-black text-slate-800 dark:text-slate-100 leading-none">{questions.length} Phút</p></div>
+                            </div>
+                        </div>
+                        <div className="bg-blue-50/80 dark:bg-blue-900/20 rounded-2xl p-6 mb-10 border border-blue-100 dark:border-blue-800/30 flex items-start gap-4 text-blue-900 dark:text-blue-100 shadow-inner">
+                            <i className="fa-solid fa-circle-info shrink-0 mt-0.5 text-2xl text-cyan-600 dark:text-cyan-400"></i>
+                            <div className="text-base leading-relaxed font-medium">
+                                <p className="font-bold mb-3 text-cyan-800 dark:text-cyan-300 text-lg">Hướng dẫn làm bài:</p>
+                                <ul className="list-disc pl-5 space-y-2 opacity-90 marker:text-cyan-600 dark:marker:text-cyan-400">
+                                    <li>Kết quả đúng/sai sẽ hiển thị <strong className="text-cyan-900 dark:text-cyan-200 font-bold">ngay lập tức</strong> khi chọn.</li>
+                                    <li>Khi đã chọn, bạn <strong className="text-cyan-900 dark:text-cyan-200 font-bold">không thể thay đổi</strong> đáp án của câu đó.</li>
+                                    <li>Sử dụng nút <strong className="text-cyan-900 dark:text-cyan-200 font-bold">Đánh dấu cờ</strong> để lưu lại những câu khó.</li>
+                                    <li><i className="fa-solid fa-keyboard mr-1 opacity-70"></i> Phím tắt điểu khiển: Ghép <strong className="text-cyan-900 dark:text-cyan-200 font-bold">A, B, C, D</strong> để chọn; <strong className="text-cyan-900 dark:text-cyan-200 font-bold">Mũi tên</strong> để chuyển câu; <strong className="text-cyan-900 dark:text-cyan-200 font-bold">Phím Space</strong> để cắm cờ.</li>
+                                    <li>Được biên soạn bởi <strong className="text-cyan-900 dark:text-cyan-200 font-bold">TEAMDRCAT</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button onClick={startQuiz} className="w-full btn-gradient text-white text-xl font-black py-5 rounded-2xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_15px_25px_-10px_rgba(37,99,235,0.8)] flex items-center justify-center gap-3 uppercase tracking-widest  active:scale-95 border border-white/20">
+                            <i className="fa-solid fa-rocket text-xl"></i> Bắt đầu ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="min-h-screen flex flex-col md:flex-row relative transition-colors duration-1000 z-0">
+            {showDrNote && (
+                <div className="fixed z-[100] w-72 glass-panel shadow-2xl rounded-2xl overflow-hidden border border-rose-500/50" style={{ right: '2rem', bottom: '2rem', animation: 'slideIn 0.3s ease-out' }} ref={(el) => { if(el && !el.dataset.dragInit) { el.dataset.dragInit = 'true'; el.style.transform = window._drNoteTransform || ''; } }}>
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 px-4 py-3 flex justify-between items-center text-white cursor-move" style={{ touchAction: 'none' }} onPointerDown={(e) => { if(e.target.closest('button')) return; const el = e.currentTarget; const panel = el.parentElement; el.setPointerCapture(e.pointerId); const startX = e.clientX; const startY = e.clientY; const transformStr = panel.style.transform; let initialDx = 0, initialDy = 0; if(transformStr && transformStr.includes('translate(')) { const match = transformStr.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/); if(match) { initialDx = parseFloat(match[1]); initialDy = parseFloat(match[2]); } } const onMove = (moveEvent) => { const dx = initialDx + (moveEvent.clientX - startX); const dy = initialDy + (moveEvent.clientY - startY); const newTransform = `translate(${dx}px, ${dy}px)`; panel.style.transform = newTransform; window._drNoteTransform = newTransform; }; const onUp = () => { el.removeEventListener('pointermove', onMove); el.removeEventListener('pointerup', onUp); el.releasePointerCapture(e.pointerId); }; el.addEventListener('pointermove', onMove); el.addEventListener('pointerup', onUp); }}>
+                        <span className="font-bold flex items-center gap-2"><i className="fa-solid fa-user-doctor"></i> Sổ tay Y lệnh</span>
+                        <button onClick={() => setShowDrNote(false)} className="hover:text-red-200 transition-colors"><i className="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div className="p-0">
+                        <textarea 
+                            value={drNoteContent}
+                            onChange={(e) => setDrNoteContent(e.target.value)}
+                            placeholder="Ghi chú các thông số bất thường, chẩn đoán sơ bộ..."
+                            className="w-full h-48 p-4 bg-yellow-50/90 dark:bg-yellow-900/20 text-slate-800 dark:text-slate-200 resize-none outline-none font-mono text-sm border-none focus:ring-0 custom-scrollbar"
+                            style={{ backgroundImage: 'linear-gradient(transparent, transparent 27px, #cbd5e1 28px)', backgroundSize: '100% 28px', lineHeight: '28px' }}
+                        ></textarea>
+                    </div>
+                </div>
+            )}
+            
+            {showMatrix && <div className="fixed inset-0 bg-slate-900/95  z-40 md:hidden transition-opacity" onClick={() => setShowMatrix(false)}></div>}
+            
+            <aside className={`fixed md:sticky top-0 right-0 h-screen w-[85vw] max-w-[320px] md:max-w-none md:w-[400px] glass-panel z-50 flex flex-col transition-transform duration-500 ease-in-out ${showMatrix ? 'translate-x-0' : 'translate-x-full md:translate-x-0'} md:order-2 shadow-[-10px_0_30px_rgba(0,0,0,0.05)] dark:shadow-none border-l border-white/40 dark:border-slate-700/50`}>
+                <div className="p-6 border-b border-slate-200/50 dark:border-slate-700/50 flex justify-between items-center bg-white/40 dark:bg-slate-800/90  sticky top-0 z-10">
+                    <h2 className="font-black text-slate-800 dark:text-slate-100 flex items-center gap-3 uppercase tracking-tighter text-base"><div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400"><i className="fa-solid fa-grip"></i></div> Bảng câu hỏi</h2>
+                    <button className="md:hidden text-slate-500 p-2 bg-white/50 dark:bg-slate-700/50 rounded-full hover:bg-white dark:hover:bg-slate-600 transition-colors shadow-sm" onClick={() => setShowMatrix(false)}><i className="fa-solid fa-xmark text-lg"></i></button>
+                </div>
+                <div className="flex-1 overflow-y-auto p-6 custom-scrollbar grid grid-cols-5 gap-3 content-start">
+                    {questions.map((q, i) => {
+                        let navBtnClass = "h-12 w-full rounded-xl text-sm font-black border relative flex items-center justify-center active:scale-95 transition-transform duration-75 bg-white/60 dark:bg-slate-700/60 text-slate-500 border-white/50 dark:border-slate-600/50 dark:text-slate-300 shadow-sm  ";
+                        if (!!answers[i]) {
+                            if (answers[i] === q.answer) {
+                                navBtnClass = "h-12 w-full rounded-xl text-sm font-black border-2 relative flex items-center justify-center active:scale-95 transition-transform duration-75 bg-green-100/90 dark:bg-green-900/60 text-green-700 dark:text-green-300 border-green-400/50 dark:border-green-600/50 shadow-sm ";
+                            } else {
+                                navBtnClass = "h-12 w-full rounded-xl text-sm font-black border-2 relative flex items-center justify-center active:scale-95 transition-transform duration-75 bg-red-100/90 dark:bg-red-900/60 text-red-700 dark:text-red-300 border-red-400/50 dark:border-red-600/50 shadow-sm ";
+                            }
+                        }
+                        if (currentIndex === i && appState !== 'review') {
+                            navBtnClass += " border-blue-500 bg-blue-100 will-change-transform scale-105 z-10";
+                        }
+                        if (flagged.has(i)) {
+                            navBtnClass += " !border-orange-400 dark:!border-orange-500 !bg-orange-100/90 dark:!bg-orange-900/50 text-orange-700 dark:text-orange-400";
+                        }
+                        return (
+                            <button 
+                                key={i} 
+                                onClick={() => { 
+                                    if (appState === 'review') { 
+                                        const target = document.getElementById(`review-q-${i}`); 
+                                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+                                    } else { 
+                                        setCurrentIndex(i); 
+                                    } 
+                                    if (window.innerWidth < 768) setShowMatrix(false); 
+                                }} 
+                                className={navBtnClass}
+                            >
+                                {i + 1}
+                                {flagged.has(i) && <div className="absolute -top-2 -right-2 w-5 h-5 bg-gradient-to-br from-orange-400 to-red-500 rounded-full border border-white dark:border-slate-800 shadow-md flex items-center justify-center text-white text-[10px]"><i className="fa-solid fa-flag"></i></div>}
+                            </button>
+                        );
+                    })}
+                </div>
+                <div className="p-6 pb-28 border-t border-slate-200/50 dark:border-slate-700/50 bg-white/40 dark:bg-slate-800/90  z-10">
+                    {appState === 'quiz' ? (
+                        <button onClick={() => { window.customConfirmDialog('Bạn có chắc chắn muốn nộp bài chứ?', () => { setAppState('result'); setShowMatrix(false); }) }} className="w-full btn-gradient text-white font-black py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 uppercase tracking-widest hover:shadow-blue-500/40 transition-all "><i className="fa-solid fa-paper-plane text-lg"></i> Nộp bài ngay</button>
+                    ) : (
+                        <button onClick={restartQuiz} className="w-full bg-slate-800 dark:bg-slate-700 text-white font-black py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-slate-900 dark:hover:bg-slate-600 transition-colors shadow-md "><i className="fa-solid fa-rotate-right text-lg"></i> Làm lại từ đầu</button>
+                    )}
+                </div>
+            </aside>
+
+            <main className="flex-1 flex flex-col h-screen md:order-1 overflow-hidden relative z-10">
+                <header className="glass-panel border-b border-white/50 dark:border-slate-700/50 px-4 md:px-6 py-3 md:py-4 flex items-start sm:items-center justify-between sticky top-0 z-30 shadow-sm rounded-none">
+                    <div className="flex items-center gap-4 flex-1 min-w-0">
+                        <div className="w-12 h-12 shrink-0 btn-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200/50 dark:shadow-none"><i className="fa-solid fa-staff-snake text-2xl"></i></div>
+                        <div className="hidden sm:block flex-1 min-w-0"><h1 className="text-sm font-black text-slate-800 dark:text-slate-100 uppercase tracking-tight drop-shadow-sm truncate">{diseaseName}</h1><p className="text-[10px] text-blue-600 dark:text-blue-400 font-bold uppercase tracking-widest mt-0.5 truncate">Tài liệu bởi TeamDrCat</p></div>
+                    </div>
+                    <div className="flex flex-wrap items-center justify-end gap-x-2 gap-y-3 sm:gap-4 ml-auto shrink-0" style={{ maxWidth: "calc(100vw - 120px)" }}>
+                        <GoogleSearch />
+                        <RealTimeClock />
+                        <button onClick={() => setIsSoundEnabled(!isSoundEnabled)} className="p-2.5 bg-white/60 dark:bg-slate-700/60 rounded-xl hover:bg-white dark:hover:bg-slate-600 transition-colors text-slate-600 dark:text-slate-300 border border-white/40 dark:border-slate-600/50 shadow-sm">
+                            {isSoundEnabled ? <i className="fa-solid fa-volume-high text-lg text-rose-500"></i> : <i className="fa-solid fa-volume-xmark text-lg text-slate-400"></i>}
+                        </button>
+                        <button onClick={() => setZoomLevel(prev => Math.min(prev + 10, 150))} title="Phóng to" className="p-2.5 bg-white/60 dark:bg-slate-700/60 rounded-xl hover:bg-white dark:hover:bg-slate-600 transition-colors text-slate-600 dark:text-slate-300 border border-white/40 dark:border-slate-600/50 shadow-sm">
+                              <i className="fa-solid fa-magnifying-glass-plus text-lg text-emerald-500"></i>
+                          </button>
+                          <button onClick={() => setZoomLevel(prev => Math.max(prev - 10, 50))} title="Thu nhỏ" className="p-2.5 bg-white/60 dark:bg-slate-700/60 rounded-xl hover:bg-white dark:hover:bg-slate-600 transition-colors text-slate-600 dark:text-slate-300 border border-white/40 dark:border-slate-600/50 shadow-sm">
+                              <i className="fa-solid fa-magnifying-glass-minus text-lg text-emerald-500"></i>
+                          </button>
+                          <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 bg-white/60 dark:bg-slate-700/60 rounded-xl hover:bg-white dark:hover:bg-slate-600 transition-colors text-slate-600 dark:text-slate-300 border border-white/40 dark:border-slate-600/50 shadow-sm">
+                            {isDarkMode ? <i className="fa-solid fa-sun text-lg text-amber-500"></i> : <i className="fa-solid fa-moon text-lg text-rose-500"></i>}
+                        </button>
+                        {['quiz', 'review', 'result'].includes(appState) && (
+                            <React.Fragment>
+                        <button onClick={() => setShowDrNote(!showDrNote)} className="p-2.5 bg-yellow-100/80 dark:bg-yellow-900/50 rounded-xl hover:bg-yellow-200 dark:hover:bg-yellow-800 transition-colors text-yellow-700 dark:text-yellow-400 border border-yellow-300/50 dark:border-yellow-700/50 shadow-sm" title="Mở sổ tay">
+                            <i className="fa-solid fa-notes-medical text-lg"></i>
+                        </button>
+                            </React.Fragment>
+                        )}
+                        {appState === 'quiz' && (
+                            <React.Fragment>
+                                <div className={`px-4 py-2 rounded-xl font-mono text-lg font-black border flex items-center gap-3 shadow-sm transition-colors ${timeRemaining < 120 ? 'bg-red-50/90 dark:bg-red-900/50 border-red-300 dark:border-red-700 text-red-600 dark:text-red-400 border-2' : 'bg-white/60 dark:bg-slate-700/60 border-white/50 dark:border-slate-600/50 text-blue-700 dark:text-blue-300'}`}>
+                                    <i className={`fa-solid fa-heart-pulse text-xl ${timeRemaining < 120 ? 'animate-heartbeat-fast' : 'animate-heartbeat'}`}></i>
+                                    {formatTime(timeRemaining)}
+                                </div>
+                                <button onClick={togglePause} className="p-2.5 bg-white/60 dark:bg-slate-700/60 rounded-xl hover:bg-white dark:hover:bg-slate-600 transition-colors text-blue-600 dark:text-blue-400 border border-white/40 dark:border-slate-600/50 shadow-sm">
+                                    {isPaused ? <i className="fa-solid fa-play text-lg"></i> : <i className="fa-solid fa-pause text-lg"></i>}
+                                </button>
+                            </React.Fragment>
+                        )}
+                        {appState === 'review' && <div className="px-4 py-2 rounded-xl font-black bg-amber-100/90 dark:bg-amber-900/50 text-amber-700 dark:text-amber-400 flex items-center gap-2 border border-amber-300/50 dark:border-amber-700/50 shadow-sm"><i className="fa-solid fa-eye"></i> <span className="hidden sm:inline uppercase text-xs tracking-wider">Xem lại</span></div>}
+                        <button className="md:hidden bg-white/60 dark:bg-slate-700/60 text-blue-600 dark:text-blue-400 p-2.5 rounded-xl flex items-center justify-center border border-white/40 dark:border-slate-600/50 shadow-sm" onClick={() => setShowMatrix(true)}><i className="fa-solid fa-bars text-lg"></i></button>
+                    </div>
+                </header>
+
+                <div ref={scrollContainerRef} className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar relative z-0">
+                    <div className="max-w-4xl mx-auto w-full pb-8">
+                        {renderQuizContent()}
+                    </div>
+                </div>
+            </main>
+        </div>
+    );
+}
+
+
+class ErrorBoundary extends React.Component {
+    constructor(props) { super(props); this.state = { hasError: false, error: null, info: null }; }
+    static getDerivedStateFromError(error) { return { hasError: true, error }; }
+    componentDidCatch(error, info) { this.setState({ error, info }); console.error("REACT CRASH: ", error, info); }
+    render() {
+        if (this.state.hasError) {
+            return (
+                <div style={{padding: '40px', background: 'white', color: 'red', minHeight: '100vh', zIndex: 99999, position: 'relative'}}>
+                    <h1 style={{fontSize: '24px', fontWeight: 'bold'}}>HỆ THỐNG GẶP LỖI (CRASH)</h1>
+                    <p style={{marginTop: '10px'}}>{this.state.error && this.state.error.toString()}</p>
+                    <pre style={{marginTop: '20px', background: '#ffebee', padding: '15px', borderRadius: '8px', overflow: 'auto', fontSize: '12px'}}>
+                        {this.state.info && this.state.info.componentStack}
+                    </pre>
+                    <button onClick={() => { localStorage.clear(); window.location.reload(); }} style={{marginTop: '20px', background: 'red', color: 'white', padding: '10px 20px', borderRadius: '8px'}}>Khôi phục / Làm lại từ đầu (Xoá bộ nhớ)</button>
+                </div>
+            );
+        }
+        return this.props.children;
+    }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ErrorBoundary><App /></ErrorBoundary>);
+
+
+</script>
+
+
+    <!-- PURE HTML FLOATING NAV - LOADS INSTANTLY -->
+    <nav id="floating-nav-pure" class="fixed bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 bg-[#383f51] text-[#b3b9cc] px-3 sm:px-6 py-2 sm:py-3 rounded-full flex z-[99999] shadow-[0_10px_30px_rgba(0,0,0,0.3)] items-center text-[9px] sm:text-xs font-black tracking-widest uppercase border border-white/5 divide-x divide-slate-600/50 transition-all scale-85 sm:scale-90 origin-bottom hover:shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+        <button onclick="if(window.self !== window.top){window.parent.postMessage({action:'closeQuiz'},'*');}else if(window.opener){window.close();}else{window.location.href='index.html';}" class="hover:text-white active:scale-95 transition-all flex items-center gap-1.5 sm:gap-2 pr-3 sm:pr-5">
+            <i class="fa-solid fa-house text-sm sm:text-lg md:text-xl"></i> Trang Chủ
+        </button>
+        <button id="btn-luu-pure" onclick="toggleLuuPure(this)" class="active:scale-95 transition-all flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 hover:text-white">
+            <i class="fa-solid fa-heart text-sm sm:text-lg md:text-xl"></i> Lưu
+        </button>
+        <button id="btn-xong-pure" onclick="toggleXongPure(this)" class="active:scale-95 transition-all flex items-center gap-1.5 sm:gap-2 pl-3 sm:pl-5 hover:text-white">
+            <i class="fa-solid fa-circle-check text-sm sm:text-lg md:text-xl"></i> Đã Xong
+        </button>
+    </nav>
+    <script>
+        (function() {
+            try {
+                const u = window.location.pathname.split('/').pop().split('?')[0].split('#')[0];
+                const b = JSON.parse(localStorage.getItem('pwa_bookmarks_hoasinh') || '[]');
+                if(b.includes(u)) { document.write('<style>#btn-luu-pure { color: #f43f5e; font-weight: 900; filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)); }</style>'); }
+                const c = JSON.parse(localStorage.getItem('pwa_completed_hoasinh') || '[]');
+                if(c.includes(u)) { document.write('<style>#btn-xong-pure { color: #34d399; font-weight: 900; filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)); }</style>'); }
+            } catch(e) {}
+        })();
+        function toggleLuuPure(btn) {
+            try {
+                const u = window.location.pathname.split('/').pop().split('?')[0].split('#')[0];
+                let b = JSON.parse(localStorage.getItem('pwa_bookmarks_hoasinh') || '[]');
+                let isGhim = false;
+                if(!b.includes(u)) { b.push(u); window.customAlert('Đã ghim mốc Dấu Trang!'); isGhim = true; }
+                else { b = b.filter(x => x !== u); window.customAlert('Đã hủy Dấu Trang!'); }
+                localStorage.setItem('pwa_bookmarks_hoasinh', JSON.stringify(b));
+                if (isGhim) { btn.classList.remove('hover:text-white'); btn.style.color = '#f43f5e'; btn.style.fontWeight = '900'; btn.style.filter = 'drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))'; }
+                else { btn.classList.add('hover:text-white'); btn.style.color = ''; btn.style.fontWeight = ''; btn.style.filter = ''; }
+            } catch(e) { console.error(e); }
+        }
+        function toggleXongPure(btn) {
+            try {
+                const u = window.location.pathname.split('/').pop().split('?')[0].split('#')[0];
+                let c = JSON.parse(localStorage.getItem('pwa_completed_hoasinh') || '[]');
+                let isDone = false;
+                if(!c.includes(u)) { c.push(u); window.customAlert('Đã đánh dấu bài học này là [Đã Xong]!'); isDone = true; }
+                else { c = c.filter(x => x !== u); window.customAlert('Đã bỏ đánh dấu hoàn thành bài học!'); }
+                localStorage.setItem('pwa_completed_hoasinh', JSON.stringify(c));
+                if (isDone) { btn.classList.remove('hover:text-white'); btn.style.color = '#34d399'; btn.style.fontWeight = '900'; btn.style.filter = 'drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))'; }
+                else { btn.classList.add('hover:text-white'); btn.style.color = ''; btn.style.fontWeight = ''; btn.style.filter = ''; }
+            } catch(e) { console.error(e); }
+        }
+    </script>
+
+
+<script>
+window.customAlert = function(msg) {
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-full shadow-2xl z-[999999] flex items-center gap-3 transform transition-all duration-500 translate-y-10 opacity-0 font-bold tracking-wide text-sm border border-slate-700';
+    toast.innerHTML = `<i class="fa-solid fa-bell text-rose-400"></i> ${msg}`;
+    
+    document.body.appendChild(toast);
+    
+    requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-10', 'opacity-0');
+    });
+    
+    setTimeout(() => {
+        toast.classList.add('translate-y-10', 'opacity-0');
+        setTimeout(() => { if(document.body.contains(toast)) document.body.removeChild(toast); }, 500);
+    }, 3000);
+};
+</script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tdc-hoasinh-v1-updated';
+const CACHE_NAME = 'tdc-hoasinh-v2';
 const urlsToCache = [
   './', 
   './index.html', 

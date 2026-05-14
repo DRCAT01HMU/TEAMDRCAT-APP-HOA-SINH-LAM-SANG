@@ -1,5 +1,37 @@
-const CACHE_NAME = 'tdc-anatomy-v60-updated';
-const urlsToCache = ['./', './index.html', './pdf-viewer.html', './manifest.json', 'https://cdn.tailwindcss.com', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', 'https://cdn-icons-png.flaticon.com/512/3004/3004458.png', 'https://unpkg.com/react@18/umd/react.production.min.js', 'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js', 'https://unpkg.com/@babel/standalone/babel.min.js', './daicuonghetk.html', './giaiphaudaday.html', './giaiphaugan.html', './giaiphaugiannao.html', './giaiphaumuihau.html', './giaiphauruotgia.html', './giaiphauruotnon.html', './giaiphauthanhquan.html', './giaiphauthucquan.html', './giaiphautim.html', './giaiphautuy.html', './giaiphauvungmieng.html', './gpdainao.html', './heco1.html', './heco2.html', './heco3.html', './henoitiet.html', './hesinhducnam.html', './hesinhducnu.html', './hetimmachvahebachhuyet.html', './hevien.html', './khiphequanphoi.html', './machmauchiduoi.html', './machmauchitren.html', './machmaudauconao.html', './machmaungucbung.html', './mat.html', './phucmac.html', './tai.html', './thankinhso.html', './thankinhtuchu.html', './thannao.html', './thantietnieu.html', './tieunao.html', './tkchiduoi.html', './tkcochitren.html', './tuysong.html', './xuongkhop1.html', './xuongkhop2.html', './xuongkhop3.html'];
+const CACHE_NAME = 'tdc-hoasinh-v1-updated';
+const urlsToCache = [
+  './', 
+  './index.html', 
+  './pdf-viewer.html', 
+  './manifest.json', 
+  'https://cdn.tailwindcss.com', 
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', 
+  'https://cdn-icons-png.flaticon.com/512/3004/3004458.png', 
+  'https://unpkg.com/react@18/umd/react.production.min.js', 
+  'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js', 
+  'https://unpkg.com/@babel/standalone/babel.min.js', 
+  './daicuonghetk.html',
+  './hoasinh_case_1.html',
+  './hoasinh_case_2.html',
+  './hoasinh_case_3.html',
+  './hoasinh_case_4.html',
+  './hoasinh_case_5.html',
+  './hoasinh_case_6.html',
+  './hoasinh_case_7.html',
+  './hoasinh_case_8.html',
+  './hoasinh_case_9.html',
+  './hoasinh_case_10.html',
+  './hoasinh_case_11.html',
+  './hoasinh_case_12.html',
+  './hoasinh_case_13.html',
+  './hoasinh_case_14.html',
+  './hoasinh_case_15.html',
+  './hoasinh_case_16.html',
+  './hoasinh_case_17.html',
+  './hoasinh_case_18.html',
+  './hoasinh_case_19.html',
+  './hoasinh_case_20.html'
+];
 
 self.addEventListener('install', event => {
   self.skipWaiting();

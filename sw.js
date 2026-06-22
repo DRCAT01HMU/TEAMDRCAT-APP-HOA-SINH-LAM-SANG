@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tdc-hoasinh-v2.2';
+const CACHE_NAME = 'tdc-hoasinh-v2.3';
 const urlsToCache = [
   './', 
   './index.html', 
@@ -36,7 +36,20 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then(cache => {
+      return Promise.all(
+        urlsToCache.map(url => {
+          return fetch(new Request(url, { cache: 'reload' }))
+            .then(response => {
+              if (response.ok) {
+                return cache.put(url, response);
+              }
+              throw new Error(`Failed to fetch ${url}`);
+            })
+            .catch(err => console.error(err));
+        })
+      );
+    })
   );
 });
 
